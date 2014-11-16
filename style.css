@@ -9,24 +9,29 @@ Commentaires CSS
 body
 {
     font-size: medium;
+    /*font-family: Georgia;*/
+    font-family: "Times New Roman", Georgia, Serif;
     background-color: white;
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 80%;
+    margin: auto;
+}
+
+hr
+{
+    border:none;
+    height:2px;
+    background-color:black;
 }
 
 main
 {
+    width: 50%;
+    margin: auto;
 }
 
 section h3
 {
     text-align:left;
-}
-
-footer
-{
-    width: 800px;
 }
 
 canvas 
@@ -35,4 +40,9 @@ canvas
     width: 640px;
     height: 480px;
     background-color: black;
+}
+
+article h2
+{
+    text-decoration: underline;
 }
