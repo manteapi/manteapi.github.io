@@ -1,0 +1,29 @@
+/*
+ Commentaires CSS
+*/
+
+*
+{
+    font-size : medium; /* 14 px */
+}
+
+body
+{
+    background-color: white;
+    width: 800px;
+    margin: auto;
+}
+
+main
+{
+}
+
+section h3
+{
+    text-align:left;
+}
+
+footer
+{
+    width: 800px;
+}
