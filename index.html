@@ -2,13 +2,17 @@
 <html>
 
 <head>
-<!-- En-tête de la page -->
+
 <meta charset="utf-8" />
+
+<!-- En-tête de la page -->
 <title> Homepage </title>
+
 <!-- <link rel="stylesheet" href="style.css"/> -->
 <link href="https://fonts.googleapis.com/css?family=Arbutus+Slab" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="latex2html5.css"> 
 <link rel="stylesheet" href="style.css"> 
+
 <!-- I love MathJax -->
 <!-- <script type="text/javascript"
 src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -36,6 +40,33 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 </script>
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 <script type="text/javascript" src="latex2html5.min.js"></script> 
+
+<!--WebGL-->
+    <script src="sylvester.js" type="text/javascript"></script>
+        <script src="glUtils.js" type="text/javascript"></script>
+            <script src="webgl-demo.js" type="text/javascript"></script>
+
+    <!-- Fragment shader program -->
+
+    <script id="shader-fs" type="x-shader/x-fragment">
+        void main(void) {
+            gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+        }
+    </script>
+    
+    <!-- Vertex shader program -->
+    
+    <script id="shader-vs" type="x-shader/x-vertex">
+      attribute vec3 aVertexPosition;
+    
+      uniform mat4 uMVMatrix;
+      uniform mat4 uPMatrix;
+    
+      void main(void) {
+        gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
+      }
+    </script>
+
 </head>
 
 <body onload="start()">
@@ -72,6 +103,14 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
         \sigma = \frac{dE}{d\epsilon}
         $$
     </section>
+</article>
+
+<article>
+    <h2>WebGL test</h2>
+    <body onload="start()">
+    <canvas id="glcanvas" width="640" height="480">
+        Your browser doesn't appear to support the HTML5 <code>&lt;canvas&gt;</code> element.
+    </canvas>
 </article>
 </main>
 
