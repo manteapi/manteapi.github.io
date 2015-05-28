@@ -6,13 +6,64 @@ Commentaires CSS
 {
 }
 
+table.publication td.title a:visited
+{
+    color:blue;
+}
+
+table.publication td.title a:hover
+{
+    color:orange;
+}
+
+a:hover
+{
+    color:orange;
+}
+
+a:visited
+{
+    color:blue;
+}
+
+table
+{
+    border-collapse : separate;
+    border-spacing : 10px 10px;
+}
+
+table.publication
+{
+    border-collapse : separate;
+    border-spacing : 1px 1px;
+}
+
+table.publication td.title
+{
+    font-size : large;
+}
+
+td.institute
+{
+    width : 300px
+}
+
+td.hours
+{
+    width : 30px;
+}
+
+td.course
+{
+    width : 200px;
+}
+
 body
 {
     font-size: medium;
-    /*font-family: Georgia;*/
-    font-family: "Times New Roman", Georgia, Serif;
+    font-family: Helvetica, Georgia, Serif;
     background-color: white;
-    width: 80%;
+    width: 900px;
     margin: auto;
 }
 
@@ -25,8 +76,9 @@ hr
 
 main
 {
-    width: 50%;
+    padding : 20px;
     margin: auto;
+    /*box-shadow:0px 0px 5px 5px #888*/
 }
 
 section h3
@@ -39,7 +91,6 @@ canvas
     border: 2px solid black;
     width: 640px;
     height: 480px;
-    background-color: black;
 }
 
 article h2

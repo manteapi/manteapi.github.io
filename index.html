@@ -3,10 +3,11 @@
 
 <head>
 
-<meta charset="utf-8" />
+<!-- Encoding -->
+<meta http-equiv="Content-Type" content="text/HTML; charset=utf-8"/>
 
 <!-- En-tête de la page -->
-<title> Homepage </title>
+<title>Pierre-Luc Manteaux homepage</title>
 
 <!-- <link rel="stylesheet" href="style.css"/> -->
 <link rel="stylesheet" href="latex2html5.css"> 
@@ -28,7 +29,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
         showMathMenu: false ,
         tex2jax: {
             processEnvironments: true,
-            inlineMath: [ ['$','$'], ["\(","\)"] ],
+            inlineMath: [ ['$','$'] ],
             displayMath: [ ['$$','$$'], ["\[","\]"] ],
             preview : "none",
             processEscapes: true
@@ -41,80 +42,431 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 <script type="text/javascript" src="latex2html5.min.js"></script> 
 
 <!--WebGL-->
-    <script src="sylvester.js" type="text/javascript"></script>
-        <script src="glUtils.js" type="text/javascript"></script>
-            <script src="webgl-demo.js" type="text/javascript"></script>
+<script src="sylvester.js" type="text/javascript"></script>
+<script src="glUtils.js" type="text/javascript"></script>
+<script src="webgl-demo.js" type="text/javascript"></script>
 
-    <!-- Fragment shader program -->
+<!--Javascript library-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-    <script id="shader-fs" type="x-shader/x-fragment">
-        void main(void) {
+<!-- Fragment shader program -->
+
+<script id="shader-fs" type="x-shader/x-fragment">
+void main(void) {
             gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
         }
-    </script>
-    
-    <!-- Vertex shader program -->
-    
-    <script id="shader-vs" type="x-shader/x-vertex">
-      attribute vec3 aVertexPosition;
-    
+</script>
+
+<!-- Vertex shader program -->
+
+<script id="shader-vs" type="x-shader/x-vertex">
+attribute vec3 aVertexPosition;
+
       uniform mat4 uMVMatrix;
       uniform mat4 uPMatrix;
-    
+
       void main(void) {
         gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
       }
-    </script>
+</script>
+
+<script language="javascript" type="text/javascript" src="menu.js"></script>
 
 </head>
 
 <body onload="start()">
 
 <header>
-    <h1>Html trials</h1>
+    <h1>Pierre-Luc Manteaux</h1>
     <hr>
 </header>
 
 <main>
+
+<section>
+    <h2>About</h2>
+    I am a PhD candidate in the Imagine team, under the supervision of François Faure and Marie-Paule Cani. 
+    I received the engineering M.Sc. degree in computer sciences and mathematics from the École Nationale Supérieure d'Informatique et Mathématiques Appliquées de Grenoble (Ensimag) in 2012.
+</section>
+
+<section>
+    <h2>Research</h2>
+    My research lies in the area of computer graphics, more specifically in physically based simulation of deformable models and fluids.
+    I am particularly interested in adaptive models to allow the expression of complex effects and drastically reduce computational cost.
+</section>
+
+<section>
+    <h2>Publications</h2>
+    <table class="publication">
+        <tbody>
+        <tr>
+            <td class="thumbnail" rowspan="3">
+                <a href= "http://hal.inria.fr/hal-00914653"><img style="width:200px;height:100px" src = "https://team.inria.fr/imagine/files/2014/01/arpsTeaserThumbnail.jpg" alt="ARPSPH"></a>
+            </td>
+            <td class="title">
+                <a href="http://hal.inria.fr/hal-00914653">Exploring the Use of Adaptively Restrained Particles for Graphics Simulations</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="author">
+                Pierre-Luc Manteaux, François Faure, Stéphane Redon, Marie-Paule Cani, <i><b>VRIPHYS 2013</b></i>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                [<a href="http://hal.inria.fr/docs/00/91/46/53/PDF/arps-vriphys2013.pdf">Paper (PDF)</a>] 
+                [<a href="http://hal.inria.fr/docs/00/91/46/53/VIDEO/VideoPaper1004.flv">Movie (FLV, 13.2MB)</a>]
+            </td>
+        </tr>
+        <!--<tr>
+            <td class="abstract">
+                    <b> Summary:</b> In this paper, we explore the use of Adaptively Restrained (AR) particles for graphics simulations. Contrary to previous methods, Adaptively Restrained Particle Simulations (ARPS) do not adapt time or space sampling, but rather switch the positional degrees of freedom of particles on and off, while letting their momenta evolve. Therefore, inter-particles forces do not have to be updated at each time step, in contrast with traditional methods that spend a lot of time there. We present the initial formulation of ARPS that was introduced for molecular dynamics simulations, and explore its potential for Computer Graphics applications: We first adapt ARPS to particle-based fluid simulations and propose an efficient incremental algorithm to update forces and scalar fields. We then introduce a new implicit integration scheme enabling to use ARPS for cloth simulation as well. Our experiments show that this new, simple strategy for adaptive simulations can provide significant speedups more easily than traditional adaptive models
+            </td>
+        </tr>-->
+        </tbody>
+    </table>
+</section>
+
+<section>
+    <h2>Teaching</h2>
+    <section>
+        <h3>2014</h3>
+        <table>
+            <tr> <td class="institute" >Ensimag 2<sup>ème</sup> année (MMIS)</td> <td class="hours">18h</td> <td class="course">3D Computer Graphics</td> </tr>
+            <tr> <td class="institute" >Polytech Grenoble 4<sup>ème</sup> année (RICM4)</td> <td class="hours" >12h</td> <td class="course">Synthèse d'Image</td> </tr>
+            <tr> <td class="institute" >UJF, UFR IMAG, Master 2 (GICAO)</td> <td class="hours">9h</td> <td class="course">Visualisation Scientifique</td> </tr>
+            <tr> <td class="institute">UJF, UFR IMAG, Master 1 Informatique</td> <td class="hours">16.5h</td>  <td class="course">Géométrie Numérique</td> </tr>
+        </table>
+    </section>
+
+    <section>
+        <h3>2013</h3>
+        <table>
+            <tr> <td class="institute">Ensimag 2eme année (MMIS)</td> <td class="hours">10h</td><td class="course">Projet de spécialité</td> </tr>
+        </table>
+    </section>
+</section>
+
+<section>
+    <h2>Miscellaneous</h2>
+    <article>
+        <h3>MathJax (Decomposition of force computation)</h3>
+        <section> <!-- different part of an article or a group of article -->
+            <h4>Notations</h4>
+            <ul>
+                <li>$f$ stands for forces</li>
+                <li>$q$ stands for positions</li>
+                <li>$E$ stands for elastic energy</li>
+                <li>$F$ stands for deformation gradient</li>
+                <li>$\epsilon$ stands for strain</li>
+            </ul>
+        </section>
+        <section>
+            <h4>Decomposition</h4>
+            We can write :
+            $$
+            f = -\frac{dE}{dq} 
+            = - \left(\frac{dF}{dq}\right)^{T}
+            \left(\frac{d\epsilon}{dF}\right)^{T}
+            \left(\frac{dE}{d\epsilon}\right)$$
+            $$
+            \sigma = \frac{dE}{d\epsilon}
+            $$
+        </section>
+    </article>
+    <article>
+        <h3>WebGL test</h3>
+        <canvas id="glcanvas" width="640" height="480">
+            Your browser doesn't appear to support the HTML5 <code>&lt;canvas&gt;</code> element.
+        </canvas>
+    </article>
+</section>
+
 <article>
-    <h2>Decomposition of force computation / MathJax</h2>
-    <section> <!-- different part of an article or a group of article -->
-        <h3>Notations</h3>
-        <ul>
-            <li>$f$ stands for forces</li>
-            <li>$q$ stands for positions</li>
-            <li>$E$ stands for elastic energy</li>
-            <li>$F$ stands for deformation gradient</li>
-            <li>$\epsilon$ stands for strain</li>
-        </ul>
+    <h2>References from Axolot</h2>
+    <section>
+        <h3>Book I would like to read</h3>
+        <table>
+            <tbody>
+            <tr><td>Bill Bryson</td></tr>
+            <tr><td>A Short History of Nearly Everything</td></tr>
+            </tbody>
+            <tbody>
+            <tr><td>John Oldale</td></tr>
+            <tr><td>A world of curiosities</td></tr>
+            </tbody>
+            <tbody>
+            <tr><td>John Oldale</td></tr>
+            <tr><td>A world of curiosities</td></tr>
+            </tbody>
+            <tbody>
+            <tr><td>Olivier Le Carrer</td></tr>
+            <tr><td>L'Atlas des Lieux Maudits</td></tr>
+            </tbody>
+            <tbody>
+            <tr><td>Richard Wiseman</td></tr>
+            <tr><td>Petit Traité de Bizarrologie</td></tr>
+            </tbody>
+            <tbody>
+            <tr><td>Joshua Foer</td></tr>
+            <tr><td>Moonwalking with Einstein : The Art and Science of Remembering Everything</td></tr>
+            </tbody>
+            <tbody>
+            <tr><td>Pierre Barthélémy</td></tr>
+            <tr><td>Improbablologie et au-delà</td></tr>
+            </tbody>
+            <tbody>
+            <tr><td>Alex Boese</td></tr>
+            <tr><td>Elephants on acid</td></tr>
+            </tbody>
+            <tbody>
+            <tr><td>Alex Boese</td></tr>
+            <tr><td>Electrified sheep</td></tr>
+            </tbody>
+        </table>
     </section>
     <section>
-        <h3>Decomposition</h3>
-        We can write :
-        $$
-        f = -\frac{dE}{dq} 
-        = - \left(\frac{dF}{dq}\right)^{T}
-        \left(\frac{d\epsilon}{dF}\right)^{T}
-        \left(\frac{dE}{d\epsilon}\right)$$
-        And I think that :
-        $$
-        \sigma = \frac{dE}{d\epsilon}
-        $$
+        <h3>Documentaries</h3>
+        <table>
+            <tbody><tr><td>
+                    Into eternity Michael Madsen
+            </td></tr></tbody>
+            <tbody><tr><td>
+                    Samsara
+            </td></tr></tbody>
+            <tbody><tr><td>
+                    The act of killing
+            </td></tr></tbody>
+            <tbody><tr><td>
+                    Cosmos, national geographic channel
+            </td></tr></tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3>Youtube Channel</h3>
+        <table>
+            <tbody><tr><td>e-penser</td></tr></tbody>
+            <tbody><tr><td>Les chroniques du monde libre</td></tr></tbody>
+            <tbody><tr><td>Doxa</td></tr></tbody>
+            <tbody><tr><td>Le coup de fil</td></tr></tbody>
+            <tbody><tr><td>Vsauce</td></tr></tbody>
+            <tbody><tr><td>SciShow</td></tr></tbody>
+            <tbody><tr><td>Veritasium</td></tr></tbody>
+            <tbody><tr><td>Minute Physics</td></tr></tbody>
+            <tbody><tr><td>mental floss</td></tr></tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3>TV shows</h3>
+        <table>
+            <tbody><tr><td>
+                    Six feet under
+            </td></tr></tbody>
+            <tbody><tr><td>
+                    Orange is the new black
+            </td></tr></tbody>
+            <tbody><tr><td>
+                    Louis C-K
+            </td></tr></tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3>Video games</h3>
+        <table>
+            <tbody><tr><td>
+                    Portal
+            </td></tr></tbody>
+            <tbody><tr><td>
+                    Gone home
+            </td></tr></tbody>
+            <tbody><tr><td>
+                    Kentucky route zero
+            </td></tr></tbody>
+            <tbody><tr><td>
+                    Stanley parable
+            </td></tr></tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3>Podcast</h3>
+        <table>
+            <tbody><tr><td>
+                    Les invités de mon invité sont mes invités
+            </td></tr></tbody>
+            <tbody><tr><td>
+                    L'original de Thomas Hercouët
+            </td></tr></tbody>
+            <tbody><tr><td>
+                    La tête au carré
+            </td></tr></tbody>
+            <tbody><tr><td>
+                    Radiolab
+            </td></tr></tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3>Creepy pasta</h3>
+        <table>
+            <tbody><tr><td>
+                    Rush and sleep experiment
+            </td></tr></tbody>
+            <tbody><tr><td>
+                    Candle Cove
+            </td></tr></tbody>
+            <tbody><tr><td>
+                    Les histoires de la SCP fondation
+            </td></tr></tbody>
+            <tbody><tr><td>
+                    Slenderman
+            </td></tr></tbody>
+        </table>
+    </section>
+
+</article>
+
+<article>
+    <h2>Some guys from Berkeley</h2>
+    Bret Viktor - http://worrydream.com
+    <br/>
+    Colorado Reed
+</article>
+
+<article>
+    <h2>Recent discoveries</h2>
+    <section>
+        <h3>To see</h3>
+        <table>
+            <tbody><tr><td>Ressurection of the little match girl</td></tr></tbody>
+            <tbody><tr><td>2009 : Lost memories</td></tr></tbody>
+        </table>
+    <section>
+        <h3>Movies</h3>
+        <table>
+            <tbody><tr><td>Lucy</td></tr></tbody>
+            <tbody><tr><td>Cloud Atlas</td></tr></tbody>
+            <tbody><tr><td>Predestination</td></tr></tbody>
+            <tbody><tr><td>Her</td></tr></tbody>
+            <tbody><tr><td>Under the skin</td></tr></tbody>
+        </table>
+    </section>
+    <section>
+        <h3>Music</h3>
+        <table>
+            <tbody>
+            <tr><td>Lucy Motion Soundtrack</td></tr>
+            <tr><td>Eric Serra</td></tr>
+            </tbody>
+            <tbody>
+            <tr><td>Under the skin Motion Soundtrack</td></tr>
+            <tr><td>Mica Levi (Micachu)</td></tr>
+            </tbody>
+            <tbody>
+            <tr><td>Her Motion Soundtrack</td></tr>
+            <tr><td>Arcade Fire</td></tr>
+            </tbody>
+            <tbody>
+            <tr><td>Second lives and Trahison</td></tr>
+            <tr><td>Vitalic</td></tr>
+            </tbody>
+            <tbody>
+            <tr><td>Cloud Atlas</td></tr>
+            <tr><td>Soundtrack</td></tr>
+            </tbody>
+            <tbody>
+            <tr><td>Far Cry 3</td></tr>
+            <tr><td>Soundtrack</td></tr>
+            </tbody>
+        </table>
+    </section>
+    <section>
+        <h3>Shows</h3>
+        <table>
+            <tbody>
+            <tr><td>Initiation à la théorie musicale</td></tr>
+            <tr><td>Alexandre Astier</td></tr>
+            </tbody>
+            <tbody>
+            <tr><td>La physique quantique</td></tr>
+            <tr><td>Alexandre Astier</td></tr>
+            </tbody>
+        </table>
+    </section>
+    <section>
+        <h3>Philosophy \& science</h3>
+        <table>
+            <tbody>
+            <tr><td>L'absurde, la révolte</td></tr>
+            <tr><td>Albert Camus</td></tr>
+            </tbody>
+            <tbody>
+            <tr><td>Le but de la vie, On ne meurt jamais vraiment, poussière stellaire, ...</td></tr>
+            <tr><td>Lucy</td></tr>
+            </tbody>
+            <tbody>
+            <tr><td>Théorie de l'évolution centré sur le gêne et non l'individu.</td></tr>
+            <tr><td>Richard Dawkins</td></tr>
+            </tbody>
+            <tbody>
+            <tr><td>Le lien entre les vies, une vie quantique qu'est ce que c'est ?</td></tr>
+            <tr><td>Cloud Atlas</td></tr>
+            </tbody>
+            <tbody>
+            <tr><td>L'inévitable</td></tr>
+            <tr><td>Predestination</td></tr>
+            </tbody>
+            <tbody>
+            <tr><td>Ecologie/Equilibre/Justice</td></tr>
+            <tr><td>Pierre Rabhi, Coline Serreau, Marie-Monique Robin</td></tr>
+            </tbody>
+        </table>
     </section>
 </article>
-<article>
-    <h2>WebGL test</h2>
-    <body onload="start()">
-    <canvas id="glcanvas" width="640" height="480">
-        Your browser doesn't appear to support the HTML5 <code>&lt;canvas&gt;</code> element.
-    </canvas>
-</article>
-</main>
 
+<article>
+    <h2> Javascript test </h2>
+    <p id="test" onmouseover="changeStyle()">Some test</p>
+    <p id="menu">Some text</p>
+    <button type="button" onclick="myFunction()">Try it</button>
+    <button id="testButton" type="button" onclick="testButton()">Add class</button>
+</article>
+
+<article>
+    <h2>References from Antoine (Berkeley)</h2>
+    <section>
+        <h3>Book</h3>
+        <table>
+            <tbody><tr><td>
+                    The God Delusion from Richard Dawkins
+            </td></tr></tbody>
+            <tbody><tr><td>
+                    Stephen Jay Gould, The Panda's Thumb
+            </td></tr></tbody>
+        </table>
+    </section>
+</article>
+
+<article>
+    <h2>Some of the best places I found to learn and stay aware of my field</h2>
+        <table>
+            <tbody><tr><td>
+                <a href="http://www.w3schools.com/"/>Web technologies</a>
+            </td></tr></tbody>
+            <tbody><tr><td>
+                    <a href="http://www.physicsbasedanimation.com/"/>Physics based animation</a>
+            </td></tr></tbody>
+        </table>
+</article>
+
+</main>
 
 <footer>
     <hr>
-    <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px"src="http://jigsaw.w3.org/css-validator/images/vcss-blue"alt="Valid CSS!" /></a>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a>
     <a href="http://www.mathjax.org"><img title="Powered by MathJax" src="http://cdn.mathjax.org/mathjax/badge/badge.gif" alt="Powered by MathJax" /></a>
     <address>by <a href="mailto:frajus@hotmail.fr">Frajus</a></address>
 </footer>
