@@ -79,7 +79,7 @@ function changeStyle()
     }
     else
     {
-        document.getElementById("test").innerHTML = "Life is hell";
+        document.getElementById("test").innerHTML = "Life is goooood";
         document.getElementById("test").style.color="red";
         change=true;
     }
