@@ -1,0 +1,32 @@
+.image-table tr td
+{
+    border: 0px solid black;
+}
+
+.slides .noborder-img
+{
+    width: 100%;
+    border: 0px solid black;
+}
+
+.slides .noborder-video
+{
+    width: 100%;
+    border: 0px solid black;
+}
+
+.slides .default-img
+{
+    width: 80%;
+    border: 4px solid black;
+    padding: 0px;
+    margin-top: 15px;
+}
+
+.slides .default-video 
+{
+    width: 80%;
+    border: 4px solid black;
+    padding: 0px;
+    margin-top: 15px;
+}
