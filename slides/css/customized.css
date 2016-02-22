@@ -3,10 +3,17 @@
     border: 0px solid black;
 }
 
+.slides .nostyle-img
+{
+    width: 100%;
+    border: none;
+    box-shadow: none;
+}
+
 .slides .noborder-img
 {
     width: 100%;
-    border: 0px solid black;
+    border: none;
 }
 
 .slides .noborder-video
