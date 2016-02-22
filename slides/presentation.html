@@ -62,8 +62,41 @@
 
 				<section>
                     <h2>Qu'est-ce qu'un dessin animé ?</h2>
-					<h3 class="fragment">Une suite d'images</h3>
 				</section>
+
+				<section data-state="walkCycle">
+					<h2>Comment faire un dessin animé ?</h2>
+					<h3>Une suite d'images</h3>
+                    <div class="im-centered">
+                        <div class="row">
+                            <video class="default-video" id="video-walkCycle" loop>
+                                <source data-src="videos/walkCycle.mp4" type="video/mp4"/>
+                            </video>
+                        </div>
+                    </div>
+                </section>
+
+				<section data-state="walkCycle2">
+					<h2>Comment faire un dessin animé ?</h2>
+					<h3>Une suite d'images</h3>
+                    <div class="im-centered">
+                        <div class="row">
+                            <video class="default-video" id="video-walkCycle2" loop>
+                                <source data-src="videos/walkCycle2.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                    </div>
+                </section>
+
+				<section>
+					<h2>Comment faire un dessin animé ?</h2>
+					<h3>Une suite d'images</h3>
+                    <div class="im-centered">
+                        <div class="row">
+					        <img class="default-img" data-src="./images/walkCycle.png" alt="walkCycle">
+                        </div>
+                    </div>
+                </section>
 
 				<section>
 					<h2>Comment faire un dessin animé ?</h2>
@@ -192,6 +225,21 @@
                 </section>
 
                 <section>
+                    <h2>Entre temps, que s'est-il passé ?</h2>
+                    <h3 class="fragment">La 3D est apparue</h3>
+                    <div class="im-centered">
+                        <div class="row">
+                            <div class="col-sm-6">
+                            <img class="noborder-img" data-src="./images/genie.png" alt="genie">
+                            </div>
+                            <div class="col-sm-6">
+                            <img class="noborder-img" data-src="./images/mikeAndSulley.jpg" alt="mike and sulley">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
                     <h2>Avec l'arrivée de l'ordinateur</h2>
                     <h3>Les objets sont décrits en 3D</h3>
                     <div class="im-centered">
@@ -223,6 +271,28 @@
 
                 <section>
                     <h2>Les dessins animés 3D</h2>
+                    <div class="im-centered">
+                        <div class="row">
+                            <div class="col-sm-2">
+                            <img data-src="./images/moviePoster/toyStory.jpg" alt="toy story">
+                            </div>
+                            <div class="col-sm-2">
+                            <img data-src="./images/moviePoster/up.jpg" alt="up">
+                            </div>
+                            <div class="col-sm-2">
+                            <img data-src="./images/moviePoster/despicableMe.jpg" alt="despicable me">
+                            </div>
+                            <div class="col-sm-2">
+                            <img data-src="./images/moviePoster/dragon2.jpg" alt="dragon2">
+                            </div>
+                            <div class="col-sm-2">
+                            <img data-src="./images/moviePoster/monsterUniversity.jpg" alt="monsterUniversity">
+                            </div>
+                            <div class="col-sm-2">
+                            <img data-src="./images/moviePoster/insideOut.jpg" alt="inside out">
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
 				<section data-background-video="./videos/breakdownCG/frozenShotProgression.mp4" data-background-color="#000000" controls>
@@ -668,6 +738,18 @@ Reveal.addEventListener( 'customevent', function() {
 					{ src: 'reveal.js/plugin/notes/notes.js', async: true }
 				]
 			});
+
+                Reveal.addEventListener( 'walkCycle', function() 
+                {
+                    var tmpVideo = document.getElementById("video-walkCycle");
+                    tmpVideo.play();
+                });
+
+                Reveal.addEventListener( 'walkCycle2', function() 
+                {
+                    var tmpVideo = document.getElementById("video-walkCycle2");
+                    tmpVideo.play();
+                });
 
                 Reveal.addEventListener( 'bouncingBall', function() 
                 {
