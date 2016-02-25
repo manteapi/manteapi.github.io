@@ -3,6 +3,12 @@
     border: 0px solid black;
 }
 
+.slides .small-caption
+{
+    margin-top: -20px;
+    font-size: 15pt;
+}
+
 .slides .closer-caption
 {
     margin-top: -20px;
