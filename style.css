@@ -6,12 +6,12 @@ Commentaires CSS
 {
 }
 
-table.publication td.title a:visited
+table.publications td.title a:visited
 {
     color:blue;
 }
 
-table.publication td.title a:hover
+table.publications td.title a:hover
 {
     color:orange;
 }
@@ -32,15 +32,27 @@ table
     border-spacing : 10px 10px;
 }
 
-table.publication
+table.publications
 {
     border-collapse : separate;
     border-spacing : 1px 1px;
 }
 
-table.publication td.title
+table.publications tr.publication-line td
 {
-    font-size : large;
+    padding-top: 15px;
+}
+
+table.publications td.teaser
+{
+    width:250px;
+    text-align:center;
+    padding-right: 15px;
+}
+
+table.publications td.title
+{
+    font-size: large;
 }
 
 td.institute
@@ -76,8 +88,9 @@ hr
 
 main
 {
-    padding : 20px;
-    margin: auto;
+    /*padding : 20px;*/
+    margin-left:auto;
+    margin-right:auto;
     /*box-shadow:0px 0px 5px 5px #888*/
 }
 

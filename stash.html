@@ -45,6 +45,11 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 
+<!-- Highlight package for code highlighting -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/zenburn.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
 <body onload="start()">
 
 <header>
@@ -115,6 +120,14 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 </article>
 
 <p>MIG2016's deadline in July</p>
+
+<pre><code class="c++">
+int var = 0;
+void highlight()
+{
+    std::cout << "Hello" << std::endl;
+}
+</code></pre>
 
 </section>
 

@@ -41,79 +41,176 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 <script type="text/javascript" src="latex2html5.min.js"></script> 
 
-<!--Javascript library-->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!--Highlight-->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<!--Bootstrap & JQuery library-->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 </head>
 
 <body onload="start()">
 
+<div class="container">
+    <div class="row">
+
+<section class="col-md-12">
 <header>
     <h1>Pierre-Luc Manteaux</h1>
     <hr>
 </header>
+</section>
 
 <main>
 
-<section>
-    <h2>About</h2>
+<section class="col-md-12">
+    <header>
+        <h2>About</h2>
+    </header>
+    <p>
     I am a PhD candidate in the Imagine team, under the supervision of François Faure and Marie-Paule Cani. 
     I received the engineering M.Sc. degree in computer sciences and mathematics from the École Nationale Supérieure d'Informatique et Mathématiques Appliquées de Grenoble (Ensimag) in 2012.
+    </p>
 </section>
 
-<section>
+<section class="col-md-12">
     <h2>Research</h2>
+    <p>
     My research lies in the area of computer graphics, more specifically in physically based simulation of deformable models and fluids.
     I am particularly interested in adaptive models to allow the expression of complex effects and drastically reduce computational cost.
+    </p>
 </section>
 
-<section>
+<section class="col-md-12">
     <h2>Publications</h2>
 
-    <table class="publication">
-    <tbody>
-    <tr>
-            <td style="padding:16px;" width="200" align="center"><a href= "http://manteapi.github.io/publications/starAdaptivity_CGF_2016/starAdaptivity-cgf.pdf"> <img alt="Teaser" style="width:200px;height:100px" src = "http://manteapi.github.io/publications/starAdaptivity_CGF_2016/STAR_Teaser.jpg"></a></td>
-            <td style="padding:16px;"><big><a href = "http://manteapi.github.io/publications/starAdaptivity_CGF_2016/starAdaptivity-cgf.pdf">Adaptive Physically-Based Models in Computer Graphics</a></big> <br>
-            Pierre-Luc Manteaux, Chris Wojtan, Rahul Narain, Stephane Redon, François Faure, Marie-Paule Cani, <i><b>CGF 2016</b></i> <br>
-     [<a href= "http://manteapi.github.io/publications/starAdaptivity_CGF_2016/starAdaptivity-cgf.pdf">Preprint (PDF)</a>] <br>
-             <b> Abstract:</b> One of the major challenges in physically-based modeling is making simulations efficient. Adaptive models provide an essential solution to these efficiency goals. These models are able to self-adapt in space and time, attempting to provide the best possible compromise between accuracy and speed.
-    This survey reviews the adaptive solutions proposed so far in computer graphics. Models are classified according to the strategy they use for adaptation, from time-stepping and freezing techniques to geometric adaptivity in the form of structured grids, meshes, and particles. Applications range from fluids, through deformable bodies, to articulated solids.
+    <div class="table-responsive">
+    <table class="publications">
+    <tr class="publication-line">
+            <td class="teaser" rowspan="5">
+                <a href= "http://manteapi.github.io/publications/starAdaptivity_CGF_2016/starAdaptivity-cgf.pdf"> <img alt="Teaser" style="width:200px;height:100px" src = "http://manteapi.github.io/publications/starAdaptivity_CGF_2016/STAR_Teaser.jpg"></a>
+            </td>
+            <td class="title"><a href = "http://manteapi.github.io/publications/starAdaptivity_CGF_2016/starAdaptivity-cgf.pdf">Adaptive Physically-Based Models in Computer Graphics</a></td>
     </tr>
-    
-    <tr>
-            <td style="padding:16px;" width="200" align="center"><a href= "https://hal.inria.fr/hal-01206780/"> <img alt="Teaser" style="width:200px;height:100px" src = "https://hal.inria.fr/hal-01206780/file/Manteaux_MIG2015_IDCTS.png"></a></td>
-            <td style="padding:16px;"><big><a href = "https://hal.inria.fr/hal-01206780/">Interactive Detailed Cutting of Thin Sheets</a></big> <br>
-            Pierre-Luc Manteaux, Wei-Lun Sun, François Faure, Marie-Paule Cani, James F. O'Brien, <i><b>MIG 2015</b></i> <br>
-     [<a href= "https://hal.inria.fr/hal-01206780/document">Paper (PDF)</a>] [<a href= "https://hal.inria.fr/hal-01206780/file/Manteaux_MIG2015_IDCTS.mp4">Movie (MP4, 2.67MB)</a>] <br>
-             <b> Abstract:</b> In this paper we propose a method for the interactive detailed cutting of deformable thin sheets. Our method builds on the ability of frame-based simulation to solve for dynamics using very few control frames while embedding highly detailed geometry - here an adaptive mesh that accurately represents the cut boundaries.
-    Our solution relies on a non-manifold grid to compute shape functions that faithfully adapt to the topological changes occurring while cutting.  New frames are dynamically inserted to describe new regions. We provide incremental mechanisms for updating simulation data, enabling us to achieve interactive rates. We illustrate our method with examples inspired by the traditional Kirigami artform.
+            <tr>
+                <td class="authors">
+                    Pierre-Luc Manteaux, Chris Wojtan, Rahul Narain, Stephane Redon, François Faure, Marie-Paule Cani
+                </td>
+            </tr>
+            <tr>
+                <td class="conference">
+                    Computer Graphics Forum 2016
+                </td>
+            </tr>
+            <tr>
+                <td class="download">
+                    [<a href= "http://manteapi.github.io/publications/starAdaptivity_CGF_2016/starAdaptivity-cgf.pdf">Preprint (PDF)</a>]
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Abstract: One of the major challenges in physically-based modeling is making simulations efficient. Adaptive models provide an essential solution to these efficiency goals. These models are able to self-adapt in space and time, attempting to provide the best possible compromise between accuracy and speed. This survey reviews the adaptive solutions proposed so far in computer graphics. Models are classified according to the strategy they use for adaptation, from time-stepping and freezing techniques to geometric adaptivity in the form of structured grids, meshes, and particles. Applications range from fluids, through deformable bodies, to articulated solids.
+                </td>
+            </tr>
+            <tr class="publication-line">
+                <td class="teaser" rowspan="5">
+                    <a href= "https://hal.inria.fr/hal-01206780/"> <img alt="Teaser" style="width:200px;height:100px" src = "https://hal.inria.fr/hal-01206780/file/Manteaux_MIG2015_IDCTS.png"></a>
+                </td>
+                <td class="title">
+                    <a href = "https://hal.inria.fr/hal-01206780/">Interactive Detailed Cutting of Thin Sheets</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="authors">
+                    Pierre-Luc Manteaux, Wei-Lun Sun, François Faure, Marie-Paule Cani, James F. O'Brien
+                </td>
+            </tr>
+            <tr>
+                <td class="conference">
+                    Motion In Games 2015
+                </td>
+            </tr>
+            <tr>
+                <td class="download">
+                    [<a href= "https://hal.inria.fr/hal-01206780/document">Paper (PDF)</a>] [<a href= "https://hal.inria.fr/hal-01206780/file/Manteaux_MIG2015_IDCTS.mp4">Movie (MP4, 2.67MB)</a>]
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Abstract: In this paper we propose a method for the interactive detailed cutting of deformable thin sheets. Our method builds on the ability of frame-based simulation to solve for dynamics using very few control frames while embedding highly detailed geometry - here an adaptive mesh that accurately represents the cut boundaries. Our solution relies on a non-manifold grid to compute shape functions that faithfully adapt to the topological changes occurring while cutting.  New frames are dynamically inserted to describe new regions. We provide incremental mechanisms for updating simulation data, enabling us to achieve interactive rates. We illustrate our method with examples inspired by the traditional Kirigami artform.
+                </td>
+            </tr>
+    <tr class="publication-line">
+            <td class="teaser" rowspan="5">
+                <a href= "https://hal.inria.fr/hal-01206764"> <img alt="Teaser" style="width:150px;height:100px" src = "https://hal.inria.fr/hal-01206764/file/Lejemble_2015_Thumbnail.png"></a>
+            </td>
+            <td class="title">
+                <a href = "https://hal.inria.fr/hal-01206764">Interactive procedural simulation of paper tearing with sound</a>
+            </td>
+        </tr>
+            <tr>
+                <td class="authors">
+                    Thibault Lejemble, Amélie Fondevilla, Nicolas Durin, Thibault Blanc-Beyne, Camille Schreck, Pierre-Luc Manteaux, Paul G. Kry, Marie-Paule Cani
+                </td>
+            </tr>
+            <tr>
+                <td class="conference">
+                    Motion In Games 2015
+                </td>
+            </tr>
+            <tr>
+                <td class="download">
+                    [<a href= "https://hal.inria.fr/hal-01206764/document">Paper (PDF)</a>] [<a href= "https://hal.inria.fr/hal-01206764/file/Lejemble_MIG2015_IPSPTS.mp4">Movie (MP4, 20.56MB)</a>]
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Abstract: We present a phenomenological model for the real-time simulation of paper tearing and sound. The model uses as input rotations of the hand along with the index and thumb of left and right hands to drive the position and orientation of two regions of a sheet of paper. The motion of the hands produces a cone shaped deformation of the paper and guides the formation and growth of the tear. We create a model for the direction of the tear based on empirical observation, and add detail to the tear with a directed noise model. Furthermore, we present a procedural sound synthesis method to produce tearing sounds during interaction. We show a variety of paper tearing examples and discuss applications and limitations.
+                </td>
+            </tr>
+    <tr class="publication-line">
+            <td class="teaser" rowspan="5">
+                <a href= "http://hal.inria.fr/hal-00914653"> <img alt="Teaser" style="width:200px;height:100px" src = "https://team.inria.fr/imagine/files/2014/01/arpsTeaserThumbnail.jpg"></a>
+            </td>
+            <td class="title">
+                <a href = "http://hal.inria.fr/hal-00914653"> Exploring the Use of Adaptively Restrained Particles for Graphics Simulations</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="author">
+            Pierre-Luc Manteaux, François Faure, Stéphane Redon, Marie-Paule Canii
+        </td>
     </tr>
-    
-    <tr>
-            <td style="padding:16px;" width="200" align="center"><a href= "https://hal.inria.fr/hal-01206764"> <img alt="Teaser" style="width:150px;height:100px" src = "https://hal.inria.fr/hal-01206764/file/Lejemble_2015_Thumbnail.png"></a></td>
-            <td style="padding:16px;"><big><a href = "https://hal.inria.fr/hal-01206764">Interactive procedural simulation of paper tearing with sound</a></big> <br>
-             Thibault Lejemble, Amélie Fondevilla, Nicolas Durin, Thibault Blanc-Beyne, Camille Schreck, Pierre-Luc Manteaux, Paul G. Kry, Marie-Paule Cani, <i><b>MIG 2015</b></i> <br>
-            [<a href= "https://hal.inria.fr/hal-01206764/document">Paper (PDF)</a>] [<a href= "https://hal.inria.fr/hal-01206764/file/Lejemble_MIG2015_IPSPTS.mp4">Movie (MP4, 20.56MB)</a>] <br>
-             <b> Abstract:</b> We present a phenomenological model for the real-time simulation of paper tearing and sound. The model uses as input rotations of the hand along with the index and thumb of left and right hands to drive the position and orientation of two regions of a sheet of paper. The motion of the hands produces a cone shaped deformation of the paper and guides the formation and growth of the tear. We create a model for the direction of the tear based on empirical observation, and add detail to the tear with a directed noise model. Furthermore, we present a procedural sound synthesis method to produce tearing sounds during interaction. We show a variety of paper tearing examples and discuss applications and limitations.
-    </tr>
-    
-    <tr>
-            <td style="padding:16px;" width="200" align="center"><a href= "http://hal.inria.fr/hal-00914653"> <img alt="Teaser" style="width:200px;height:100px" src = "https://team.inria.fr/imagine/files/2014/01/arpsTeaserThumbnail.jpg"></a></td>
-            <td style="padding:16px;"><big><a href = "http://hal.inria.fr/hal-00914653"> Exploring the Use of Adaptively Restrained Particles for Graphics Simulations</a></big> <br>
-            Pierre-Luc Manteaux, François Faure, Stéphane Redon, Marie-Paule Cani, <i><b>VRIPHYS 2013</b></i> <br>
-           [<a href= "http://hal.inria.fr/docs/00/91/46/53/PDF/arps-vriphys2013.pdf">Paper (PDF)</a>] [<a href= "http://hal.inria.fr/docs/00/91/46/53/VIDEO/VideoPaper1004.flv">Movie (FLV, 13.2MB)</a>] <br>
-           <b> Abstract:</b> In this paper, we explore the use of Adaptively Restrained (AR) particles for graphics simulations. Contrary to previous methods, Adaptively Restrained Particle Simulations (ARPS) do not adapt time or space sampling, but rather switch the positional degrees of freedom of particles on and off, while letting their momenta evolve. Therefore, inter-particles forces do not have to be updated at each time step, in contrast with traditional methods that spend a lot of time there. We present the initial formulation of ARPS that was introduced for molecular dynamics simulations, and explore its potential for Computer Graphics applications: We first adapt ARPS to particle-based fluid simulations and propose an efficient incremental algorithm to update forces and scalar fields. We then introduce a new implicit integration scheme enabling to use ARPS for cloth simulation as well. Our experiments show that this new, simple strategy for adaptive simulations can provide significant speedups more easily than traditional adaptive models.
+        <tr>
+            <td class="conference">
+                VRIPHYS 2013
+            </td>
+        </tr>
+        <tr>
+            <td class="download">
+                [<a href= "http://hal.inria.fr/docs/00/91/46/53/PDF/arps-vriphys2013.pdf">Paper (PDF)</a>] [<a href= "http://hal.inria.fr/docs/00/91/46/53/VIDEO/VideoPaper1004.flv">Movie (FLV, 13.2MB)</a>]
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Abstract: In this paper, we explore the use of Adaptively Restrained (AR) particles for graphics simulations. Contrary to previous methods, Adaptively Restrained Particle Simulations (ARPS) do not adapt time or space sampling, but rather switch the positional degrees of freedom of particles on and off, while letting their momenta evolve. Therefore, inter-particles forces do not have to be updated at each time step, in contrast with traditional methods that spend a lot of time there. We present the initial formulation of ARPS that was introduced for molecular dynamics simulations, and explore its potential for Computer Graphics applications: We first adapt ARPS to particle-based fluid simulations and propose an efficient incremental algorithm to update forces and scalar fields. We then introduce a new implicit integration scheme enabling to use ARPS for cloth simulation as well. Our experiments show that this new, simple strategy for adaptive simulations can provide significant speedups more easily than traditional adaptive models.
+            </td>
     </tr>
     </tbody>
     </table>
+</div>
 </section>
 
-<section>
+<section class="col-md-12">
     <h2>Teaching</h2>
     <section>
         <h3>Main courses</h3>
-        <table class="course">
+        <div class="table-responsive">
+        <table class="table course">
             <thead>
             <tr>
                 <th>Title</th>
@@ -175,6 +272,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
             </tr>
             </tbody>
         </table>
+    </div>
     </section>
 
     <section>
@@ -185,7 +283,8 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
     <section>
         <h3>Specific courses</h3>
         I participated to the management of students during the time of <em>special project</em> at Ensimag. These projects allowed me to be involved in advanced scientific problems on different topics. The list of the project I was involved in is just below. Also, from 2013 to 2016 I was invited to be part of the jury of these projects.
-        <table class="projet">
+        <div class="table-responsive">
+        <table class="table projet">
             <thead>
             <tr>
                 <th>Title</th>
@@ -251,6 +350,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
             </tr>
             </tbody>
         </table>
+    </div>
     </section>
 
 </section>
@@ -264,5 +364,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
     <address>by <a href="mailto:frajus@hotmail.fr">Frajus</a></address>
 </footer>
 
+</div>
+</div>
 </body>
 </html>
