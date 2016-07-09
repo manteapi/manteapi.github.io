@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<!-- Encoding -->
+<meta http-equiv="Content-Type" content="text/HTML; charset=utf-8"/>
+
+<!-- En-tête de la page -->
+<title>Pierre-Luc Manteaux homepage</title>
+
+<!-- <link rel="stylesheet" href="style.css"/> -->
+<link rel="stylesheet" href="latex2html5.css"> 
+<link rel="stylesheet" href="style.css"> 
+
+<!-- I love MathJax -->
+<!-- <script type="text/javascript"
+src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>-->
+<!-- But MathJax + PSTricks is better -->
+<script type="text/x-mathjax-config">
+// <![CDATA[
+    MathJax.Hub.Config({ 
+        TeX: {extensions: ["AMSmath.js", "AMSsymbols.js"]},     
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+        showProcessingMessages : false,
+        messageStyle : "none" ,    
+        showMathMenu: false ,
+        tex2jax: {
+            processEnvironments: true,
+            inlineMath: [ ['$','$'] ],
+            displayMath: [ ['$$','$$'], ["\[","\]"] ],
+            preview : "none",
+            processEscapes: true
+        },
+        "HTML-CSS": { linebreaks: { automatic:true, width: "latex-container"} }
+    });
+    // ]]>
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/javascript" src="latex2html5.min.js"></script> 
+
+<!--WebGL-->
+<script src="sylvester.js" type="text/javascript"></script>
+<script src="glUtils.js" type="text/javascript"></script>
+<script src="webgl-demo.js" type="text/javascript"></script>
+
+<!--Javascript library-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- Fragment shader program -->
+
+<script id="shader-fs" type="x-shader/x-fragment">
+void main(void) {
+            gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+        }
+</script>
+
+<!-- Vertex shader program -->
+
+<script id="shader-vs" type="x-shader/x-vertex">
+attribute vec3 aVertexPosition;
+
+      uniform mat4 uMVMatrix;
+      uniform mat4 uPMatrix;
+
+      void main(void) {
+        gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
+      }
+</script>
+
+<script language="javascript" type="text/javascript" src="menu.js"></script>
+
+</head>
+
+<body onload="start()">
+
+<header>
+    <h1>Miscellaneous</h1>
+    <hr>
+</header>
+
+<main>
+    <article>
+        <h3>MathJax (Decomposition of force computation)</h3>
+        <section> <!-- different part of an article or a group of article -->
+            <h4>Notations</h4>
+            <ul>
+                <li>$f$ stands for forces</li>
+                <li>$q$ stands for positions</li>
+                <li>$E$ stands for elastic energy</li>
+                <li>$F$ stands for deformation gradient</li>
+                <li>$\epsilon$ stands for strain</li>
+            </ul>
+        </section>
+        <section>
+            <h4>Decomposition</h4>
+            We can write :
+            $$
+            f = -\frac{dE}{dq} 
+            = - \left(\frac{dF}{dq}\right)^{T}
+            \left(\frac{d\epsilon}{dF}\right)^{T}
+            \left(\frac{dE}{d\epsilon}\right)$$
+            $$
+            \sigma = \frac{dE}{d\epsilon}
+            $$
+        </section>
+    </article>
+    <article>
+        <h3>WebGL test</h3>
+        <canvas id="glcanvas" width="640" height="480">
+            Your browser doesn't appear to support the HTML5 <code>&lt;canvas&gt;</code> element.
+        </canvas>
+    </article>
+</section>
+
+<article>
+    <h2> Javascript test </h2>
+    <p id="test" onmouseover="changeStyle()">Some test</p>
+    <p id="menu">Some text</p>
+    <button type="button" onclick="myFunction()">Try it</button>
+    <button id="testButton" type="button" onclick="testButton()">Add class</button>
+</article>
+
+<article>
+    <h2><a href="./slides/presentation.html"/>Test</a></h2>
+</article>
+
+<article>
+    <h2>Some of the best places I found to learn and stay aware of my field</h2>
+        <table>
+            <tbody><tr><td>
+                <a href="http://www.w3schools.com/"/>Web technologies</a>
+            </td></tr></tbody>
+            <tbody><tr><td>
+                    <a href="http://www.physicsbasedanimation.com/"/>Physics based animation</a>
+            </td></tr></tbody>
+        </table>
+</article>
+
+<article>
+    <h2><a href="stash.html"/>Stash</a></h2>
+</article>
+
+</main>
+
+<footer>
+    <hr>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a>
+    <a href="http://www.mathjax.org"><img title="Powered by MathJax" src="http://cdn.mathjax.org/mathjax/badge/badge.gif" alt="Powered by MathJax" /></a>
+    <address>by <a href="mailto:frajus@hotmail.fr">Frajus</a></address>
+</footer>
+
+</body>
+</html>

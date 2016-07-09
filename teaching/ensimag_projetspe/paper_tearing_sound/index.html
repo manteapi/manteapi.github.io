@@ -51,24 +51,43 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 <body onload="start()">
 
 <header>
-    <h1>Synthèse d'Image - Polytech Grenoble, RICM 4 - 2013</h1>
+    <h1>Animation sonorisée de papier qui se déchire - Ensimag 2<sup>ème</sup> année - 2015</h1>
     <hr>
 </header>
 
 <main>
 
 <section>
+    <h2>Membres du projet</h2>
+    <ul>
+        <li>Encadrants: Marie-Paule Cani, Pierre-Luc Manteaux</li>
+        <li>Étudiants: Thibault Blanc-Beyne, Thibault Lejemble, Nicolas Durin, Amélie Fondevilla</li>
+        <li>Durée: 3 semaines</li>
+    </ul>
+    <p><a href="https://ensiwiki.ensimag.fr/index.php/Projet_image_2015_:_Animation_sonorisee_de_papier_qui_se_dechire">Lien vers la page ensiwiki</a></p>
+</section>
 
-<ul>
-       <li><a href="data/TP1_Prise_En_Main_OpenGL.zip">TP1 : Prise en main d'OpenGL</a></li>
-       <li><a href="data/TP2_Transformations_Maillages_Indexing.zip">TP2 : Transformations, Maillages et Indexing</a></li>
-       <li><a href="data/TP3_Illumination_Locale.pdf">TP3 : Illumination locale</a></li>
-       <li><a href="data/TP4_Texturing.zip">TP4 : Introduction aux Textures</a></li>
-       <li><a href="data/TP5_Aliasing.zip">TP5 : Aliasing</a></li>
-       <li><a href="data/TP6_Bezier.zip">TP6 : Courbes de Bézier - Algorithme de De Casteljau</a></li>
-       <li><a href="data/projet.pdf">Projet : Jeu de course</a></li>
-</ul>
+<section>
+    <h2>Objectifs</h2>
+    <p>
+    La modélisation de phénomènes physiques est une problématique courante en informatique graphique. Malheureusement, la modélisation du papier, matière complexe et non-extensible n’est que très peu développée. Des travaux de recherche sont en cours pour la modélisation de papier qui se froissent, ou que l’on découpe. Mais à ce jour, aucun modèle de papier qui se déchire n’existe. En effet un modèle basé sur un système masse-ressort (modèle physique couramment utilisé) manquerait de réalisme dans ce contexte. Non seulement un tel modèle permettrait au papier de s’étirer, mais il provoquerait de plus des déchirements non voulus du papier : par exemple, si on essaie de tirer des deux côtés du papier. 
+    </p>
+    <p>
+    Notre but principal est donc de créer le premier modèle de papier qui se déchire. Nous devons aussi garantir un modèle temps-réel, donc avec des temps de calculs limités pour permettre un rendu visuel fluide. Enfin, le dernier enjeu sera d’intégrer le son au modèle : il devra être réaliste, et s’adapter aux différents types de déchirure. Etant donnée la complexité de la réalité physique du phénomène de déchirement, nous avons décider de limiter notre étude à une configuration simple de déchirure.
 
+    On traite du cas suivant : une feuille posée sur un plan 2D, que l’on va déchirer par le haut, à l’aide de l’action de deux mains. Chaque main va agir sur la déchirure à l’aide de deux doigts : l’index et le pouce. Il est entendu que bien que la feuille soit initialement dans un plan, le modèle passe en 3 dimensions dès le début du mouvement qui va engendrer la déchirure.
+    </p>
+</section>
+
+<section>
+    <h2>Résultats</h2>
+
+    <table>
+        <tr><td><img style="width:600px;height:600px" src="data/Resultats.png"/></td></tr>
+        <tr><td><img style="width:600px;height:600px" src="data/Resultat_Detail.png"/></td></tr>
+        <tr><td><img style="width:600px;height:600px" src="data/Cone52.jpg"/></td></tr>
+        <tr><td><img style="width:600px;height:600px" src="data/ResultatTriangulation.bmp"/></td></tr>
+    </table>
 </section>
 
 </main>
