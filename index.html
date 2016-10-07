@@ -71,9 +71,10 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
     <header>
         <h2>About</h2>
     </header>
-    <p>
-    I am a PhD candidate in the Imagine team, under the supervision of François Faure and Marie-Paule Cani. 
-    I received the engineering M.Sc. degree in computer sciences and mathematics from the École Nationale Supérieure d'Informatique et Mathématiques Appliquées de Grenoble (Ensimag) in 2012.
+    <p>        
+        I graduated my PhD at INRIA Rhone-Alpes on 3rd of October 2016. 
+        My thesis was on the simulation and control of physical phenomena (Advisors: <a title="François Faure Webpage" href="https://team.inria.fr/imagine/francois-faure/">Francois Faure</a> and <a title="Marie-Paule Cani Webpage" href="https://team.inria.fr/imagine/marie-paule-cani/">Marie-Paule Cani</a>).
+        I received the engineering M.Sc. degree in computer sciences and mathematics from the École Nationale Supérieure d'Informatique et Mathématiques Appliquées de Grenoble (Ensimag) in 2012.
     </p>
 </section>
 
@@ -81,7 +82,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
     <h2>Research</h2>
     <p>
     My research lies in the area of computer graphics, more specifically in physically based simulation of deformable models and fluids.
-    I am particularly interested in adaptive models to allow the expression of complex effects and drastically reduce computational cost.
+    I am particularly interested in adaptive models to allow the expression of complex effects and drastically reduce computational cost.        
     </p>
 </section>
 
@@ -89,13 +90,40 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
     <h2>Publications</h2>
 
     <div class="table-responsive">
-    <table class="publications">
-    <tr class="publication-line">
-            <td class="teaser" rowspan="5">
-                <a href= "http://manteapi.github.io/publications/starAdaptivity_CGF_2016/starAdaptivity-cgf.pdf"> <img alt="Teaser" style="width:200px;height:100px" src = "http://manteapi.github.io/publications/starAdaptivity_CGF_2016/STAR_Teaser.jpg"></a>
-            </td>
-            <td class="title"><a href = "http://manteapi.github.io/publications/starAdaptivity_CGF_2016/starAdaptivity-cgf.pdf">Adaptive Physically-Based Models in Computer Graphics</a></td>
-    </tr>
+    <table class="publications">      
+             <tr class="publication-line">
+                    <td class="teaser" rowspan="5">
+                        <a href= "http://manteapi.github.io/publications/fluidSculpting_MIG_2016/fluidSculpting-mig2016.pdf"> <img alt="Teaser" style="width:200px;height:150px" src = "http://manteapi.github.io/publications/fluidSculpting_MIG_2016/fluidSculptingTeaser.jpg"></a>
+                    </td>
+                    <td class="title"><a href = "http://manteapi.github.io/publications/fluidSculpting_MIG_2016/fluidSculpting-mig2016.pdf">Space-time sculpting of liquid animation</a></td>
+            </tr>
+            <tr>
+                <td class="authors">
+                    Pierre-Luc Manteaux<sup>*</sup>, Ulysse Vimont<sup>*</sup>, Chris Wojtan, Damien Rohmer, Marie-Paule Cani, <sup>*</sup>joint first authors
+                </td>
+            </tr>
+            <tr>
+                <td class="conference">
+                    Motion In Games 2016
+                </td>
+            </tr>
+            <tr>
+                <td class="download">
+                    [<a href= "http://manteapi.github.io/publications/fluidSculpting_MIG_2016/fluidSculpting-mig2016.pdf">Paper (PDF)</a>] [<a href= "http://manteapi.github.io/publications/fluidSculpting_MIG_2016/video/fluidSculpting_mig2016.mp4">Movie (MP4, 20.8MB)</a>]
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Abstract: We propose an interactive sculpting system for seamlessly editing pre-computed animations of liquid, without the need for any re-simulation. The input is a sequence of meshes without correspondences representing the liquid surface over time. Our method enables the efficient selection of consistent space-time parts of this animation, such as moving waves or droplets, which we call <em>space-time features</em>. Once selected, a feature can be copied, edited, or duplicated and then pasted back anywhere in space and time in the same or in another liquid animation sequence. Our method circumvents tedious user interactions by automatically computing the spatial and temporal ranges of the selected feature. We also provide space-time shape editing tools for non-uniform scaling, rotation, trajectory changes, and temporal editing to locally speed up or slow down motion. Using our tools, the user can edit and progressively refine any input simulation result, possibly using a library of pre-computed space-time features extracted from other animations. In contrast to the trial-and-error loop usually required to edit animation results through the tuning of indirect simulation parameters, our method gives the user full control over the edited space-time behaviors.
+                </td>
+            </tr>       
+        
+            <tr class="publication-line">
+                    <td class="teaser" rowspan="5">
+                        <a href= "http://manteapi.github.io/publications/starAdaptivity_CGF_2016/starAdaptivity-cgf.pdf"> <img alt="Teaser" style="width:200px;height:100px" src = "http://manteapi.github.io/publications/starAdaptivity_CGF_2016/STAR_Teaser.jpg"></a>
+                    </td>
+                    <td class="title"><a href = "http://manteapi.github.io/publications/starAdaptivity_CGF_2016/starAdaptivity-cgf.pdf">Adaptive Physically-Based Models in Computer Graphics</a></td>
+            </tr>
             <tr>
                 <td class="authors">
                     Pierre-Luc Manteaux, Chris Wojtan, Rahul Narain, Stephane Redon, François Faure, Marie-Paule Cani
