@@ -1,0 +1,446 @@
+=====================================================================================
+                                    Introduction
+=====================================================================================
+
+Slide 1
+========
+
+Bonjour à tous.
+Je suis Pierre-Luc Manteaux et je vais vous présenter les travaux réalisés pendant ma thèse,
+intitulée "Simulation et contrôle de phénomènes physiques", qui a été supervisé par François
+Faure et Marie-Paule Cani, au sein de l'équipe IMAGINE du laboratoire Jean Kuntzmann.
+
+Slide 2
+========
+Cette thèse s'inscrit dans le domaine de l'informatique graphique, 
+qui étudie comment créer et intéragir avec des scènes virtuelles.
+Une des applications phare de l'IG, qui l'a fait connaître au grand public, c'est l'animation.
+Au milieu des années 80, les dessins animés, qui étaient traditionnellement réalisé à la main,
+vont être créér à l'aide d'ordinateurs.
+Ça permet d'économiser un temps considérable sur des tâches répétitives.
+Sans brider l'imagination et la capacité à transmettre des émotions.
+Très rapidement, de nouveaux outils émergent, permettent de créer des animations toujours plus spec.
+Un de ces outils, qui va devenir indispensable, c'est la simulation physique.
+Qui fait partie des domaines dans lesquels s'inscrit ma thèse également.
+Elle va permettre de créer automatiquement des animations complexes et réalistes.
+Des animations qui auraient été très difficile, voire quasi-impossible à obtenir par le dessin.
+
+Slide 3
+========
+Au delà du cinéma, on retrouve l'IG et la SP dans d'autres applications pour le divertissement (JV).
+Mais aussi dans d'autres domaines, comme l'enseigment avec e.g logiciel chirurgie virtuelle,
+ou la fabrication, ou elle va permettre d'accélérer la conception d'objet tout en validant leur faisabilité.
+La capacité à simuler/visualiser/intéragir avec des comportements réalistes est importante. 
+
+Slide 4
+========
+Comment fait-on pour simuler des objets virtuels ?
+Très souvent, on va s'inspirer d'un objet réel.
+Cet objet, on va le représenter virtuellement, en approximant sa forme à l'aide d'une géométrie
+et en lui attribuant des propriétés physiques comme la masse où sa rigidité. 
+Cette étape, c'est la discrétisation spatiael.
+De la même manière pour pouvoir approximer son comportement, on va discrétiser le temps,
+i.e le découper en plusieurs instants.
+A chaque instant, on va utiliser la discrétisation spatiale 
+pour déterminer comment l'objet réagit à des forces extérieurs comme la gravité. 
+On va utiliser ces informations pour intégrer les équations du mouvement dans le temps
+et déterminer la position/vitesse de notre objet à l'instant suivant et etc..
+Pour que les applications que j'ai présenté remplissent leur objectifs.
+Il y a plusieurs défis auxquels la simulation physique doit faire face. 
+Je vais en introduire trois qui font échos aux travaux de ma thèse.
+
+Slide 5
+========
+Un des premiers défis qu'on rencontre, c'est celui de la complexité calculatoire.
+En utilisant discrétisation spatiale/temporelle grossière, on va réduire cette complexité 
+mais en contrepartie, on aura un comportement imprécis et pouvant présenter des instabilités.
+A l'inverse, en utilisant des discrétisations fines, on va pouvoir approximer fidèlement l'objet
+que l'on simule et garantir une simulation stable.
+En revanche, ça va nécessiter des ressources informatiques importantes (mémoire, temps de calcul).
+Par exemple, pour une simulation de liquide avec une discrétisation fine, on peut devoir
+attendre 30h de calcul pour 20s de simulation. On abandonne la notion d'intéractivité.
+Il y a un besoin constant de nouvelles techniques qui permettent de
+simuler des phénomènes à haute résolution avec des ressources informatiques qui sont limitées.
+
+Slide 6
+========
+Le second défi, lui, est relatif à la description des phénomènes que l'on cherche à simuler.
+Aujourd'hui on est capable de représenter de manière efficace de nombreux phénomènes.
+(rigide,déformable,fluide,liquide).
+On les retrouve fréquemment dans des environnements intéractifs grand publics:jeux vidéos, logiciel.
+En revanche, ce que l'on trouve moins, ce sont des phénomènes qui mettent en jeu des changements de formes et d'état important comme la découpe/fracture d'objets déformables. 
+Pour retrouver ces phénomènes dans des contextes intéractifs, où ils sont très attendu.
+On a besoin de nouveaux modèles qui puissent décrire ces évolutions de manière efficace.
+
+Slide 7
+========
+Le troisième défi concerne le contrôle de simulation.
+Dans les logiciels existants, même en ayant une idée précise de ce que l'on souhaite, 
+Ça va rester long et difficile d'obtenir un résultat satisfaisant. Principalement pour 3 raisons:
+Une interface peu intuitive, des outils de contrôle indirect et un temps de calcul long.
+Pour toutes ces raisons, ces logiciels restent peu utilisés par le grand public.
+Quand bien même certains sont gratuits et utilisées par des studios professionnelles pour des animations magnifique.
+Il y un besoin d'outils simple, direct, intuitifs pour le contrôle de simulations.
+
+Slide 8
+========
+Ok, ce sont les trois défis autour desquelles s'articulent les contributions de cette thèse.
+Tout d'abord, on a étudié les modèles adaptatifs existants dont je vais parler dans un instant.
+On a étendu un modèle issu du domaine de la dynamique moléculaire à l'informatique graphique, 
+pour la simulation de liquide/vêtement.
+Ensuite, on s'est intéressé à la simulation de découpe. 
+On propose une technique qui permet de simuler de manière intéractive 
+des découpes très détaillées d'objets fins déformables.
+Enfin, sur le contrôle de simulation, 
+on propose une nouvelle approche qui consiste à éditer des animations de liquide existantes 
+à l'aide d'outils inspirés de la sculpture virtuelle.
+
+=====================================================================================
+                                        ARPS
+=====================================================================================
+
+Slide 9
+========
+Dans cette première contribution, 
+on a étudié un modèle physique adaptatif issu de la dynamique moléc. qui permet d'accélérer
+des simulations de particules.
+On propose des extensions qui permettent de l'utiliser dans des applications graphiques.
+
+Slide 10
+========
+Comme je le disais précédemment, une simulation physique peut coûter cher en temps de calcul.
+Pour schématiser, plus le phénomène est complexe et plus on cherche à avoir un résultat réaliste.
+Plus on va devoir utiliser un échantillonnage dense à la fois spatial et temporel 
+pour représenter fidèlement les détails que l'on cherche à capturer. 
+Irrémédiablement, ça va résulter en un coût important, voire prohibitif.
+Les techniques adaptatives proposent une approche générale à ce problème.
+Qui consiste à modifier les différents composants de la simulation, dynamiquement,
+pour obtenir le meilleur compromis entre précision, performance et stabilité.
+Une des approches les plus connus consiste à adapter la discrétisation spatiale aux
+zones visuellement intéressante pour concentrer l'effort de calcul là où il les plus attendu.
+Ça peut être les plis d'un vêtements, surface de l'eau, ou ce qui sera au premier plan de la scène.
+
+Slide 11
+========
+Ce n'est pas la seule approche, il y a de nombreuses méthodes adaptatives, 
+que l'on peut regrouper dans différentes familles.
+Je ne vais pas toute les détailler ici.
+Je vais juste dire quelques mots sur les méthodes de freezing, en rouge.
+Auxquelles appartient le modèle que je vais présenter dans la suite.
+
+Slide 12
+========
+Elles ont pour objectif de gagner du temps dans des situations quasi-statiques. (no move).
+En restraignant la simulation aux zones actives, générallement visuellement intéressantes.
+On trouve essentiellement des travaux concernant les R et les RA. Et 1 travail pour liquide.
+Pour les R, le F est utilisé pour accélérer le traitement des collisions dans des scé. d'empilement.
+en ne traitant pas les groupes d'objets immobiles et en contact qui sont alors dit inactif.
+Pour les RA, les joints sont activés/désactivé en fonction de critère visuel, 
+comme la distance à la caméra pour simplifier les objets.
+Et enfin le travail de Goswami et al. sur les liquides particulaires.
+Qui consiste à approximer les particules lentes par des particules immobiles 
+et à ne simuler que les particules actives pour réduire compl.
+Ce travail est assez proche du notre puisqu'il traite du cas des liquide,
+mais malheureusement il ne respecte pas le principe d'action/réaction 
+et la question de quand/comment réactiver les particules de manière cohérente n'est pas addréssée.
+
+Slide 13
+========
+Le modèle de freezing qu'on propose d'étudier répond à cette question de manière assez simple.
+Ce modèle s'appelle ARPS, a été init. proposé dans le domaine de la dyn. mol par A & R.
+L'idée de base est similaire à celle de Goswami et al.
+Les particules lentes sont considérées immobile, inactives.
+Du coup les forces inter-particules sont constantes et n'ont plus à être calculées.
+La différence est dans l'intégration du mouvement des particules.
+Toute les particules, actives ou inactives sont intégrées.
+La quantité de mouvement associée aux forces constantes continuent d'être accumulée.
+Jusqu'à un certain seuil où la particule va redevenir active.
+Artemova et Redon ont proposé une légère modification des équations du mouvement qui permet à la
+particule ré-activée de suivre un mouvement physiquement cohérent et de ne pas partir comme un boulet de canon.
+La méthode a été validée sur différents exemples comme en bas à droite.
+Elle permet d'obtenir des accélérations intéressantes, 
+de préserver les caractéristiques de la simulation.
+Je vais prendre l'exemple d'un oscillateur pour mieux illustrer son fonctionnement.
+
+Slide 14
+=========
+Sur la gauche un oscillateur harmonique, deux particules reliés par un ressort, une particule fixe.
+Sur la droite le protrait de phase de la simulation qui décrit l'évolution de la quantité de mouvement en fonction de la position de la particule. 
+Pendant une simulation classique, la force inter-particule est calculée à chaque pas de temps,
+Maintenant, le même système mais simulé avec l'ARPS.
+Le portrait de phase est légèrement différent.
+Il est divisée en trois régions qui décrivent les différentes dynamiques(restr., trans., classique.)
+A ces dynamiques, correspond l'état de la particule, qui peut être inactive, trans., active.
+Pendant la dynamique restrainte, la particule est immobile aucune force n'est calculée, 
+mais la particule accumule de la quantité de mouvement jusqu'à un certain seuil. 
+Alors la particule devient transitive.
+L'objectif de cette phase est de faire le lien entre la dynamique restreinte et classique.
+Ensuite la particule redevient active et suit une dynamique classique.
+Et donc, en utilisant des seuils adaptés pour la zone de transition, on peut avoir une simulation adaptative qui reste proche de la simulation de référence.
+
+Slide 15
+========
+Nos contributions, ici, se limitent à l'extension de cette méthode à des applications pour l'IG.
+Tout d'abord, on propose d'appliquer l'ARPS à la simulation de liquide.
+Ensuite, dans le cadre de la simulation de vêtement, on propose un intégrateur implicite, dérivé de l'ARPS.
+
+Slide 16
+=========
+Pour la simulation de liquide, on a choisi de combiner l'ARPS avec le modèle SPH de Becker et al.
+Ce modèle permet de simuler un liquide à l'aide de particules qui interpolent les différentes 
+quantités qui décrivent le liquide (pression, densité, vitesse, ...).
+Il est assez gourmand parce que pour chaque particule on fait une recherche de voisinage.
+En utilisant l'intégrateur proposé par Artemova et Redon, on peut écrire un algorithme incrémentale
+qui restreint les calculs aux particules actives: forces/scalaires qui interviennent mais 
+plus important la recherche des voisins qui est le gouleau d'étranglement de la méthode.
+
+Slide 17-18
+============
+Voici quelques résultats. 
+Tout d'abord une simulation d'un dam break où l'on compare SPH et l'ARPS.
+Ici la visualisation de l'état des particules. 
+Pour cette simulation on a obtenu une accélération moyenne de 3.8.
+On peut constate que l'on a un comportement très proche d'une simulation classique.
+
+Slide 19-20
+============
+Et un second exemple dans lequel on a créé un courant permanent.
+Une fois que le flux est installé, un grand nombre de particules bougent très peu mais réagissent aux intéractions avec les particules actives.
+L'accélération moyenne est de 2.7 et on voit bien dans cet exemple que l'activation/la désactivation des particules est bien gérée par l'algorithme.
+
+Slide 21
+=========
+Passons maintenant à la simulation de vêtement.
+Pour des objets structurés comme les vêtements, l'intégration explicite nécessite de très petit pas de temps et ralentit considérablement la simulation.
+Une solution classique consiste à utiliser un intégrateur implicite comme celui proposé par Baraff et Witkin.
+Les éq. du mouvement sont alors discrétisés en considérant les forces à la fin du pas de temps.
+En utilisant un développement de Taylor Young, on arrive à un système linéaire qu'il faut résoudre.
+La résolution est cher mais permet d'utiliser un pas de temps beaucoup plus grand.
+Notre idée ici est de dériver un intégrateur implicite pour l'ARPS pour réduire la taille du système linéaire en accord avec le nombre de particules actives.
+
+Slide 22
+========
+On est tout simplement parti des équations du mouvement décrite par l'ARPS.
+On a suivi la même procédure que je viens de décrire : discrétisation, développement taylor.
+On obtient un système linéaire similaire à celui que l'on avait mais qui contient 2 nouveaux termes.
+Une matrice et un vecteur qui servent à encapsuler l'état des particules.
+On peut observer que lorsque les particules sont inactives, on retrouve une intégration explicite.
+Alors que lorsque les particules sont actives on retrouve l'intégration implicite.
+Donc on peut extraire les particules inactives du système linéaire et ainsi réduire sa taille.
+
+Slide 23-24
+========
+On a implémenté ce solveur hybride sur un cas extrêmement simple d'un vêtement qui tombe sous l'effet de la gravité.
+Les particules inactives en rouge sont intégrées explicitement, les particules actives en vert sont intégrées implicitement.
+On a bien une réduction du système linéaire qui permet d'obtenir une accélération de 2.7.
+
+Slide 25
+========
+Voilà pour cette première partie.
+On a étendu à l'informatique graphique une nouvelle approche 
+pour approximer de manière cohérente des simulations de particules.
+Pour les
+On l'a fait de deux manières, via une application aux fluides et via une application aux vêtements.
+Dans les deux cas, on a obtenu des accélérations encourageantes.
+La méthode n'est pas sans limite, on a observé des instabilités concernant l'intégration implicite, qui viennent de la fonction de restriction utilisée pour gérer la transition des particules.
+Ça nécessiterait de mieux comprendre l'origine du problème pour pouvoir apporter des solutions.
+Sinon, ça serait également intéressant d'étudier l'utilisation de critère visuel tel que la distance à la caméra pour déterminer l'état des particules et ainsi concentrer les ressouces là où elles contribuent le plus à l'intérêt visuel.
+
+====================================================================
+                                Découpe
+====================================================================
+
+Slide 26
+=======
+Je vais passé à la contribution suivante dans laquelle on s'est intéressé à la découpe détaillée et intéractive d'objets fins déformable comme du papier ou du tissu.
+Avant de parler de notre méthode, je vais redire quelques mots sur l'interaction / détails.
+
+Slide 27
+=======
+
+Pour que l'immersion dans un EV soit intéressante, il faut que l'utilisateur ait des intéractions
+réalistes/spectaculaires avec les objets qui l'entoure.
+Une intéraction qui décuple cette immersion, c'est de pouvoir changer la forme d'un objet.
+E.g dans les jeux vidéos avec la destruction d'objets en pls débris.
+
+Là où ça coince c'est que ces intéractions restent assez limités -> immersion limité
+Tout d'abord elles se limitent principalement aux rigides, et ensuite, 
+comme les deux images l'illustrent, parce que le LOD reste assez faible. 
+E.g les débris vont avoir une géométrie similaire/simple.
+
+La principale raison est que les ressources informatiques sont limitées pour pouvoir garantir l'intéractivité. On peut gérer une certaine quantité détails mais quand celle-ci va augmenter à cause des intéractions, on sera limité. 
+Toujours à cause de cette très forte relation entre le niveau de détails géométriques souhaité 
+et le nombre de DDL utilisé. 
+Dans ce contexte, assurer des changements topologiques détaillés et interactifs reste un défi. 
+En particulier dans un jeu vidéo où l'on souhaite une variation faible du nombre de DDL, 
+
+Aujourd'hui il y a deux grandes approches pour réduire la dépendance entre le LOD et le nb. de DDL,
+et ainsi pouvoir représenter des changements topologiqes.
+
+Slide 28
+========
+
+Dans la première approche: 
+Le même modèle est utilisé à la fois pour la visualisation et pour le calcul de la dynamique. 
+Et c'est par des opérations de remaillage que l'on va contrôler le nombre de DDL, 
+en les concentrant là où les détails sont les plus important. 
+L'image de gauche illustre cette approche, une feuille de papier est déchirer, 
+de nombreux de détails géométriques apparaissent le long de la déchirure 
+et les DDL y sont concentrés.
+Dans la second approche:
+Deux modèles distincts sont utilisés. Un modèle pour la visualisation. Un modèle pour la simulation.
+Le modèle visuel est embarqué dans le modèle physique. 
+Les deux modèles peuvent avoir des natures et des résolutions différentes. 
+En pratique, le modèle visuel est détaillé et le modèle physique est grossier. 
+Sur l'image de droite, on voit un modèle visuel détaillé de lapin en gris, 
+embarqué dans un modèle élément finis hexahédrique assez grossier en vert.  
+En procédant ainsi on peut limiter le nombre de DDL nécessaire pour de la découpe.
+Les résultats de ces deux approches sont très impressionnant. 
+La méthode d'embarquement permet de faire de la découpe d'objet 3D en temps réel. 
+Cependant, dans les deux cas, le nombre de DDL varie beaucoup fonction du nombre/détail découpes.
+Encore une fois parce que la relation entre les détails géométriques, la qualité de la simulation 
+et le nombre de DDL est extrêmement forte.
+
+Slide 29
+========
+
+Notre objectif dans ce travail, c'est de simuler des objets déformables qui subissent des changements topologiques détaillées, en utilisant un nombre de degré de liberté très faible. 
+Tout ça ayant pour conséquence de réduire significativement cette dépendance entre 
+détails géométrique, comportement plausible et quantité de DDL.
+Les 3 images que vous voyez sont des Kirigami, des objets qui présentent des découpes détaillées.
+faisant apparaître des comportements complexes, et on s'en est inspiré pour illustrer notre méthode.
+
+Slide 30
+========
+
+Notre méthode se base sur le modèle déformable des repères, proposé par Gilles et al. en 2011.
+Il permet de simuler des objets déformables complexes à l’aide de très peu de DoF.  
+L’idée clé étant que chacun des repères possède une grande région d’influence 
+appelée fonction de forme. 
+C'est une méthode d'embarquement, i.e que le modèle visuel et le modèle physique sont distincts.
+A gauche, un modèle échantillonée de repères en bleu, et à droite les régions d’influences. 
+Elles décroient en fontion de la distance géodésique. 
+
+Slide 31
+========
+
+On propose un processus de découpe qui permet de conserver les avantages de cette méthode.
+I.e un niveau de détails élevé et un très faible nombre de DDL.
+En partant d'un maillage embarqué dans une simulation basé repère.
+L'utilisateur peut appliquer des découpes au niveau du modèle visuelle 
+qui est mise à jour à l'aide d'un algorithme de remaillage.
+Ensuite les fonctions de formes des repères sont mise à jour pour prendre 
+en compte les changements topologiques dans la dynamique.
+
+Slide 32
+========
+
+Voici une vidéo illustrant notre pipeline.
+Un maillage est échantillonné avec 5 repères (blue circles). A droite, les fonctions de formes de chacun des repères. On découpe une spirale dans ce maillage et l’on met à jour dynamiquement les fonctions de formes pour prendre en compte la nouvelle topologie. 
+
+Slide 33
+=========
+
+Ainsi on a un modèle visuelle comportant des découpes détaillées 
+qui peut être simulé avec un très faible nombre de DOF (5).
+
+Slide 34
+========
+
+Pour réaliser cet objectifs, on a mis en place 3 alg. qui constituent nos contributions.
+Le premier permet de mettre à jour dyna. les SF pr représ. la topo. du maillage au niveau de la dyn.
+Le second permet de ré-échantillonner dynamiquement des repères. 
+Même si l'on souhaite un nombre de dof qui soit faible et quasi constant, 
+certains cas nécessite un rééchantillonnage.
+Notamment au moment où une partie du modèle est complètement découpé et ne contient pas de repères.
+Le troisième consiste à exploire la localité des découpes pour mettre à jour de manière incrémentale
+les données de la simulation. 
+Dans cette présentation je vais me concentrer sur les 2 premières contributions.
+
+Slide 35
+=======
+
+Commencons avec les fonctions de formes.
+Elles sont calculées sur une grille qui est calquée sur le modèle visuelle. 
+Un diagramme de voronoi discret est calculé à partir de la position des repères. 
+Puis pour chaque repère, on construit une fonction qui vaut 1 à l’emplacement du repère, 0 à ses voisins de Voronoi et 0,5 sur la frontière. 
+Ce qui nous donne une fonction linéairement décroissante par rapport à la distance géodésique.
+Une fois que le modèle visuel a été découpé: 
+on va reporter les changements topologiques sur la connectivité de la grille 
+et recalculer les distances géodésiques utilisée pour le calcul de la fonction de forme.
+Pour ce faire, on va utiliser une grille non-manifold.
+
+Slide 36
+=======
+
+Une grille non-manifold, c’est tout simplement une grille où les cellules peuvent stocker plusieurs connectivités indépendantes. 
+Ces cellules sont alors dupliquées autant de fois qu’il y a de connectivités.
+Disons que l’on part d’une grille à connectivité 8.
+Si une découpe passe en travers d’une cellule. Celle-ci sera dupliquée. 
+Chacun des duplicats aura une connectivité de 5 voisins.
+Pourquoi cette structure pour représenter la topologie du modèle ? 
+Le principal intérêt est de découpler autant que possible la résolution de la grille de la complexité géométrique des découpes.
+Peu importe le niveau de détail le long des contours des découpes, peu importe le nombre de débris,
+on est capable de les représenter au niveau d’une grille basse résolution.
+
+Slide 37
+========
+
+On a maintenant un pipeline de découpe qui permet de réprésenter la topologie du maillage au niveau de la dynamique. Tout en ayant un découplage détail/simulation assez fort. 
+Maintenant il reste à s’assurer que toutes les parties du modèle découpé sont échantillonné par des repères pour pouvoir être simulé. 
+On peut garantir un faible nombre de DoF, modulo le nombre de parties découpées.
+La stratégie de rééchantillonnage est la suivante. On détecte les régions vides à l’aide d’un algorithme de remplissage. On échantillonne uniformément les régions vides à l’aide d’une relaxation de Lloyd. Et enfin, on va interpoler les orientations/vitesses des nouveaux repères, à partir des anciens repères qui influencait la région découpée pour réduire les discontinuités de positions et de vitesses.
+Parlez du nombre de repères ?
+
+Slide 38
+========
+
+Voici quelques résultats.
+Tout d’abord, un exemple montrant la capacité de notre système à gérer des découpes qui s’intersectent. La simulation comportent uniquement 5 repères.
+
+Slide 39
+========
+
+Ensuite voici un exemple où plusieurs formes détaillées ont été découpées. A chaque découpe d’une partie, on rééchantillonne le modèle à l’aide de repère. Dans cet exemple, on commence avec 5 repères et on termine avec 12.
+
+Slide 40
+========
+
+Enfin, voici un exemple comportant 47 repères pour une cinquantaine de découpe. Ce qui permet de faire émerger un comportement de flexion. 47 repères, ça peut sembler beaucoup par rapport aux simulations précédentes, mais le modèle visuel lui comporte 4000 sommets. On reste très loin de ce qui aurait été nécessaire avec une simulation FEM.
+
+Slide 41
+========
+
+Quelques mots sur les performances.
+Sur la première ligne, le nombre de repères.
+Sur la seconde, le FPS avant,pendant,après la découpe.
+Sur la dernière, le pourcentage de ressource utilisé au moment de la mise à jour du système.
+On constate, que pendant la découpe, on a une forte chute du FPS. Cela vient principalement de notre remaillage qui doit jongler entre différentes structures. Mais on peut constater qu’il y a peu de différence entre avant/après la découpe, malgré une augmentation drastique des détails géométriques.
+Enfin, la dernière ligne confirme bien que la mise à jour incrémentale fonctionne bien. On reste sous les 20% pour les trois derniers exemple. Le premier exemple est un peu spéciale, car on a une découpe qui occupe la quasi-totalité du modèle, uniquement 5 repères. Ce qui fait que même un changement locale aura des conséquences globales sur les régions d’influences.  
+
+Slide 42
+========
+
+Synthèse:
+on propose une méthode pour simuler la découpe détaillée d’objets fins, à l’aide de très peu de DDL.
+Pour ce faire, on a proposé une méthode de mise à jour des régions d’influence, basée sur une grille non-manifold. Ainsi que des stratégies de ré-échantillonnage et de mise à jour incrémentale des données.
+A la fin de ce travail, on envisage différentes pistes.
+Tout d’abord on souhaiterait appliquer la même méthode à des objets volumiques. 
+Tout est en place, il reste à pouvoir constuire notre grille à partir d’un contour surfacique. 
+Pour le moment, ce n’est pas le cas.
+On aimerait également étendre cette méthode à la fracture.
+La méthode des repères est surtout intéressante pour des simulation où la dynamique rés. moyenne.
+Ça serait compliqué de mesurer précisément les tenseurs des contraintes qui donneront les dir. de fracture. Une idée consisterait à avoir une évaluer de manière grossière la direction de fracture, et
+d'utiliser un modèle procédural pour ajouter des détails le long de la fracture.
+Enfin, il reste du travail concernant le ré-échantillonnage des repères. 
+En fonction des matériaux et de la qualité de simulation, 
+il faudrait varier le nb de repères que l'on ré-échantillonne.
+Pour des matériaux rigides, un seul repère est suffisant alors que pour des matériaux mou, il faut plus de repères pour que la gamme de déformation possible soit plus conséquentes.
+
+============================================================
+                    Sculpture de Liquide
+============================================================
+
+Slide 43
+========
+Je vais maintenant présenter notre dernière contribution.
