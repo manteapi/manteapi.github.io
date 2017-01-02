@@ -1,0 +1,52 @@
+---
+title: "Freakonometric - 2/01/2017 - Playground"
+output: html_document
+--- 
+
+```{r include = FALSE}
+library("ggplot2")
+```
+
+###Data - Global Weather-related Disaster Loss as Proportion of the Global Gross Domestic Product
+```{r}
+db=data.frame(year=1990:2016,
+              ratio=c(.23,.27,.32,.37,.22,.26,.29,.15,.40,.28,.14,.09,.24,.18,.29,.51,.13,.17,.25,.13,.21,.29,.25,.2,.15,.12,.12))
+```
+
+###Bar plots and linear smoothing with confidence band
+
+```{r}
+#stat_smooth : lm = linear model, se = confidence band
+ggplot(data = db, aes(x = year,y = ratio)) + geom_bar(stat="identity") + stat_smooth(method = "lm", se = TRUE)
+```
+```{r}
+###Regression model summary
+summary(lm(ratio~year, data=db))
+```
+
+```{r}
+###Point plots
+ggplot(data = db, aes(x = year, y = ratio)) + stat_smooth(method = "lm", se = TRUE) + geom_point()
+```
+
+###Non-linear regression - Local polynomial regression fit
+
+```{r}
+ggplot(data = db, aes(x = year, y = ratio)) + stat_smooth(method = "loess", se = TRUE) + geom_point()
+```
+
+###Times series and Exponential smoothing
+
+```{r}
+#ts function will convert a numeric vector into an R time series object
+ratio=ts(data = db$ratio, start = 1990, frequency = 1)
+plot(ratio, xlim=c(1990,2030))
+#exponential smoothing model
+hw=HoltWinters(ratio,gamma=FALSE)
+#prediction
+phw=predict(hw, n.ahead=15,prediction.interval = TRUE)
+#plot
+plot(hw, phw, xlim=c(1990,2030))
+polygon(c(2017:2031,rev(2017:2031)), c(phw[,2],rev(phw[,3])),border=NA,col=rgb(0,0,1,.2))
+```
+#render("~/Documents/naturalDisaster.Rmd")
