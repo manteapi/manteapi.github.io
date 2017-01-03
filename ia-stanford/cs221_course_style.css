@@ -1,0 +1,55 @@
+/*
+Commentaires CSS
+ */
+
+.course a:hover
+{
+    color:orange;
+}
+
+.course a:visited
+{
+    color:blue;
+}
+
+body
+{
+    font-size: medium;
+    font-family: Helvetica, Georgia, Serif;
+    background-color: white;
+    margin: auto;
+}
+
+.course p, ul, li, ol
+{
+    font-size: medium;
+    font-family: Helvetica, Georgia, Serif;
+}
+
+.course hr
+{
+    border:none;
+    height:1px;
+    background-color:black;
+}
+
+.course main
+{
+    /*padding : 20px;*/
+    margin-left:auto;
+    margin-right:auto;
+    /*box-shadow:0px 0px 5px 5px #888*/
+}
+
+.course article section h3,h4,h5,h6
+{
+    text-align: left;
+}
+
+.course pre
+{
+}
+
+.course pre code
+{  
+}
