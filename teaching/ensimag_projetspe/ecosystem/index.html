@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 
@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8"/>
 
 <!-- En-tête de la page -->
-<title>Pierre-Luc Manteaux homepage</title>
+<title>Ecosystème 2016 - Teaching - Pierre-Luc Manteaux</title>
 
 <!-- <link rel="stylesheet" href="style.css"/> -->
 <link rel="stylesheet" href="latex2html5.css"> 
@@ -41,23 +41,42 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 <script type="text/javascript" src="latex2html5.min.js"></script> 
 
-<!--Javascript library-->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!--Highlight-->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 
-<script language="javascript" type="text/javascript" src="menu.js"></script>
+<!--Bootstrap & JQuery library-->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<!--Html scripts-->
+<script type="text/javascript" src="./../../../website.js"></script>
 
 </head>
 
-<body onload="start()">
+<body class="website">
 
+<div class="container">
+    <div class="row">
+
+    <script type="text/javascript">
+        document.write(website.header('./../../..'));
+    </script>
+
+<section class="col-md-12">
 <header>
     <h1>Génération d'un écosystème - Ensimag 2<sup>ème</sup> année - 2016</h1>
     <hr>
 </header>
+</section>
 
 <main>
 
-<section>
+<section class="col-md-12">
+<article>
+<section class="col-md-12">
     <h2>Membres du projet</h2>
     <ul>
         <li>Encadrants: Thomas Delame, Pierre-Luc Manteaux</li>
@@ -67,7 +86,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
     <a href="https://ensiwiki.ensimag.fr/index.php/Projet_image_2016_:_G%C3%A9n%C3%A9ration_d'un_%C3%A9cosyst%C3%A8me">Lien vers la page ensiwiki</a>
 </section>
 
-<section>
+<section class="col-md-12">
     <h2>Objectifs</h2>
     <p>
     Le but du projet est d’obtenir un rendu plaisant d’un écosystème dont la dynamique pourra apparaître comme réaliste aux yeux d’un observateur. Il est donc naturel de catégoriser les objectifs en deux sous-ensembles d'objectifs qui convergeront afin d'obtenir la simulation finale.
@@ -89,16 +108,19 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
     <p>
     La tâche la plus importante ici est de programmer l’intelligence artificielle de ces animaux. Cette intelligence doit à la fois prendre en compte les autres animaux et l’environnement de sorte à ce que les animaux puissent effectuer des tâches simples (fuite, chasse, reproduction, mort…) pour obtenir un écosystème visuellement plausible. 
     </p>
+</section>
 
-<section>
+<section class="col-md-12">
     <h2>Résultats</h2>
     <table>
-        <tr><td><img style="width:600px;height:250px" src="data/image1.png"/></td></tr>
-        <tr><td><img style="width:600px;height:250px" src="data/image2.png"/></td></tr>
-        <tr><td><img style="width:600px;height:250px" src="data/image3.png"/></td></tr>
+        <tr><td><img alt="screenshot" style="width:600px;height:250px" src="data/image1.png"/></td></tr>
+        <tr><td><img alt="screenshot" style="width:600px;height:250px" src="data/image2.png"/></td></tr>
+        <tr><td><img alt="screenshot" style="width:600px;height:250px" src="data/image3.png"/></td></tr>
     </table>
 </section>
 
+</article>
+</section>
 </main>
 
 <footer>
@@ -107,6 +129,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
     <a href="http://www.mathjax.org"><img title="Powered by MathJax" src="http://cdn.mathjax.org/mathjax/badge/badge.gif" alt="Powered by MathJax" /></a>
     <address>by <a href="mailto:frajus@hotmail.fr">Frajus</a></address>
 </footer>
-
+</div>
+</div>
 </body>
 </html>

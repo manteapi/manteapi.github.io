@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 
@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8"/>
 
 <!-- En-tête de la page -->
-<title>Pierre-Luc Manteaux homepage</title>
+<title>Simulation liquide 2013 - Teaching - Pierre-Luc Manteaux</title>
 
 <!-- <link rel="stylesheet" href="style.css"/> -->
 <link rel="stylesheet" href="latex2html5.css"> 
@@ -41,23 +41,43 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 <script type="text/javascript" src="latex2html5.min.js"></script> 
 
-<!--Javascript library-->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!--Highlight-->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 
-<script language="javascript" type="text/javascript" src="menu.js"></script>
+<!--Bootstrap & JQuery library-->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<!--Html scripts-->
+<script type="text/javascript" src="./../../../website.js"></script>
 
 </head>
 
-<body onload="start()">
+<body class="website">
 
+<div class="container">
+    <div class="row">
+
+    <script type="text/javascript">
+        document.write(website.header('./../../..'));
+    </script>
+
+<section class="col-md-12">
 <header>
     <h1>Simulation de liquide avec SPH - Ensimag 2<sup>ème</sup> année - 2013</h1>
     <hr>
 </header>
+</section>
 
 <main>
 
-<section>
+<section class="col-md-12">
+<article>
+
+<section class="col-md-12">
     <h2>Membres du projet</h2>
     <ul>
         <li>Encadrants: Marie-Paule Cani, Pierre-Luc Manteaux</li>
@@ -67,7 +87,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
     <p><a href="https://ensiwiki.ensimag.fr/index.php/Projet_image_2013_:_Animation_temps-r%C3%A9el_de_liquides_(Cascade)">Lien vers la page ensiwiki</a></p
 </section>
 
-<section>
+<section class="col-md-12">
     <h2>Objectifs</h2>
     <p>
     Nos objectifs pour ce projet couvraient trois aspects : modélisation physique, rendu graphique, et optimisations.
@@ -113,10 +133,10 @@ Enfin, un sujet de ce type mobilisant un certain nombre de ressources de l'ordin
 
 </section>
 
-<section>
+<section class="col-md-12">
     <h2>Résultats</h2>
 
-    <img style="width:600px;height:600px" src="data/ExempleSPH.png"/>
+    <img alt="screenshot" style="width:400px;height:400px" src="data/ExempleSPH.png"/>
 
     <ul>
         <li>
@@ -134,7 +154,8 @@ Enfin, un sujet de ce type mobilisant un certain nombre de ressources de l'ordin
     </ul>
 
 </section>
-
+</article>
+</section>
 </main>
 
 <footer>
@@ -143,6 +164,7 @@ Enfin, un sujet de ce type mobilisant un certain nombre de ressources de l'ordin
     <a href="http://www.mathjax.org"><img title="Powered by MathJax" src="http://cdn.mathjax.org/mathjax/badge/badge.gif" alt="Powered by MathJax" /></a>
     <address>by <a href="mailto:frajus@hotmail.fr">Frajus</a></address>
 </footer>
-
+</div>
+</div>
 </body>
 </html>

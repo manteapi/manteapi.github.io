@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 
@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8"/>
 
 <!-- En-tête de la page -->
-<title>Pierre-Luc Manteaux homepage</title>
+<title>Visualisation scientifique 2013 - Teaching - Pierre-Luc Manteaux</title>
 
 <!-- <link rel="stylesheet" href="style.css"/> -->
 <link rel="stylesheet" href="latex2html5.css"> 
@@ -41,23 +41,41 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 <script type="text/javascript" src="latex2html5.min.js"></script> 
 
-<!--Javascript library-->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!--Highlight-->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 
-<script language="javascript" type="text/javascript" src="menu.js"></script>
+<!--Bootstrap & JQuery library-->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<!--Html scripts-->
+<script type="text/javascript" src="./../../website.js"></script>
 
 </head>
 
-<body onload="start()">
+<body class="website">
 
+<div class="container">
+    <div class="row">
+
+    <script type="text/javascript">
+        document.write(website.header('./../..'));
+    </script>
+
+<section class="col-md-12">
 <header>
     <h1>Visualisation Scientifique - UJF, UFR IM<sup>2</sup>AG, Master 2 GICAO - 2013</h1>
     <hr>
 </header>
+</section>
 
 <main>
 
-<section>
+<section class="col-md-12">
+<article>
                                     <ul>
                                      <li><a href="data/TP1_Subdivision_Ondelette_Haar.zip">TP1 : Ondelette de Haar</a></li>
                                      <li>
@@ -99,8 +117,8 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
                                      </li>
                                      <li>Projet</li>
                              </ul>
+</article>
 </section>
-
 </main>
 
 <footer>
@@ -110,5 +128,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
     <address>by <a href="mailto:frajus@hotmail.fr">Frajus</a></address>
 </footer>
 
+</div>
+</div>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 
@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8"/>
 
 <!-- En-tête de la page -->
-<title>Pierre-Luc Manteaux homepage</title>
+<title>Animation papier 2015 - Teaching - Pierre-Luc Manteaux</title>
 
 <!-- <link rel="stylesheet" href="style.css"/> -->
 <link rel="stylesheet" href="latex2html5.css"> 
@@ -41,23 +41,41 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 <script type="text/javascript" src="latex2html5.min.js"></script> 
 
-<!--Javascript library-->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!--Highlight-->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 
-<script language="javascript" type="text/javascript" src="menu.js"></script>
+<!--Bootstrap & JQuery library-->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<!--Html scripts-->
+<script type="text/javascript" src="./../../../website.js"></script>
 
 </head>
 
-<body onload="start()">
+<body class="website">
 
+<div class="container">
+    <div class="row">
+
+    <script type="text/javascript">
+        document.write(website.header('./../../..'));
+    </script>
+
+<section class="col-md-12">
 <header>
     <h1>Animation sonorisée de papier qui se déchire - Ensimag 2<sup>ème</sup> année - 2015</h1>
     <hr>
 </header>
+</section>
 
 <main>
-
-<section>
+<section class="col-md-12">
+<article>
+<section class="col-md-12">
     <h2>Membres du projet</h2>
     <ul>
         <li>Encadrants: Marie-Paule Cani, Pierre-Luc Manteaux</li>
@@ -67,7 +85,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
     <p><a href="https://ensiwiki.ensimag.fr/index.php/Projet_image_2015_:_Animation_sonorisee_de_papier_qui_se_dechire">Lien vers la page ensiwiki</a></p>
 </section>
 
-<section>
+<section class="col-md-12">
     <h2>Objectifs</h2>
     <p>
     La modélisation de phénomènes physiques est une problématique courante en informatique graphique. Malheureusement, la modélisation du papier, matière complexe et non-extensible n’est que très peu développée. Des travaux de recherche sont en cours pour la modélisation de papier qui se froissent, ou que l’on découpe. Mais à ce jour, aucun modèle de papier qui se déchire n’existe. En effet un modèle basé sur un système masse-ressort (modèle physique couramment utilisé) manquerait de réalisme dans ce contexte. Non seulement un tel modèle permettrait au papier de s’étirer, mais il provoquerait de plus des déchirements non voulus du papier : par exemple, si on essaie de tirer des deux côtés du papier. 
@@ -79,17 +97,18 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
     </p>
 </section>
 
-<section>
+<section class="col-md-12">
     <h2>Résultats</h2>
 
     <table>
-        <tr><td><img style="width:600px;height:600px" src="data/Resultats.png"/></td></tr>
-        <tr><td><img style="width:600px;height:600px" src="data/Resultat_Detail.png"/></td></tr>
-        <tr><td><img style="width:600px;height:600px" src="data/Cone52.jpg"/></td></tr>
-        <tr><td><img style="width:600px;height:600px" src="data/ResultatTriangulation.bmp"/></td></tr>
+        <tr><td><img alt="screenshot" style="width:400px;height:400px" src="data/Resultats.png"/></td></tr>
+        <tr><td><img alt="screenshot" style="width:400px;height:400px" src="data/Resultat_Detail.png"/></td></tr>
+        <tr><td><img alt="screenshot" style="width:400px;height:400px" src="data/Cone52.jpg"/></td></tr>
+        <tr><td><img alt="screenshot" style="width:400px;height:400px" src="data/ResultatTriangulation.bmp"/></td></tr>
     </table>
 </section>
-
+</article>
+</section>
 </main>
 
 <footer>
@@ -98,6 +117,7 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
     <a href="http://www.mathjax.org"><img title="Powered by MathJax" src="http://cdn.mathjax.org/mathjax/badge/badge.gif" alt="Powered by MathJax" /></a>
     <address>by <a href="mailto:frajus@hotmail.fr">Frajus</a></address>
 </footer>
-
+</div>
+</div>
 </body>
 </html>

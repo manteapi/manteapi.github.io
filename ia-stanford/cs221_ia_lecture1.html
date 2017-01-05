@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8"/>
 
 <!-- En-tête de la page -->
-<title>Pierre-Luc Manteaux homepage</title>
+<title>AI - Lecture 1 - Notes</title>
 
 <!-- <link rel="stylesheet" href="style.css"/> -->
 <link rel="stylesheet" href="./../latex2html5.css">
@@ -68,18 +68,14 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
     
     <section class="col-md-12">
         <header>
-        <h2>Scattered notes about AI</h2>
+        <h2>Scattered notes</h2>
         </header>
         
-        <h3>Kind of definition</h3>
         <p>
-        An AI is an intelligent system able to resolve tasks that combine <strong>high societal impact</strong>, <strong>diversity</strong> and <strong>complexity</strong>. <br/>
-            An AI is not necessarily similar to human intelligence. <br/>
-            "What is an AI ?", "What is thinking ?" are difficult questions that are tackled in cognitive science. <br/>
-            In computer science, the question of "What an AI can do for you ?" is more often addressed. <br/>
+        An AI is a system able to resolve tasks that combine <strong>high societal impact</strong>, <strong>diversity</strong> and <strong>complexity</strong>. It is not necessarily similar to human intelligence. While coginitive science tackle difficult questions such as "What is an AI ?", "What is thinking ?", computer science more often address the question "What an AI can do for you ?". 
         </p>
         
-        <h3>Few applications with large societal impact</h3>
+        <p>Some of the most impactful AI applications : </p>
             <ul>
                 <li>Handwriting recognition - 1983-?</li>
                 <li>Machine translation - 1960s-?</li>
@@ -87,112 +83,99 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
                 <li>Autonomous driving - 1980s-?</li>
             </ul>
         
-        <h3>Human vs Machines</h3>
+            <p>
+            <em>Humans vs Machines</em> exists since several centuries. However when a machine rivalizes with what we think is a proof of <em>human intelligence</em>, then it becomes exciting and sensitive.
+            </p>
             <ul>
                 <li>1997: Deep Blue</li>
                 <li>2011: IBM Watson</li>
                 <li>2016: AlphaGo</li>
             </ul>
-        
-        <h3>Challenges</h3>
-        <p>
-            Complexity = <strong>Resources</strong> + <strong>Information</strong> = Time/Memory + Data
-        </p>
-        
-        <h3>Paradigm</h3>
-        <p>
-            What to compute + How to compute = <strong>Model</strong> + <strong>Algorithm</strong>
-        </p>
-    
-        <h3>Classification</h3>
-        <p>
-            AI techniques span from low intelligence to high intelligence model+algorithms.
-        </p>
-    </section>
-    
-    <section class="col-md-12">
-        <header>
-            <h2>Machine Learning</h2>
-            <blockquote>
+
             <p>
-                Machine learning allows to shift the complexity from the program to the data.
-                Learning algorithm maximizes accuracy on training examples.
-                Generalization is a leap of faith at the heart of machine learning algorithm : 
-                the trained program will produce good results beyond the set of training examples.
+            In 2017, the main paradigm to create an AI is a modeling approach. Any problem is separated into two subproblems : "What to compute ?" and "How to compute ?". "What to compute ?" is solved using a <strong>Model</strong> which formally depict the problem. "How to compute ?" is solved using an <strong>Algorithm</strong> which exploits the model to compute a solution to the problem.
             </p>
-            </blockquote>
-        </header>
-        
-        <h3>Low-level intelligence to high level intelligence models</h3>
-        <ul>
-            <li>
-                <strong>Reflex-based models</strong> <br/> 
-                Linear classifiers $f(x) = sign\left( \sum_{i} \omega_{i} \phi_{i}(x) \right)$ where $\phi_{i}(x)$ are features and $\omega_{i}$ are weights.
-            </li>
-            <li>
-                <strong>State-based models</strong> <br/>
-                A state captures all the relevant information about the past in order to act optimally in the future. <br/>
-                Applications : Search problems. <br/>
-                Models : markov decision processes, adversarial games, minimum cost paths through graphs.
-            </li>
-            <li>
-                <strong>Variable-based models</strong> <br/> 
-                A solution corresponds to an assignment of values to variables. <br/>
-                Models : Constraint satisfaction problem, Bayesian networks
-            </li>
-            <li>
-                <strong>Logic</strong> <br/>
-                Logic provices a compact language for modeling which gives us more expressivity. <br/>
-                Applications : Natural language parsin, knowledge representation, logical inference.
-            </li>
-        </ul>
+
+            <p>
+            In 2017, one of the main challenge the AI faces is the handling of complexity i.e 
+            <strong>Resources</strong> + <strong>Information</strong> = Time/Memory + Data
+            </p>
+
+            <p>
+            <strong>Machine Learning</strong> is a famous form of artificial intelligence.
+            It allows to shift the complexity from the program to the data.
+            Instead of implementing insanely complex programs to handle every possible cases, 
+            learning algorithm and data are used to produce results beyond the set of training examples.
+            This is called <strong>generalization</strong>, a kind of leap of faith at the heart of machine learning algorithm.
+            </p>
+
+            <p>
+            There are many models among the machine learning approach.
+            They can be classified from low-level intelligence to high-level intelligence.
+            </p>
+
+            <ul>
+                <li>
+                    <strong>Reflex-based models</strong> <br/> 
+                    Linear classifiers $f(x) = sign\left( \sum_{i} \omega_{i} \phi_{i}(x) \right)$ where $\phi_{i}(x)$ are features and $\omega_{i}$ are weights.
+                </li>
+                <li>
+                    <strong>State-based models</strong> <br/>
+                    A state captures all the relevant information about the past in order to act optimally in the future. <br/>
+                    Applications : Search problems. <br/>
+                    Models : markov decision processes, adversarial games, minimum cost paths through graphs.
+                </li>
+                <li>
+                    <strong>Variable-based models</strong> <br/> 
+                    A solution corresponds to an assignment of values to variables. <br/>
+                    Models : Constraint satisfaction problem, Bayesian networks
+                </li>
+                <li>
+                    <strong>Logic</strong> <br/>
+                    Logic provices a compact language for modeling which gives us more expressivity. <br/>
+                    Applications : Natural language parsin, knowledge representation, logical inference.
+                </li>
+            </ul>
         
         <blockquote>
             <p>
                 A key challenge is to combine the modeling richness of logic with the robustness and agility of machine learning
             </p>
         </blockquote>
-    </section>
 
-    <section class="col-md-12">
-        <header>
-            <h2>Optimization</h2>
-            $$\underset{ x \in \mathcal{C} }{\min} F(x)$$
-            <ul>
-                <li>$F$ is a function to optimize</li>
-                <li>$\mathcal{C}$ is a set of constraints</li>
-            </ul>
-        </header>
-        <h3>Basic tools</h3>
-            <ul>
-                <li><strong>Discrete optimization</strong> : Dynamic programming</li>
-                <li><strong>Continuous optimization</strong> : Gradient descent</li>
-            </ul>
-    </section>
+        <p>
+        Among the different tools used in these approach, <strong>optimization</strong> is one of the most important.
+        It can be <strong>discrete</strong> or <strong>continuous</strong>
+        </p>
+        $$\underset{ x \in \mathcal{C} }{\min} F(x)$$
+        <ul>
+            <li>$F$ is a function to optimize</li>
+            <li>$\mathcal{C}$ is a set of constraints</li>
+        </ul>
 
-            <h3>Discrete optimization : Dynamic programming + Levenshtein distance</h3>
-            <blockquote>
-                <p>
-                The Levenshtein distance is an edit distance between two strings $s$ and $t$ which measures the minimum number of character <strong>insertions</strong>, <strong>deletions</strong> and <strong>substitutions</strong> it takes to change $s$ into $t$. This distance can be computed using a <strong>mathematical recurrence</strong>.<br/>
-                </p>
-            </blockquote>
-
-            <h4>Implementation - Recurrence</h4>
+        <h3>Exercice 1 : Discrete optimization - Dynamic programming</h3>
+        <blockquote>
             <p>
-                Let $d(m,n)$ be the edit distance between the first $m$ letters of $s$ and the first $n$ letters of $t$. We can compute $d(m,n)$ from $d(m-1,n-1)$ using the following formula
+            The Levenshtein distance is an edit distance between two strings $s$ and $t$ which measures the minimum number of character <strong>insertions</strong>, <strong>deletions</strong> and <strong>substitutions</strong> it takes to change $s$ into $t$. This distance can be computed using a <strong>mathematical recurrence</strong>.<br/>
             </p>
-                $$
-                    d(m,n) = \min\left( 1+d(m-1,n), 1+d(m,n-1), 1_{s_{m},t_{n}}+d(m-1,n-1) \right)
-                $$
-            <p>
-                and the following terminal cases
-            </p>
-                $$
-                    \begin{array}{lll}
-                    d(m,n) = m & \text{if} & n=0 \\
-                    d(m,n) = n & \text{if} & m=0 \\
-                    \end{array}
-                $$
+        </blockquote>
+
+        <h4>Implementation - Recurrence</h4>
+        <p>
+            Let $d(m,n)$ be the edit distance between the first $m$ letters of $s$ and the first $n$ letters of $t$. We can compute $d(m,n)$ from $d(m-1,n-1)$ using the following formula
+        </p>
+            $$
+                d(m,n) = \min\left( 1+d(m-1,n), 1+d(m,n-1), 1_{s_{m},t_{n}}+d(m-1,n-1) \right)
+            $$
+        <p>
+            and the following terminal cases
+        </p>
+            $$
+                \begin{array}{lll}
+                d(m,n) = m & \text{if} & n=0 \\
+                d(m,n) = n & \text{if} & m=0 \\
+                \end{array}
+            $$
             <pre><code class="python">def levenshtein_recursive(s,t) :
     if len(s) == 0 : 
         return len(t)
@@ -238,7 +221,19 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
     return m[len(t)][len(s)]
             </code></pre>
 
-            <h3>Continous optimization : Gradient descent + Least squares line</h3>
+            <h3>Exercice 2 : Continous optimization - Gradient descent</h3>
+            <blockquote>
+            $$
+                \begin{array}{l}
+                \displaystyle
+                F(w) = \sum_{i}\left(wx_{i}-y_{i}\right)^{2} \\
+                \displaystyle
+                F'(w) = \sum_{i}2*\left(wx_{i}-y_{i}\right)x_{i} \\
+                \end{array}
+            $$
+            The function $F$ measures the distance between a line of slope $w$ and a set of 2D points $(x_{i},y_{i})$. A gradient descent will follow the gradient to find the slope $w$ that minimizes $F(w)$ which means $F'(w)=0$. It can be implemented as an iteration process which update $w$ according to the gradient of $F$ until $F$ is minimized.
+            </blockquote>
+
             <pre><code class="python">#Point set data
 xCoord = [0, 2, 4, 6, 8]
 yCoord = [0, 2, 4, 1, 4]
@@ -268,16 +263,14 @@ def gradientDescent() :
     optimalSlope = 0
     evaldF_next = deriv_costFunction(xCoord, yCoord, optimalSlope)
     evaldF_curr = evaldF_next
-    while abs(evaldF_next)>epsilon and iterNb<maxIterNb :
+    while abs(evaldF_next)&gt;epsilon and iterNb&lt;maxIterNb :
         evaldF_curr = evaldF_next
         evaldF_next = deriv_costFunction(xCoord, yCoord, optimalSlope)
         optimalSlope = optimalSlope - stepSize * evaldF_curr
         iterNb = iterNb + 1
     return optimalSlope
-            </code></pre>
-        </header>
+</code></pre>
     </section>
-    
 </article>
     
 </main>
