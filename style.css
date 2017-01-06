@@ -108,14 +108,14 @@ hr
     font-size: x-large;
 }
 
-td.center
+.website td.center
 {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
 
-table.center
+.website table.center
 {
     margin-left: auto;
     margin-right: auto;
