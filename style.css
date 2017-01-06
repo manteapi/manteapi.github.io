@@ -57,7 +57,7 @@ table.publications td.title
 
 td.institute
 {
-    width : 300px
+    width : 300px;
 }
 
 td.hours
@@ -85,7 +85,7 @@ hr
     background-color:black;
 }
 
-main
+.website main
 {
     /*padding : 20px;*/
     margin-left:auto;
@@ -107,9 +107,28 @@ main
 {
     font-size: x-large;
 }
+
+td.center
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+table.center
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
 canvas 
 {
     border: 2px solid black;
     width: 640px;
     height: 480px;
+}
+
+iframe
+{
+    border: 0px;
 }

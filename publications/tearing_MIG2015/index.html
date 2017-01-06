@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+    <!-- Encoding -->
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8"/>
+
+    <!-- En-tête de la page -->
+    <title>Paper tearing - Publications - Pierre-Luc Manteaux</title>
+
+    <!-- <link rel="stylesheet" href="style.css"/> -->
+    <link rel="stylesheet" href="./../../style.css"> 
+
+    <!-- I love MathJax -->
+    <!-- <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>-->
+    <!-- But MathJax + PSTricks is better -->
+    <script type="text/x-mathjax-config">
+    // <![CDATA[
+        MathJax.Hub.Config({ 
+            TeX: {extensions: ["AMSmath.js", "AMSsymbols.js"]},     
+            extensions: ["tex2jax.js"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+            showProcessingMessages : false,
+            messageStyle : "none" ,    
+            showMathMenu: false ,
+            tex2jax: {
+                processEnvironments: true,
+                inlineMath: [ ['$','$'] ],
+                displayMath: [ ['$$','$$'], ["\[","\]"] ],
+                preview : "none",
+                processEscapes: true
+            },
+            "HTML-CSS": { linebreaks: { automatic:true, width: "latex-container"} }
+        });
+        // ]]>
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+    <!--Highlight-->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!--Bootstrap & JQuery library-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!--Html scripts-->
+    <script type="text/javascript" src="./../../website.js"></script>
+
+    </head>
+
+    <body class="website">
+        <div class="container">
+            <div class="row">
+                <script type="text/javascript">
+                    document.write(website.header('./../../'));
+                </script>
+                <main>
+                    <section class="col-md-12">
+                        <header>
+                            <h1>Interactive procedural simulation of paper tearing with sound</h1>
+                            <h2><small>Thibault Lejemble, Amélie Fondevilla, Nicolas Durin, Thibault Blanc-Beyne, Camille Schreck, Pierre-Luc Manteaux, Paul G. Kry, Marie-Paule Cani </small></h2>
+                            <h2><small>Motion In Games 2015</small></h2>
+                            <hr>
+                        </header>
+                        <section>
+                            <img alt="Paper tearing" src = "tearingTeaser.png" width="800"> <h3>Summary</h3>
+                            <p>
+                                We present a phenomenological model for the real-time simulation of paper tearing and sound. The model uses as input rotations of the hand along with the index and thumb of left and right hands to drive the position and orientation of two regions of a sheet of paper. The motion of the hands produces a cone shaped deformation of the paper and guides the formation and growth of the tear. We create a model for the direction of the tear based on empirical observation, and add detail to the tear with a directed noise model. Furthermore, we present a procedural sound synthesis method to produce tearing sounds during interaction. We show a variety of paper tearing examples and discuss applications and limitations.
+                            </p>
+                            <h3>Downloads</h3>
+                                [<a href= "https://hal.inria.fr/hal-01206764/document">Paper (PDF)</a>] [<a href= "https://hal.inria.fr/hal-01206764/file/Lejemble_MIG2015_IPSPTS.mp4">Movie (MP4, 20.56MB)</a>] [<a href="./IPSPT_MIG2015.bib">Bibtex</a>]
+                            <h3>Results</h3>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/EiP3fHqtZnk" allowfullscreen></iframe>
+                        </section>
+                    </section>
+                </main>
+            </div>
+            <div class="row">
+                <footer>
+                    <hr>
+                    <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a>
+                    <a href="http://www.mathjax.org"><img title="Powered by MathJax" src="http://cdn.mathjax.org/mathjax/badge/badge.gif" alt="Powered by MathJax" /></a>
+                    <address>by <a href="mailto:frajus@hotmail.fr">Frajus</a></address>
+                </footer>
+            </div>
+        </div>             
+    </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+    <!-- Encoding -->
+    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8"/>
+
+    <!-- En-tête de la page -->
+    <title>ARPS - Publications - Pierre-Luc Manteaux</title>
+
+    <!-- <link rel="stylesheet" href="style.css"/> -->
+    <link rel="stylesheet" href="./../../style.css"> 
+
+    <!-- I love MathJax -->
+    <!-- <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>-->
+    <!-- But MathJax + PSTricks is better -->
+    <script type="text/x-mathjax-config">
+    // <![CDATA[
+        MathJax.Hub.Config({ 
+            TeX: {extensions: ["AMSmath.js", "AMSsymbols.js"]},     
+            extensions: ["tex2jax.js"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+            showProcessingMessages : false,
+            messageStyle : "none" ,    
+            showMathMenu: false ,
+            tex2jax: {
+                processEnvironments: true,
+                inlineMath: [ ['$','$'] ],
+                displayMath: [ ['$$','$$'], ["\[","\]"] ],
+                preview : "none",
+                processEscapes: true
+            },
+            "HTML-CSS": { linebreaks: { automatic:true, width: "latex-container"} }
+        });
+        // ]]>
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+    <!--Highlight-->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!--Bootstrap & JQuery library-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!--Html scripts-->
+    <script type="text/javascript" src="./../../website.js"></script>
+
+    </head>
+
+    <body class="website">
+        <div class="container">
+            <div class="row">
+                <script type="text/javascript">
+                    document.write(website.header('./../../'));
+                </script>
+                <main>
+                    <section class="col-md-12">
+                        <header>
+                            <h1>Exploring the Use of Adaptively Restrained Particles for Graphics Simulations</h1>
+                            <h2><small>Pierre-Luc Manteaux, François Faure, Stéphane Redon, Marie-Paule Cani</small></h2>
+                            <h2><small>VRIPHYS 2013</small></h2>
+                            <hr>
+                        </header>
+                        <section>
+                            <img alt="ARPS" src = "arpsTeaser.png" width="800"> <h3>Summary</h3>
+                            <p>
+                                In this paper, we explore the use of Adaptively Restrained (AR) particles for graphics simulations. Contrary to previous methods, Adaptively Restrained Particle Simulations (ARPS) do not adapt time or space sampling, but rather switch the positional degrees of freedom of particles on and off, while letting their momenta evolve. Therefore, inter-particles forces do not have to be updated at each time step, in contrast with traditional methods that spend a lot of time there. We present the initial formulation of ARPS that was introduced for molecular dynamics simulations, and explore its potential for Computer Graphics applications: We first adapt ARPS to particle-based fluid simulations and propose an efficient incremental algorithm to update forces and scalar fields. We then introduce a new implicit integration scheme enabling to use ARPS for cloth simulation as well. Our experiments show that this new, simple strategy for adaptive simulations can provide significant speedups more easily than traditional adaptive models. 
+                            </p>
+                            <h3>Downloads</h3>
+                                [<a href= "http://hal.inria.fr/docs/00/91/46/53/PDF/arps-vriphys2013.pdf">Paper (PDF)</a>] [<a href= "http://hal.inria.fr/docs/00/91/46/53/VIDEO/VideoPaper1004.flv">Movie (FLV, 13.2MB)</a>] [<a href="./EARPS_VRIPHYS2013.bib">Bibtex</a>]
+                            <h3>Results</h3>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/RpJjGAoqp50" allowfullscreen></iframe>
+                        </section>
+                    </section>
+                </main>
+            </div>
+            <div class="row">
+                <footer>
+                    <hr>
+                    <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a>
+                    <a href="http://www.mathjax.org"><img title="Powered by MathJax" src="http://cdn.mathjax.org/mathjax/badge/badge.gif" alt="Powered by MathJax" /></a>
+                    <address>by <a href="mailto:frajus@hotmail.fr">Frajus</a></address>
+                </footer>
+            </div>
+        </div>             
+    </body>
+</html>
