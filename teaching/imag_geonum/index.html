@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+    <head>
 
-<head>
+        <!-- Meta data -->
+        <!-- Encoding -->
+        <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+        <!-- Viewport adptation to device -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Keywords for search engine -->
+        <meta name="keywords" content="géométrique numérique, imag, m1 info">
+        <!-- Description of the webpage -->
+        <meta name="description" content="Ressources pédagogiques - Géométrie Numérique - M1 info - 2013 - UFR IMAG">
+        <!-- Author -->
+        <meta name="author" content="Pierre-Luc Manteaux">
 
-<!-- Encoding -->
-<meta http-equiv="Content-Type" content="text/HTML; charset=utf-8"/>
+        <!-- En-tête de la page -->
+        <title>Géométrie Numérique 2013 - Teaching - Pierre-Luc Manteaux</title>
 
-<!-- En-tête de la page -->
-<title>Géométrie Numérique 2013 - Teaching - Pierre-Luc Manteaux</title>
+        <!-- <link rel="stylesheet" href="style.css"/> -->
+        <link rel="stylesheet" href="latex2html5.css"> 
+        <link rel="stylesheet" href="style.css"> 
 
-<!-- <link rel="stylesheet" href="style.css"/> -->
-<link rel="stylesheet" href="latex2html5.css"> 
-<link rel="stylesheet" href="style.css"> 
-
-<!-- I love MathJax -->
-<!-- <script type="text/javascript"
+        <!-- I love MathJax -->
+        <!-- <script type="text/javascript"
 src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>-->
-<!-- But MathJax + PSTricks is better -->
-<script type="text/x-mathjax-config">
+        <!-- But MathJax + PSTricks is better -->
+        <script type="text/x-mathjax-config">
 // <![CDATA[
     MathJax.Hub.Config({ 
         TeX: {extensions: ["AMSmath.js", "AMSsymbols.js"]},     
@@ -37,127 +45,121 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
         "HTML-CSS": { linebreaks: { automatic:true, width: "latex-container"} }
     });
     // ]]>
-</script>
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-<script type="text/javascript" src="latex2html5.min.js"></script> 
+        </script>
+        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+        <script type="text/javascript" src="latex2html5.min.js"></script> 
 
-<!--Highlight-->
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+        <!--Highlight-->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
 
-<!--Bootstrap & JQuery library-->
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <!--Bootstrap & JQuery library-->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-<!--Html scripts-->
-<script type="text/javascript" src="./../../website.js"></script>
+        <!--Html scripts-->
+        <script type="text/javascript" src="./../../website.js"></script>
+    </head>
+    <body class="website">
+        <div class="container">
+            <div class="row">
 
-</head>
+                <script type="text/javascript">
+                    document.write(website.header('./../..'));
+                </script>
 
-<body class="website">
+                <section class="col-md-12">
+                    <header>
+                        <h1>Géométrie Numérique - UJF, UFR IM<sup>2</sup>AG, Master 1 Informatique - 2013</h1>
+                        <hr>
+                    </header>
+                </section>
 
-<div class="container">
-    <div class="row">
+                <main>
+                    <section class="col-md-12">
+                        <article>
+                            <ul>
+                                <li>
+                                    <a href="data/TP1_Beziers_De_Casteljau.zip">TP1 : Courbes de Bézier - Algorithme de De Casteljau</a>
+                                    <table>
+                                        <tr>
+                                            <td><a href="data/animation4.gif"><img src="data/animation4.gif" alt="animation" width="200" height="100" class="alignnone size-medium wp-image-2723" /></a> </td>
+                                        </tr>
+                                    </table>
+                                </li>
+                                <li>
+                                    <a href="data/TP2_Raccord_Bezier.zip">TP2 : Courbes de Bézier - Raccord C<sup>1</sup> et C<sup>2</sup></a>
+                                    <table>
+                                        <tr>
+                                            <td><a href="data/infinite1.png"><img src="data/infinite1.png" alt="infinite" width="200" height="100" class="alignnone size-medium wp-image-2761" /></a></td>
+                                            <td><a href="data/raccord_4.png"><img src="data/raccord_4.png" alt="raccord_4" width="200" height="100" class="alignnone size-medium wp-image-2762" /></a></td>
+                                        </tr>
+                                    </table>
+                                </li>
 
-    <script type="text/javascript">
-        document.write(website.header('./../..'));
-    </script>
-
-<section class="col-md-12">
-    <header>
-        <h1>Géométrie Numérique - UJF, UFR IM<sup>2</sup>AG, Master 1 Informatique - 2013</h1>
-        <hr>
-    </header>
-</section>
-    
-    <main>
-
-    <section class="col-md-12">
-
-    <article>
-
-                               <ul>
-                               <li>
-                               <a href="data/TP1_Beziers_De_Casteljau.zip">TP1 : Courbes de Bézier - Algorithme de De Casteljau</a>
-                               <table>
-                                   <tr>
-                                       <td><a href="data/animation4.gif"><img src="data/animation4.gif" alt="animation" width="200" height="100" class="alignnone size-medium wp-image-2723" /></a> </td>
-                                   </tr>
-                               </table>
-                               </li>
-                               <li>
-                               <a href="data/TP2_Raccord_Bezier.zip">TP2 : Courbes de Bézier - Raccord C<sup>1</sup> et C<sup>2</sup></a>
-                                <table>
-                                              <tr>
-                                                     <td><a href="data/infinite1.png"><img src="data/infinite1.png" alt="infinite" width="200" height="100" class="alignnone size-medium wp-image-2761" /></a></td>
-                                                     <td><a href="data/raccord_4.png"><img src="data/raccord_4.png" alt="raccord_4" width="200" height="100" class="alignnone size-medium wp-image-2762" /></a></td>
-                                               </tr>
-                               </table>
-                               </li>
-    
-                               <li>
-                              <a href="data/tp3_bspline.pdf">TP3 : Courbes B-splines, Algorithme de Deboor-Cox</a>
-                                <table>
-                                              <tr>
-                                                     <td><a href="data/animaion.gif"><img src="data/animaion.gif" alt="animaion" width="200" height="100" class="alignnone size-medium wp-image-2771" /></a></td>
-                                               </tr>
-                               </table>
-                               </li>
-                               <li>
-                               <a href="data/TP4_Courbes_Subdivision.zip">TP4 : Courbes de subdivision</a>
-                                <table>
-                                              <tr>
-                                                     <td><a href="data/animation5.gif"><img src="data/animation5.gif" alt="animation" width="200" height="100" class="alignnone size-medium wp-image-2782" /></a></td>
-                                               </tr>
-                               </table>
-                               </li>
-                               <li>
-                              <a href="data/TP5_Spline_Uniforme.zip">TP5 : Spline uniforme</a>
-                                <table>
-                                              <tr>
-                                                     <td><a href="data/animation6.gif"><img src="data/animation6.gif" alt="animation" width="200" height="100" class="alignnone size-medium wp-image-2889" /></a></td>
-                                               </tr>
-                               </table>
-                               </li>                           
-                              <li>
-                              <a href="data/TP6_Surface_Bezier.pdf">TP6 : Surface de Bézier</a>
-                                <table>
-                                              <tr>
-                                                  <td><a href="data/gumbo_bicubic_patch.png"><img src="data/gumbo_bicubic_patch.png" alt="gumbo_bicubic_patch" width="200" height="100" class="alignnone size-medium wp-image-2900" /></a></td>
-                                               </tr>
-                               </table>
-                               </li>
-                               <li>
-                              <a href="data/TP7_Surface_BSpline.zip">TP7 : Surface B-spline</a>
-                                <table>
-                                              <tr>
-                                                     <td><a href="data/tore.png"><img src="data/tore.png" alt="tore" width="200" height="100" class="alignnone size-medium wp-image-2909" /></a></td>
-                                               </tr>
-                               </table>
-                               </li>
-                               <li>
-                              <a href="data/TP8_Surface_Subdivision.pdf">TP8 : Surface Subdivision</a>
-                                <table>
-                                              <tr>
-                                                     <td><a href="data/tore1.png"><img src="data/tore1.png" alt="tore" width="200" height="100" class="alignnone size-medium wp-image-2918" /></a></td>
-                                               </tr>
-                               </table>
-                               </li>
-                               </ul>
-    </article>
-    </section>
-    </main>
-
-<footer>
-    <hr>
-    <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a>
-    <a href="http://www.mathjax.org"><img title="Powered by MathJax" src="http://cdn.mathjax.org/mathjax/badge/badge.gif" alt="Powered by MathJax" /></a>
-    <address>by <a href="mailto:frajus@hotmail.fr">Frajus</a></address>
-</footer>
-
-</div>
-</div>
-</body>
+                                <li>
+                                    <a href="data/tp3_bspline.pdf">TP3 : Courbes B-splines, Algorithme de Deboor-Cox</a>
+                                    <table>
+                                        <tr>
+                                            <td><a href="data/animaion.gif"><img src="data/animaion.gif" alt="animaion" width="200" height="100" class="alignnone size-medium wp-image-2771" /></a></td>
+                                        </tr>
+                                    </table>
+                                </li>
+                                <li>
+                                    <a href="data/TP4_Courbes_Subdivision.zip">TP4 : Courbes de subdivision</a>
+                                    <table>
+                                        <tr>
+                                            <td><a href="data/animation5.gif"><img src="data/animation5.gif" alt="animation" width="200" height="100" class="alignnone size-medium wp-image-2782" /></a></td>
+                                        </tr>
+                                    </table>
+                                </li>
+                                <li>
+                                    <a href="data/TP5_Spline_Uniforme.zip">TP5 : Spline uniforme</a>
+                                    <table>
+                                        <tr>
+                                            <td><a href="data/animation6.gif"><img src="data/animation6.gif" alt="animation" width="200" height="100" class="alignnone size-medium wp-image-2889" /></a></td>
+                                        </tr>
+                                    </table>
+                                </li>                           
+                                <li>
+                                    <a href="data/TP6_Surface_Bezier.pdf">TP6 : Surface de Bézier</a>
+                                    <table>
+                                        <tr>
+                                            <td><a href="data/gumbo_bicubic_patch.png"><img src="data/gumbo_bicubic_patch.png" alt="gumbo_bicubic_patch" width="200" height="100" class="alignnone size-medium wp-image-2900" /></a></td>
+                                        </tr>
+                                    </table>
+                                </li>
+                                <li>
+                                    <a href="data/TP7_Surface_BSpline.zip">TP7 : Surface B-spline</a>
+                                    <table>
+                                        <tr>
+                                            <td><a href="data/tore.png"><img src="data/tore.png" alt="tore" width="200" height="100" class="alignnone size-medium wp-image-2909" /></a></td>
+                                        </tr>
+                                    </table>
+                                </li>
+                                <li>
+                                    <a href="data/TP8_Surface_Subdivision.pdf">TP8 : Surface Subdivision</a>
+                                    <table>
+                                        <tr>
+                                            <td><a href="data/tore1.png"><img src="data/tore1.png" alt="tore" width="200" height="100" class="alignnone size-medium wp-image-2918" /></a></td>
+                                        </tr>
+                                    </table>
+                                </li>
+                            </ul>
+                        </article>
+                    </section>
+                </main>
+            </div>
+            <div class="row">
+                <footer>
+                    <hr>
+                    <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a>
+                    <a href="http://www.mathjax.org"><img title="Powered by MathJax" src="http://cdn.mathjax.org/mathjax/badge/badge.gif" alt="Powered by MathJax" /></a>
+                    <address>by <a href="mailto:frajus@hotmail.fr">Frajus</a></address>
+                </footer>
+            </div>
+        </div>             
+    </body>
 </html>

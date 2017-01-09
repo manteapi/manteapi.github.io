@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- Meta data -->
+        <!-- Encoding -->
+        <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+        <!-- Viewport adptation to device -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Keywords for search engine -->
+        <meta name="keywords" content="pierre-luc, manteaux, homepage, website, computer, science">
+        <!-- Description of the webpage -->
+        <meta name="description" content="Pierre-Luc Manteaux homepage - Notes on Computer Science and more">
+        <!-- Author -->
+        <meta name="author" content="Pierre-Luc Manteaux">
 
-<head>
+        <!-- En-tête de la page -->
+        <title>Pierre-Luc Manteaux homepage</title>
 
-<!-- Encoding -->
-<meta http-equiv="Content-Type" content="text/HTML; charset=utf-8"/>
+        <!-- <link rel="stylesheet" href="style.css"/> -->
+        <link rel="stylesheet" href="style.css"> 
 
-<!-- En-tête de la page -->
-<title>Pierre-Luc Manteaux homepage</title>
-
-<!-- <link rel="stylesheet" href="style.css"/> -->
-<link rel="stylesheet" href="style.css"> 
-
-<!-- I love MathJax -->
-<!-- <script type="text/javascript"
+        <!-- I love MathJax -->
+        <!-- <script type="text/javascript"
 src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>-->
-<!-- But MathJax + PSTricks is better -->
-<script type="text/x-mathjax-config">
+        <!-- But MathJax + PSTricks is better -->
+        <script type="text/x-mathjax-config">
 // <![CDATA[
     MathJax.Hub.Config({ 
         TeX: {extensions: ["AMSmath.js", "AMSsymbols.js"]},     
@@ -35,78 +42,74 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
         },
         "HTML-CSS": { linebreaks: { automatic:true, width: "latex-container"} }
     });
-    // ]]>
-</script>
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-<script type="text/javascript" src="latex2html5.min.js"></script> 
+// ]]>
+        </script>
+        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+        <script type="text/javascript" src="latex2html5.min.js"></script> 
 
-<!--Highlight-->
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+        <!--Highlight-->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
 
-<!--Bootstrap & JQuery library-->
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <!--Bootstrap & JQuery library-->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-<!--Html scripts-->
-<script type="text/javascript" src="website.js"></script>
+        <!--Html scripts-->
+        <script type="text/javascript" src="website.js"></script>
+    </head>
+    <body class="website">
+        <div class="container">
+            <div class="row">
+                <script type="text/javascript">
+                    document.write(website.header('./'));
+                </script>
 
-</head>
-
-<body class="website">
-
-    <div class="container">
-        <div class="row">
-            <script type="text/javascript">
-                document.write(website.header('./'));
-            </script>
-
-            <section class="col-md-12">
-            <header>
-                <h1>Notes on Computer Science and more !</h1>
-                <hr>
-            </header>
-            </section>
-        
-            <main>
-                <article class="col-md-12">
+                <section class="col-md-12">
                     <header>
-                        <h2>PhD done !</h2>
-                        <p>Published: <time datetime="2016-10-03">2016-10-03</time></p>
+                        <h1>Notes on Computer Science and more !</h1>
+                        <hr>
                     </header>
-                    <p>
-                        I graduated my PhD at INRIA Rhone-Alpes on 3rd of October 2016. 
-                        My thesis was on the simulation and control of physical phenomena (Advisors: <a title="François Faure Webpage" href="https://team.inria.fr/imagine/francois-faure/">François Faure</a> and <a title="Marie-Paule Cani Webpage" href="https://team.inria.fr/imagine/marie-paule-cani/">Marie-Paule Cani</a>). More informations <a title="thesis-webpage" href="thesis.html">here</a>.
-                    </p>
-                    <table class="center">
-                        <tr>
-                            <td class="center">
-                                <a href="./publications/fluidSculpting_MIG_2016/index.html"> <img alt="Fluid sculpting" style="width:200px;height:150px" src = "http://manteapi.github.io/publications/fluidSculpting_MIG_2016/fluidSculptingTeaser.jpg"></a>
-                                <a href="./publications/cutting_MIG2015/index.html"> <img alt="Cutting" style="width:250px;height:150px" src = "https://hal.inria.fr/hal-01206780/file/Manteaux_MIG2015_IDCTS.png"></a>
-                                <a href="./publications/starAdaptivity_CGF_2016/index.html"> <img alt="Teaser" style="width:200px;height:100px" src = "http://manteapi.github.io/publications/starAdaptivity_CGF_2016/STAR_Teaser.jpg"></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="center">
-                                <a href="./publications/arps_VRIPHYS2013/index.html"> <img alt="Teaser" style="width:250px;height:125px" src = "https://team.inria.fr/imagine/files/2014/01/arpsTeaserThumbnail.jpg"></a>
-                                <a href="./publications/tearing_MIG2015/index.html"> <img alt="Teaser" style="width:200px;height:125px" src = "https://hal.inria.fr/hal-01206764/file/Lejemble_2015_Thumbnail.png"></a>
-                            </td>
-                        </tr>
-                    </table>
-                </article>
-            </main>
-        </div>
-        <div class="row">
-            <footer>
-                <hr>
-                <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a>
-                <a href="http://www.mathjax.org"><img title="Powered by MathJax" src="http://cdn.mathjax.org/mathjax/badge/badge.gif" alt="Powered by MathJax" /></a>
-                <address>by <a href="mailto:frajus@hotmail.fr">Frajus</a></address>
-            </footer>
-        </div>
-    </div>             
-</body>
+                </section>
 
+                <main>
+                    <article class="col-md-12">
+                        <header>
+                            <h2>PhD done !</h2>
+                            <p>Published: <time datetime="2016-10-03">2016-10-03</time></p>
+                        </header>
+                        <p>
+                            I graduated my PhD at INRIA Rhone-Alpes on 3rd of October 2016. 
+                            My thesis was on the simulation and control of physical phenomena (Advisors: <a title="François Faure Webpage" href="https://team.inria.fr/imagine/francois-faure/">François Faure</a> and <a title="Marie-Paule Cani Webpage" href="https://team.inria.fr/imagine/marie-paule-cani/">Marie-Paule Cani</a>). More informations <a title="thesis-webpage" href="thesis.html">here</a>.
+                        </p>
+                        <table class="center">
+                            <tr>
+                                <td class="center">
+                                    <a href="./publications/fluidSculpting_MIG_2016/index.html"> <img alt="Fluid sculpting" style="width:200px;height:150px" src = "http://manteapi.github.io/publications/fluidSculpting_MIG_2016/fluidSculptingTeaser.jpg"></a>
+                                    <a href="./publications/cutting_MIG2015/index.html"> <img alt="Cutting" style="width:250px;height:150px" src = "https://hal.inria.fr/hal-01206780/file/Manteaux_MIG2015_IDCTS.png"></a>
+                                    <a href="./publications/starAdaptivity_CGF_2016/index.html"> <img alt="Teaser" style="width:200px;height:100px" src = "http://manteapi.github.io/publications/starAdaptivity_CGF_2016/STAR_Teaser.jpg"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="center">
+                                    <a href="./publications/arps_VRIPHYS2013/index.html"> <img alt="Teaser" style="width:250px;height:125px" src = "https://team.inria.fr/imagine/files/2014/01/arpsTeaserThumbnail.jpg"></a>
+                                    <a href="./publications/tearing_MIG2015/index.html"> <img alt="Teaser" style="width:200px;height:125px" src = "https://hal.inria.fr/hal-01206764/file/Lejemble_2015_Thumbnail.png"></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+                </main>
+            </div>
+            <div class="row">
+                <footer>
+                    <hr>
+                    <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a>
+                    <a href="http://www.mathjax.org"><img title="Powered by MathJax" src="http://cdn.mathjax.org/mathjax/badge/badge.gif" alt="Powered by MathJax" /></a>
+                    <address>by <a href="mailto:frajus@hotmail.fr">Frajus</a></address>
+                </footer>
+            </div>
+        </div>             
+    </body>
 </html>

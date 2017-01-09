@@ -1,24 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+    <head>
+        <!-- Meta data -->
+        <!-- Encoding -->
+        <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+        <!-- Viewport adptation to device -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Keywords for search engine -->
+        <meta name="keywords" content="simulation, liquide, SPH, shallow water, ensimag">
+        <!-- Description of the webpage -->
+        <meta name="description" content="Projet spécialité - ENSIMAG 2013 - Simulation liquide Shallow Water SPH">
+        <!-- Author -->
+        <meta name="author" content="Pierre-Luc Manteaux">
 
-<head>
+        <!-- En-tête de la page -->
+        <title>Simulation liquide 2013 - Teaching - Pierre-Luc Manteaux</title>
 
-<!-- Encoding -->
-<meta http-equiv="Content-Type" content="text/HTML; charset=utf-8"/>
+        <!-- <link rel="stylesheet" href="style.css"/> -->
+        <link rel="stylesheet" href="latex2html5.css"> 
+        <link rel="stylesheet" href="style.css"> 
 
-<!-- En-tête de la page -->
-<title>Simulation liquide 2013 - Teaching - Pierre-Luc Manteaux</title>
-
-<!-- <link rel="stylesheet" href="style.css"/> -->
-<link rel="stylesheet" href="latex2html5.css"> 
-<link rel="stylesheet" href="style.css"> 
-
-<!-- I love MathJax -->
-<!-- <script type="text/javascript"
+        <!-- I love MathJax -->
+        <!-- <script type="text/javascript"
 src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>-->
-<!-- But MathJax + PSTricks is better -->
-<script type="text/x-mathjax-config">
+        <!-- But MathJax + PSTricks is better -->
+        <script type="text/x-mathjax-config">
 // <![CDATA[
     MathJax.Hub.Config({ 
         TeX: {extensions: ["AMSmath.js", "AMSsymbols.js"]},     
@@ -37,101 +44,92 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
         "HTML-CSS": { linebreaks: { automatic:true, width: "latex-container"} }
     });
     // ]]>
-</script>
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-<script type="text/javascript" src="latex2html5.min.js"></script> 
+        </script>
+        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+        <script type="text/javascript" src="latex2html5.min.js"></script> 
 
-<!--Highlight-->
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+        <!--Highlight-->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
 
-<!--Bootstrap & JQuery library-->
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <!--Bootstrap & JQuery library-->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-<!--Html scripts-->
-<script type="text/javascript" src="./../../../website.js"></script>
+        <!--Html scripts-->
+        <script type="text/javascript" src="./../../../website.js"></script>
+    </head>
 
-</head>
+    <body class="website">
+        <div class="container">
+            <div class="row">
 
-<body class="website">
+                <script type="text/javascript">
+                    document.write(website.header('./../../..'));
+                </script>
 
-<div class="container">
-    <div class="row">
+                <section class="col-md-12">
+                    <header>
+                        <h1>Simulation de Shallow Water avec SPH - Ensimag 2<sup>ème</sup> année - 2013</h1>
+                        <hr>
+                    </header>
+                </section>
 
-    <script type="text/javascript">
-        document.write(website.header('./../../..'));
-    </script>
+                <main>
+                    <section class="col-md-12">
+                        <article>
+                            <section class="col-md-12">
+                                <h2>Membres du projet</h2>
+                                <ul>
+                                    <li>Encadrants: Marie-Paule Cani, Pierre-Luc Manteaux</li>
+                                    <li>Étudiants: Vincent Boumard, Élie Cattan, Jean-Philippe Classen, Olivier Perret</li>
+                                    <li>Durée: 3 semaines</li>
+                                </ul>
+                                <p><a href="https://ensiwiki.ensimag.fr/index.php/ShaWatOce">Lien vers la page ensiwiki</a></p>
+                            </section>
+                            <section class="col-md-12">
+                                <h2>Objectifs</h2>
+                                <p>
+                                    La simulation réaliste de liquides et en temps réel est intéressante pour plusieurs domaines, des jeux vidéo à la médecine. Notre objectif dans ce projet est d'obtenir une simulation de liquides répondant à des perturbations venant d'éléments extérieurs (pente du terrain, mouvement provoquant des vagues, ...).
+                                    Pour cela, l'idée est d'utiliser une discrétisation du fluide en particules qui s'animent les unes par rapport aux autres. Contrairement à des animations très réalistes qui utilisent des millions de particules et des temps de calcul énormes, nous travaillons sous la contrainte de temps réel. Cela limite non seulement le nombre de particule que nous pouvons animer mais nous oblige aussi à utiliser des optimisations.
+                                </p>
 
-<section class="col-md-12">
-<header>
-    <h1>Simulation de Shallow Water avec SPH - Ensimag 2<sup>ème</sup> année - 2013</h1>
-    <hr>
-</header>
-</section>
+                                <p>
+                                    Le but de ce projet est de modéliser de l'eau dans le cadre d'une scène représentant un océan, dans un système temps réel. On utilise pour cela les équations de <b>Shallow Water</b> au sein d'un système de particules de type <b>SPH</b> (<b>S</b>moothed <b>P</b>articles <b>H</b>ydrodynamics).
+                                    La nuance ici est que contrairement aux SPH classiques en 3 dimensions, nous ne considérons que de la surface; ainsi, tous les calculs sont effectués en 2 dimensions, alors que la hauteur de l'eau est calculée indépendamment. 
+                                </p>
 
-<main>
+                                <p>Au delà de cette simulation 2.5D (plus performante qu'une simulation 3D), le second objectif est d'intégrer les optimisations données par l' <b>ARPS</b> (<b>A</b>daptively <b>R</b>estrained <b>P</b>article <b>S</b>imulations) au projet, afin d'améliorer les temps de calcul et ainsi augmenter le nombre de particules de la simulation.
+                                </p>
+                            </section>
+                            <section class="col-md-12">
+                                <h2>Résultats</h2>
 
-<section class="col-md-12">
-<article>
-<section class="col-md-12">
-    <h2>Membres du projet</h2>
-    <ul>
-        <li>Encadrants: Marie-Paule Cani, Pierre-Luc Manteaux</li>
-        <li>Étudiants: Vincent Boumard, Élie Cattan, Jean-Philippe Classen, Olivier Perret</li>
-        <li>Durée: 3 semaines</li>
-    </ul>
-     </ul>
-    <p><a href="https://ensiwiki.ensimag.fr/index.php/ShaWatOce">Lien vers la page ensiwiki</a></p>
-</section>
+                                <img alt="screenshot" style="width:600px;height:400px" src="data/Shallowwatersurface.png"/>
 
-<section class="col-md-12">
-    <h2>Objectifs</h2>
-    <p>
-    La simulation réaliste de liquides et en temps réel est intéressante pour plusieurs domaines, des jeux vidéo à la médecine. Notre objectif dans ce projet est d'obtenir une simulation de liquides répondant à des perturbations venant d'éléments extérieurs (pente du terrain, mouvement provoquant des vagues, ...).
-    Pour cela, l'idée est d'utiliser une discrétisation du fluide en particules qui s'animent les unes par rapport aux autres. Contrairement à des animations très réalistes qui utilisent des millions de particules et des temps de calcul énormes, nous travaillons sous la contrainte de temps réel. Cela limite non seulement le nombre de particule que nous pouvons animer mais nous oblige aussi à utiliser des optimisations.
-    </p>
-
-    <p>
-    Le but de ce projet est de modéliser de l'eau dans le cadre d'une scène représentant un océan, dans un système temps réel. On utilise pour cela les équations de <b>Shallow Water</b> au sein d'un système de particules de type <b>SPH</b> (<b>S</b>moothed <b>P</b>articles <b>H</b>ydrodynamics).
-    La nuance ici est que contrairement aux SPH classiques en 3 dimensions, nous ne considérons que de la surface; ainsi, tous les calculs sont effectués en 2 dimensions, alors que la hauteur de l'eau est calculée indépendamment. 
-    </p>
-    
-    <p>Au delà de cette simulation 2.5D (plus performante qu'une simulation 3D), le second objectif est d'intégrer les optimisations données par l' <b>ARPS</b> (<b>A</b>daptively <b>R</b>estrained <b>P</b>article <b>S</b>imulations) au projet, afin d'améliorer les temps de calcul et ainsi augmenter le nombre de particules de la simulation.
-    </p>
-
-</section>
-
-<section class="col-md-12">
-    <h2>Résultats</h2>
-
-    <img alt="screenshot" style="width:600px;height:400px" src="data/Shallowwatersurface.png"/>
-
-    <ul>
-        <li><a href="http://www.youtube.com/watch?v=WzZAjQCHd7w" >Bassins de particules</a></li>
-        <li><a href="http://www.youtube.com/watch?v=lGf8HPch6iw" >Bassin hexagonal avec surfaces</a></li>
-        <li><a href="http://www.youtube.com/watch?v=X_UyNMtu33A" >Montagne centrale et dénivelé</a></li>
-        <li><a href="http://www.youtube.com/watch?v=nrKCvhmubvw" >Pente uniforme</a></li>
-        <li><a href="http://www.youtube.com/watch?v=iVQtw89ENrs" >Puits central</a></li>
-        <li><a href="http://www.youtube.com/watch?v=Lm8p7AgK1c4" >Animation des navires</a></li>
-    </ul>
-
-</section>
-
-</article>
-</section>
-</main>
-
-<footer>
-    <hr>
-    <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a>
-    <a href="http://www.mathjax.org"><img title="Powered by MathJax" src="http://cdn.mathjax.org/mathjax/badge/badge.gif" alt="Powered by MathJax" /></a>
-    <address>by <a href="mailto:frajus@hotmail.fr">Frajus</a></address>
-</footer>
-
-</div>
-</div>
-</body>
+                                <ul>
+                                    <li><a href="http://www.youtube.com/watch?v=WzZAjQCHd7w" >Bassins de particules</a></li>
+                                    <li><a href="http://www.youtube.com/watch?v=lGf8HPch6iw" >Bassin hexagonal avec surfaces</a></li>
+                                    <li><a href="http://www.youtube.com/watch?v=X_UyNMtu33A" >Montagne centrale et dénivelé</a></li>
+                                    <li><a href="http://www.youtube.com/watch?v=nrKCvhmubvw" >Pente uniforme</a></li>
+                                    <li><a href="http://www.youtube.com/watch?v=iVQtw89ENrs" >Puits central</a></li>
+                                    <li><a href="http://www.youtube.com/watch?v=Lm8p7AgK1c4" >Animation des navires</a></li>
+                                </ul>
+                            </section>
+                        </article>
+                    </section>
+                </main>
+            </div>
+            <div class="row">
+                <footer>
+                    <hr>
+                    <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a>
+                    <a href="http://www.mathjax.org"><img title="Powered by MathJax" src="http://cdn.mathjax.org/mathjax/badge/badge.gif" alt="Powered by MathJax" /></a>
+                    <address>by <a href="mailto:frajus@hotmail.fr">Frajus</a></address>
+                </footer>
+            </div>
+        </div>             
+    </body>
 </html>

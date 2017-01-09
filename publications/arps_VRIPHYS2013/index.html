@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- Meta data -->
+        <!-- Encoding -->
+        <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+        <!-- Viewport adptation to device -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Keywords for search engine -->
+        <meta name="keywords" content="simulation, particles, adaptive model, ARPS, adaptivity, freezing, sleeping, research">
+        <!-- Description of the webpage -->
+        <meta name="description" content="Exploring the Use of Adaptively Restrained Particles for Graphics Simulations">
+        <!-- Author -->
+        <meta name="author" content="Pierre-Luc Manteaux">
 
-    <!-- Encoding -->
-    <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8"/>
+        <!-- En-tête de la page -->
+        <title>Exploring the Use of Adaptively Restrained Particles for Graphics Simulations - Publications - Pierre-Luc Manteaux</title>
 
-    <!-- En-tête de la page -->
-    <title>ARPS - Publications - Pierre-Luc Manteaux</title>
+        <!-- <link rel="stylesheet" href="style.css"/> -->
+        <link rel="stylesheet" href="./../../style.css"> 
 
-    <!-- <link rel="stylesheet" href="style.css"/> -->
-    <link rel="stylesheet" href="./../../style.css"> 
-
-    <!-- I love MathJax -->
-    <!-- <script type="text/javascript"
-    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>-->
-    <!-- But MathJax + PSTricks is better -->
-    <script type="text/x-mathjax-config">
+        <!-- I love MathJax -->
+        <!-- <script type="text/javascript"
+src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>-->
+        <!-- But MathJax + PSTricks is better -->
+        <script type="text/x-mathjax-config">
     // <![CDATA[
         MathJax.Hub.Config({ 
             TeX: {extensions: ["AMSmath.js", "AMSsymbols.js"]},     
@@ -35,21 +43,21 @@
             "HTML-CSS": { linebreaks: { automatic:true, width: "latex-container"} }
         });
         // ]]>
-    </script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+        </script>
+        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 
-    <!--Highlight-->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+        <!--Highlight-->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
 
-    <!--Bootstrap & JQuery library-->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <!--Bootstrap & JQuery library-->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-    <!--Html scripts-->
-    <script type="text/javascript" src="./../../website.js"></script>
+        <!--Html scripts-->
+        <script type="text/javascript" src="./../../website.js"></script>
 
     </head>
 
@@ -73,9 +81,9 @@
                                 In this paper, we explore the use of Adaptively Restrained (AR) particles for graphics simulations. Contrary to previous methods, Adaptively Restrained Particle Simulations (ARPS) do not adapt time or space sampling, but rather switch the positional degrees of freedom of particles on and off, while letting their momenta evolve. Therefore, inter-particles forces do not have to be updated at each time step, in contrast with traditional methods that spend a lot of time there. We present the initial formulation of ARPS that was introduced for molecular dynamics simulations, and explore its potential for Computer Graphics applications: We first adapt ARPS to particle-based fluid simulations and propose an efficient incremental algorithm to update forces and scalar fields. We then introduce a new implicit integration scheme enabling to use ARPS for cloth simulation as well. Our experiments show that this new, simple strategy for adaptive simulations can provide significant speedups more easily than traditional adaptive models. 
                             </p>
                             <h3>Downloads</h3>
-                                [<a href= "http://hal.inria.fr/docs/00/91/46/53/PDF/arps-vriphys2013.pdf">Paper (PDF)</a>] [<a href= "http://hal.inria.fr/docs/00/91/46/53/VIDEO/VideoPaper1004.flv">Movie (FLV, 13.2MB)</a>] [<a href="./EARPS_VRIPHYS2013.bib">Bibtex</a>]
+                            [<a href= "http://hal.inria.fr/docs/00/91/46/53/PDF/arps-vriphys2013.pdf">Paper (PDF)</a>] [<a href= "http://hal.inria.fr/docs/00/91/46/53/VIDEO/VideoPaper1004.flv">Movie (FLV, 13.2MB)</a>] [<a href="./EARPS_VRIPHYS2013.bib">Bibtex</a>]
                             <h3>Results</h3>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/RpJjGAoqp50" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/RpJjGAoqp50" allowfullscreen></iframe>
                         </section>
                     </section>
                 </main>

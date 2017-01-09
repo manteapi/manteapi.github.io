@@ -1,24 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+    <head>
+        <!-- Meta data -->
+        <!-- Encoding -->
+        <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+        <!-- Viewport adptation to device -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Keywords for search engine -->
+        <meta name="keywords" content="simulation, génération terrain, simulation de foule, écosystème, ensimag">
+        <!-- Description of the webpage -->
+        <meta name="description" content="Projet spécialité - ENSIMAG 2016 - Génération d'un écosystème">
+        <!-- Author -->
+        <meta name="author" content="Pierre-Luc Manteaux">
 
-<head>
+        <!-- En-tête de la page -->
+        <title>Ecosystème 2016 - Teaching - Pierre-Luc Manteaux</title>
 
-<!-- Encoding -->
-<meta http-equiv="Content-Type" content="text/HTML; charset=utf-8"/>
+        <!-- <link rel="stylesheet" href="style.css"/> -->
+        <link rel="stylesheet" href="latex2html5.css"> 
+        <link rel="stylesheet" href="style.css"> 
 
-<!-- En-tête de la page -->
-<title>Ecosystème 2016 - Teaching - Pierre-Luc Manteaux</title>
-
-<!-- <link rel="stylesheet" href="style.css"/> -->
-<link rel="stylesheet" href="latex2html5.css"> 
-<link rel="stylesheet" href="style.css"> 
-
-<!-- I love MathJax -->
-<!-- <script type="text/javascript"
+        <!-- I love MathJax -->
+        <!-- <script type="text/javascript"
 src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>-->
-<!-- But MathJax + PSTricks is better -->
-<script type="text/x-mathjax-config">
+        <!-- But MathJax + PSTricks is better -->
+        <script type="text/x-mathjax-config">
 // <![CDATA[
     MathJax.Hub.Config({ 
         TeX: {extensions: ["AMSmath.js", "AMSsymbols.js"]},     
@@ -37,99 +44,91 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
         "HTML-CSS": { linebreaks: { automatic:true, width: "latex-container"} }
     });
     // ]]>
-</script>
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-<script type="text/javascript" src="latex2html5.min.js"></script> 
+        </script>
+        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+        <script type="text/javascript" src="latex2html5.min.js"></script> 
 
-<!--Highlight-->
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+        <!--Highlight-->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
 
-<!--Bootstrap & JQuery library-->
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <!--Bootstrap & JQuery library-->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-<!--Html scripts-->
-<script type="text/javascript" src="./../../../website.js"></script>
+        <!--Html scripts-->
+        <script type="text/javascript" src="./../../../website.js"></script>
+    </head>
 
-</head>
+    <body class="website">
+        <div class="container">
+            <div class="row">
+                <script type="text/javascript">
+                    document.write(website.header('./../../..'));
+                </script>
+                <section class="col-md-12">
+                    <header>
+                        <h1>Génération d'un écosystème - Ensimag 2<sup>ème</sup> année - 2016</h1>
+                        <hr>
+                    </header>
+                </section>
+                <main>
+                    <section class="col-md-12">
+                        <article>
+                            <section class="col-md-12">
+                                <h2>Membres du projet</h2>
+                                <ul>
+                                    <li>Encadrants: Thomas Delame, Pierre-Luc Manteaux</li>
+                                    <li>Étudiants: Maxence Hammen Ilyes Kacher, Mickael Ly, Mathieu Stoffel</li>
+                                    <li>Durée: 3 semaines</li>
+                                </ul>
+                                <a href="https://ensiwiki.ensimag.fr/index.php/Projet_image_2016_:_G%C3%A9n%C3%A9ration_d'un_%C3%A9cosyst%C3%A8me">Lien vers la page ensiwiki</a>
+                            </section>
+                            <section class="col-md-12">
+                                <h2>Objectifs</h2>
+                                <p>
+                                    Le but du projet est d’obtenir un rendu plaisant d’un écosystème dont la dynamique pourra apparaître comme réaliste aux yeux d’un observateur. Il est donc naturel de catégoriser les objectifs en deux sous-ensembles d'objectifs qui convergeront afin d'obtenir la simulation finale.
+                                </p>
 
-<body class="website">
+                                <h3>Création de la carte</h3>
+                                <p>La surface qui nous intéresse sera l’équivalent d’une île de sorte à limiter les problèmes de modélisation et de performances en taille.</p>
+                                <p>Le terrain généré doit être cohérent aux yeux d'un utilisateur. Dit autrement, le paysage généré de l'île doit pouvoir ressembler à un paysage réel.</p>
+                                <p>Cette création de terrain peut se décomposer en deux sous-tâches :</p>
+                                <ul>
+                                    <li>La géographie de la carte doit apparaître comme réaliste (les plages devront jouxter la mer, il pourra y avoir des montagnes à l'intérieur de l'île...) ;</li>
+                                    <li>Les différentes régions devront être décorées en accord avec l'environnement (des carottes ne peuvent pas apparaître au milieu de la mer...) </li>
+                                </ul>
 
-<div class="container">
-    <div class="row">
-
-    <script type="text/javascript">
-        document.write(website.header('./../../..'));
-    </script>
-
-<section class="col-md-12">
-<header>
-    <h1>Génération d'un écosystème - Ensimag 2<sup>ème</sup> année - 2016</h1>
-    <hr>
-</header>
-</section>
-
-<main>
-
-<section class="col-md-12">
-<article>
-<section class="col-md-12">
-    <h2>Membres du projet</h2>
-    <ul>
-        <li>Encadrants: Thomas Delame, Pierre-Luc Manteaux</li>
-        <li>Étudiants: Maxence Hammen Ilyes Kacher, Mickael Ly, Mathieu Stoffel</li>
-        <li>Durée: 3 semaines</li>
-    </ul>
-    <a href="https://ensiwiki.ensimag.fr/index.php/Projet_image_2016_:_G%C3%A9n%C3%A9ration_d'un_%C3%A9cosyst%C3%A8me">Lien vers la page ensiwiki</a>
-</section>
-
-<section class="col-md-12">
-    <h2>Objectifs</h2>
-    <p>
-    Le but du projet est d’obtenir un rendu plaisant d’un écosystème dont la dynamique pourra apparaître comme réaliste aux yeux d’un observateur. Il est donc naturel de catégoriser les objectifs en deux sous-ensembles d'objectifs qui convergeront afin d'obtenir la simulation finale.
-    </p>
-
-    <h3>Création de la carte</h3>
-    <p>La surface qui nous intéresse sera l’équivalent d’une île de sorte à limiter les problèmes de modélisation et de performances en taille.</p>
-    <p>Le terrain généré doit être cohérent aux yeux d'un utilisateur. Dit autrement, le paysage généré de l'île doit pouvoir ressembler à un paysage réel.</p>
-    <p>Cette création de terrain peut se décomposer en deux sous-tâches :</p>
-    <ul>
-        <li>La géographie de la carte doit apparaître comme réaliste (les plages devront jouxter la mer, il pourra y avoir des montagnes à l'intérieur de l'île...) ;</li>
-        <li>Les différentes régions devront être décorées en accord avec l'environnement (des carottes ne peuvent pas apparaître au milieu de la mer...) </li>
-        </ul>
-
-    <h3>Gestion des animaux</h3>
-    <p>
-    Les animaux considérés seront pour ce projet des animaux “existants” dans le sens où ce sont des animaux connus (lapins, loups...) et les modèles seront prédéfinis dans des fichiers qui seront importés.
-    </p>
-    <p>
-    La tâche la plus importante ici est de programmer l’intelligence artificielle de ces animaux. Cette intelligence doit à la fois prendre en compte les autres animaux et l’environnement de sorte à ce que les animaux puissent effectuer des tâches simples (fuite, chasse, reproduction, mort…) pour obtenir un écosystème visuellement plausible. 
-    </p>
-</section>
-
-<section class="col-md-12">
-    <h2>Résultats</h2>
-    <table>
-        <tr><td><img alt="screenshot" style="width:600px;height:250px" src="data/image1.png"/></td></tr>
-        <tr><td><img alt="screenshot" style="width:600px;height:250px" src="data/image2.png"/></td></tr>
-        <tr><td><img alt="screenshot" style="width:600px;height:250px" src="data/image3.png"/></td></tr>
-    </table>
-</section>
-
-</article>
-</section>
-</main>
-
-<footer>
-    <hr>
-    <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a>
-    <a href="http://www.mathjax.org"><img title="Powered by MathJax" src="http://cdn.mathjax.org/mathjax/badge/badge.gif" alt="Powered by MathJax" /></a>
-    <address>by <a href="mailto:frajus@hotmail.fr">Frajus</a></address>
-</footer>
-</div>
-</div>
-</body>
+                                <h3>Gestion des animaux</h3>
+                                <p>
+                                    Les animaux considérés seront pour ce projet des animaux “existants” dans le sens où ce sont des animaux connus (lapins, loups...) et les modèles seront prédéfinis dans des fichiers qui seront importés.
+                                </p>
+                                <p>
+                                    La tâche la plus importante ici est de programmer l’intelligence artificielle de ces animaux. Cette intelligence doit à la fois prendre en compte les autres animaux et l’environnement de sorte à ce que les animaux puissent effectuer des tâches simples (fuite, chasse, reproduction, mort…) pour obtenir un écosystème visuellement plausible. 
+                                </p>
+                            </section>
+                            <section class="col-md-12">
+                                <h2>Résultats</h2>
+                                <table>
+                                    <tr><td><img alt="screenshot" style="width:600px;height:250px" src="data/image1.png"/></td></tr>
+                                    <tr><td><img alt="screenshot" style="width:600px;height:250px" src="data/image2.png"/></td></tr>
+                                    <tr><td><img alt="screenshot" style="width:600px;height:250px" src="data/image3.png"/></td></tr>
+                                </table>
+                            </section>
+                        </article>
+                    </section>
+                </main>
+            </div>
+            <div class="row">
+                <footer>
+                    <hr>
+                    <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a>
+                    <a href="http://www.mathjax.org"><img title="Powered by MathJax" src="http://cdn.mathjax.org/mathjax/badge/badge.gif" alt="Powered by MathJax" /></a>
+                    <address>by <a href="mailto:frajus@hotmail.fr">Frajus</a></address>
+                </footer>
+            </div>
+        </div>             
+    </body>
 </html>
