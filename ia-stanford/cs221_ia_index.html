@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- Meta data -->
+        <!-- Encoding -->
+        <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+        <!-- Viewport adptation to device -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Keywords for search engine -->
+        <meta name="keywords" content="artificial intelligence, course notes">
+        <!-- Description of the webpage -->
+        <meta name="description" content="Notes about artificial intelligence">
+        <!-- Author -->
+        <meta name="author" content="Pierre-Luc Manteaux">
 
-<head>
+        <!-- En-tête de la page -->
+        <title>AI Course Notes - Pierre-Luc Manteaux</title>
 
-<!-- Encoding -->
-<meta http-equiv="Content-Type" content="text/HTML; charset=utf-8"/>
+        <!-- <link rel="stylesheet" href="style.css"/> -->
+        <link rel="stylesheet" href="./../style.css"> 
 
-<!-- En-tête de la page -->
-<title>Pierre-Luc Manteaux homepage</title>
-
-<!-- <link rel="stylesheet" href="style.css"/> -->
-<link rel="stylesheet" href="./../latex2html5.css">
-<link rel="stylesheet" href="cs221_course_style.css">
-
-<!-- I love MathJax -->
-<!-- <script type="text/javascript"
+        <!-- I love MathJax -->
+        <!-- <script type="text/javascript"
 src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>-->
-<!-- But MathJax + PSTricks is better -->
-<script type="text/x-mathjax-config">
+        <!-- But MathJax + PSTricks is better -->
+        <script type="text/x-mathjax-config">
 // <![CDATA[
     MathJax.Hub.Config({ 
         TeX: {extensions: ["AMSmath.js", "AMSsymbols.js"]},     
@@ -36,60 +42,59 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
         },
         "HTML-CSS": { linebreaks: { automatic:true, width: "latex-container"} }
     });
-    // ]]>
-</script>
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-<script type="text/javascript" src="./../latex2html5.min.js"></script> 
+// ]]>
+        </script>
+        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 
-<!--Bootstrap & JQuery library-->
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <!--Highlight-->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
 
-<!--Highlight-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/idea.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+        <!--Bootstrap & JQuery library-->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-</head>
+        <!--Html scripts-->
+        <script type="text/javascript" src="./../website.js"></script>
+    </head>
 
-<body onload="start()" class="course">
-
-<div class="container">
-    <div class="row">
-
-<main>
-
-<article>
-    <header>
-        <h1>Artificial Intelligence - Course Notes</h1>
-        <hr>
-    </header>
-
-    <section class="col-md-12">
-        <h2>About</h2>
-        <p>        
-            These are notes from the stanford course <a title="CS221-webpage" href="http://web.stanford.edu/class/cs221/">CS221: Artificial intelligence</a>.
-        </p>        
-        <h2>Lectures notes</h2>
-        <ul>
-            <li><a title="cs221_lecture1" href="cs221_ia_lecture1.html">Lecture 1 - Introduction</a></li>
-        </ul>
-    </section>
-</article>
-    
-</main>
-
-<footer>
-    <hr>
-    <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a>
-    <a href="http://www.mathjax.org"><img title="Powered by MathJax" src="http://cdn.mathjax.org/mathjax/badge/badge.gif" alt="Powered by MathJax" /></a>
-    <address>by <a href="mailto:frajus@hotmail.fr">Frajus</a></address>
-</footer>
-
-    </div> <!--class=container-->
-</div> <!--class=row-->
-
-</body>
-
+    <body class="website course">
+        <div class="container">
+            <div class="row">
+                <script type="text/javascript">
+                    document.write(website.header('./../'));
+                </script>
+                <section class="col-md-12">
+                    <header>
+                        <h1>Artificial Intelligence - Course Notes</h1>
+                        <hr>
+                    </header>
+                </section>
+                <main>
+                    <article>
+                        <section class="col-md-12">
+                            <h2>About</h2>
+                            <p>        
+                                These are notes from the stanford course <a title="CS221-webpage" href="http://web.stanford.edu/class/cs221/">CS221: Artificial intelligence</a>.
+                            </p>        
+                            <h2>Lectures notes</h2>
+                            <ul>
+                                <li><a title="cs221_lecture1" href="cs221_ia_lecture1.html">Lecture 1 - Introduction</a></li>
+                            </ul>
+                        </section>
+                    </article>
+                </main>
+            </div>
+            <div class="row">
+                <footer>
+                    <hr>
+                    <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a>
+                    <a href="http://www.mathjax.org"><img title="Powered by MathJax" src="http://cdn.mathjax.org/mathjax/badge/badge.gif" alt="Powered by MathJax" /></a>
+                    <address>by <a href="mailto:frajus@hotmail.fr">Frajus</a></address>
+                </footer>
+            </div>
+        </div>             
+    </body>
 </html>

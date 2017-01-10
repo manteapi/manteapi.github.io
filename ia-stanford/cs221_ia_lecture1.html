@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- Meta data -->
+        <!-- Encoding -->
+        <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
+        <!-- Viewport adptation to device -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Keywords for search engine -->
+        <meta name="keywords" content="artificial intelligence, course notes">
+        <!-- Description of the webpage -->
+        <meta name="description" content="Notes about artificial intelligence">
+        <!-- Author -->
+        <meta name="author" content="Pierre-Luc Manteaux">
 
-<head>
+        <!-- En-tête de la page -->
+        <title>AI Course Notes - Lecture - Pierre-Luc Manteaux</title>
 
-<!-- Encoding -->
-<meta http-equiv="Content-Type" content="text/HTML; charset=utf-8"/>
+        <!-- <link rel="stylesheet" href="style.css"/> -->
+        <link rel="stylesheet" href="./../style.css"> 
 
-<!-- En-tête de la page -->
-<title>AI - Lecture 1 - Notes</title>
-
-<!-- <link rel="stylesheet" href="style.css"/> -->
-<link rel="stylesheet" href="./../latex2html5.css">
-<link rel="stylesheet" href="cs221_course_style.css">
-
-<!-- I love MathJax -->
-<!-- <script type="text/javascript"
+        <!-- I love MathJax -->
+        <!-- <script type="text/javascript"
 src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>-->
-<!-- But MathJax + PSTricks is better -->
-<script type="text/x-mathjax-config">
+        <!-- But MathJax + PSTricks is better -->
+        <script type="text/x-mathjax-config">
 // <![CDATA[
     MathJax.Hub.Config({ 
         TeX: {extensions: ["AMSmath.js", "AMSsymbols.js"]},     
@@ -36,205 +42,195 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
         },
         "HTML-CSS": { linebreaks: { automatic:true, width: "latex-container"} }
     });
-    // ]]>
-</script>
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-<script type="text/javascript" src="./../latex2html5.min.js"></script> 
+// ]]>
+        </script>
+        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 
-<!--Bootstrap & JQuery library-->
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <!--Highlight-->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
 
-<!--Highlight-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/idea.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+        <!--Bootstrap & JQuery library-->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-</head>
+        <!--Html scripts-->
+        <script type="text/javascript" src="./../website.js"></script>
+    </head>
 
-<body onload="start()" class="course">
+    <body class="website course">
+        <div class="container">
+            <div class="row">
+                <script type="text/javascript">
+                    document.write(website.header('./../'));
+                </script>
+                <section class="col-md-12">
+                    <header>
+                        <h1>Artificial Intelligence - Lecture 1 - Introduction</h1>
+                        <hr>
+                    </header>
+                </section>
+                <main>
+                    <article>
+                        <section class="col-md-12">
+                            <header>
+                                <h2>Scattered notes</h2>
+                            </header>
+                            <p>
+                                An AI is a system able to resolve tasks that combine <strong>high societal impact</strong>, <strong>diversity</strong> and <strong>complexity</strong>. It is not necessarily similar to human intelligence. While coginitive science tackle difficult questions such as "What is an AI ?", "What is thinking ?", computer science more often address the question "What an AI can do for you ?". 
+                            </p>
+                            <p>Some of the most impactful AI applications : </p>
+                            <ul>
+                                <li>Handwriting recognition - 1983-?</li>
+                                <li>Machine translation - 1960s-?</li>
+                                <li>Virtual assistants - Speech recognition and natural language understanding - 2010-?</li>
+                                <li>Autonomous driving - 1980s-?</li>
+                            </ul>
+                            <p>
+                                <em>Humans vs Machines</em> exists since several centuries. However when a machine rivalizes with what we think is a proof of <em>human intelligence</em>, then it becomes exciting and sensitive.
+                            </p>
+                            <ul>
+                                <li>1997: Deep Blue</li>
+                                <li>2011: IBM Watson</li>
+                                <li>2016: AlphaGo</li>
+                            </ul>
+                            <p>
+                                In 2017, the main paradigm to create an AI is a modeling approach. Any problem is separated into two subproblems : "What to compute ?" and "How to compute ?". "What to compute ?" is solved using a <strong>Model</strong> which formally depict the problem. "How to compute ?" is solved using an <strong>Algorithm</strong> which exploits the model to compute a solution to the problem.
+                            </p>
 
-<div class="container">
-    <div class="row">
+                            <p>
+                                In 2017, one of the main challenge the AI faces is the handling of complexity i.e 
+                                <strong>Resources</strong> + <strong>Information</strong> = Time/Memory + Data
+                            </p>
 
-<main>
-
-<article>
-    <header>
-        <h1>Artificial Intelligence - Lecture 1 - Introduction</h1>
-        <hr>
-    </header>
-    
-    <section class="col-md-12">
-        <header>
-        <h2>Scattered notes</h2>
-        </header>
-        
-        <p>
-        An AI is a system able to resolve tasks that combine <strong>high societal impact</strong>, <strong>diversity</strong> and <strong>complexity</strong>. It is not necessarily similar to human intelligence. While coginitive science tackle difficult questions such as "What is an AI ?", "What is thinking ?", computer science more often address the question "What an AI can do for you ?". 
-        </p>
-        
-        <p>Some of the most impactful AI applications : </p>
-            <ul>
-                <li>Handwriting recognition - 1983-?</li>
-                <li>Machine translation - 1960s-?</li>
-                <li>Virtual assistants - Speech recognition and natural language understanding - 2010-?</li>
-                <li>Autonomous driving - 1980s-?</li>
-            </ul>
-        
-            <p>
-            <em>Humans vs Machines</em> exists since several centuries. However when a machine rivalizes with what we think is a proof of <em>human intelligence</em>, then it becomes exciting and sensitive.
-            </p>
-            <ul>
-                <li>1997: Deep Blue</li>
-                <li>2011: IBM Watson</li>
-                <li>2016: AlphaGo</li>
-            </ul>
-
-            <p>
-            In 2017, the main paradigm to create an AI is a modeling approach. Any problem is separated into two subproblems : "What to compute ?" and "How to compute ?". "What to compute ?" is solved using a <strong>Model</strong> which formally depict the problem. "How to compute ?" is solved using an <strong>Algorithm</strong> which exploits the model to compute a solution to the problem.
-            </p>
-
-            <p>
-            In 2017, one of the main challenge the AI faces is the handling of complexity i.e 
-            <strong>Resources</strong> + <strong>Information</strong> = Time/Memory + Data
-            </p>
-
-            <p>
-            <strong>Machine Learning</strong> is a famous form of artificial intelligence.
-            It allows to shift the complexity from the program to the data.
-            Instead of implementing insanely complex programs to handle every possible cases, 
-            learning algorithm and data are used to produce results beyond the set of training examples.
-            This is called <strong>generalization</strong>, a kind of leap of faith at the heart of machine learning algorithm.
-            </p>
-
-            <p>
-            There are many models among the machine learning approach.
-            They can be classified from low-level intelligence to high-level intelligence.
-            </p>
-
-            <ul>
-                <li>
-                    <strong>Reflex-based models</strong> <br/> 
-                    Linear classifiers $f(x) = sign\left( \sum_{i} \omega_{i} \phi_{i}(x) \right)$ where $\phi_{i}(x)$ are features and $\omega_{i}$ are weights.
-                </li>
-                <li>
-                    <strong>State-based models</strong> <br/>
-                    A state captures all the relevant information about the past in order to act optimally in the future. <br/>
-                    Applications : Search problems. <br/>
-                    Models : markov decision processes, adversarial games, minimum cost paths through graphs.
-                </li>
-                <li>
-                    <strong>Variable-based models</strong> <br/> 
-                    A solution corresponds to an assignment of values to variables. <br/>
-                    Models : Constraint satisfaction problem, Bayesian networks
-                </li>
-                <li>
-                    <strong>Logic</strong> <br/>
-                    Logic provices a compact language for modeling which gives us more expressivity. <br/>
-                    Applications : Natural language parsin, knowledge representation, logical inference.
-                </li>
-            </ul>
-        
-        <blockquote>
-            <p>
-                A key challenge is to combine the modeling richness of logic with the robustness and agility of machine learning
-            </p>
-        </blockquote>
-
-        <p>
-        Among the different tools used in these approach, <strong>optimization</strong> is one of the most important.
-        It can be <strong>discrete</strong> or <strong>continuous</strong>
-        </p>
-        $$\underset{ x \in \mathcal{C} }{\min} F(x)$$
-        <ul>
-            <li>$F$ is a function to optimize</li>
-            <li>$\mathcal{C}$ is a set of constraints</li>
-        </ul>
-
-        <h3>Exercice 1 : Discrete optimization - Dynamic programming</h3>
-        <blockquote>
-            <p>
-            The Levenshtein distance is an edit distance between two strings $s$ and $t$ which measures the minimum number of character <strong>insertions</strong>, <strong>deletions</strong> and <strong>substitutions</strong> it takes to change $s$ into $t$. This distance can be computed using a <strong>mathematical recurrence</strong>.<br/>
-            </p>
-        </blockquote>
-
-        <h4>Implementation - Recurrence</h4>
-        <p>
-            Let $d(m,n)$ be the edit distance between the first $m$ letters of $s$ and the first $n$ letters of $t$. We can compute $d(m,n)$ from $d(m-1,n-1)$ using the following formula
-        </p>
-            $$
-                d(m,n) = \min\left( 1+d(m-1,n), 1+d(m,n-1), 1_{s_{m},t_{n}}+d(m-1,n-1) \right)
-            $$
-        <p>
-            and the following terminal cases
-        </p>
-            $$
-                \begin{array}{lll}
-                d(m,n) = m & \text{if} & n=0 \\
-                d(m,n) = n & \text{if} & m=0 \\
-                \end{array}
-            $$
-            <pre><code class="python">def levenshtein_recursive(s,t) :
-    if len(s) == 0 : 
-        return len(t)
-    elif len(t) == 0 : 
-        return len(s)
-    else :
-        #Cost of a substitution
-        cost = 1 if s[len(s)-1] != t[len(t)-1] else 0
-        #Case 1 : delete a letter from s
-        c1 = 1 + levenshtein_recursive( s[0:len(s)-1], t)
-        #Case 2 : delete a letter from t
-        c2 = 1 + levenshtein_recursive( s, t[0:len(t)-1])
-        #Case 3 : substitute a letter
-        c3 = cost  + levenshtein_recursive( s[0:len(s)-1], t[0:len(t)-1])
-        return min(c1, c2, c3) 
+                            <p>
+                                <strong>Machine Learning</strong> is a famous form of artificial intelligence.
+                                It allows to shift the complexity from the program to the data.
+                                Instead of implementing insanely complex programs to handle every possible cases, 
+                                learning algorithm and data are used to produce results beyond the set of training examples.
+                                This is called <strong>generalization</strong>, a kind of leap of faith at the heart of machine learning algorithm.
+                            </p>
+                            <p>
+                                There are many models among the machine learning approach.
+                                They can be classified from low-level intelligence to high-level intelligence.
+                            </p>
+                            <ul>
+                                <li>
+                                    <strong>Reflex-based models</strong><br/> 
+                                    Linear classifiers $f(x) = sign\left( \sum_{i} \omega_{i} \phi_{i}(x) \right)$ where $\phi_{i}(x)$ are features and $\omega_{i}$ are weights.
+                                </li>
+                                <li>
+                                    <strong>State-based models</strong> <br/>
+                                    A state captures all the relevant information about the past in order to act optimally in the future. <br/>
+                                    Applications : Search problems. <br/>
+                                    Models : markov decision processes, adversarial games, minimum cost paths through graphs.
+                                </li>
+                                <li>
+                                    <strong>Variable-based models</strong> <br/> 
+                                    A solution corresponds to an assignment of values to variables. <br/>
+                                    Models : Constraint satisfaction problem, Bayesian networks
+                                </li>
+                                <li>
+                                    <strong>Logic</strong> <br/>
+                                    Logic provices a compact language for modeling which gives us more expressivity. <br/>
+                                    Applications : Natural language parsin, knowledge representation, logical inference.
+                                </li>
+                            </ul>
+                            <blockquote>
+                                <p>
+                                    A key challenge is to combine the modeling richness of logic with the robustness and agility of machine learning
+                                </p>
+                            </blockquote>
+                            <p>
+                                Among the different tools used in these approach, <strong>optimization</strong> is one of the most important.
+                                It can be <strong>discrete</strong> or <strong>continuous</strong>
+                            </p>
+                            $$\underset{ x \in \mathcal{C} }{\min} F(x)$$
+                            <ul>
+                                <li>$F$ is a function to optimize</li>
+                                <li>$\mathcal{C}$ is a set of constraints</li>
+                            </ul>
+                            <h3>Exercice 1 : Discrete optimization - Dynamic programming</h3>
+                            <blockquote>
+                                <p>
+                                    The Levenshtein distance is an edit distance between two strings $s$ and $t$ which measures the minimum number of character <strong>insertions</strong>, <strong>deletions</strong> and <strong>substitutions</strong> it takes to change $s$ into $t$. This distance can be computed using a <strong>mathematical recurrence</strong>.<br/>
+                                </p>
+                            </blockquote>
+                            <h4>Implementation - Recurrence</h4>
+                            <p>
+                                Let $d(m,n)$ be the edit distance between the first $m$ letters of $s$ and the first $n$ letters of $t$. We can compute $d(m,n)$ from $d(m-1,n-1)$ using the following formula
+                            </p>
+                            $$
+                            d(m,n) = \min\left( 1+d(m-1,n), 1+d(m,n-1), 1_{s_{m},t_{n}}+d(m-1,n-1) \right)
+                            $$
+                            <p>
+                                and the following terminal cases
+                            </p>
+                            $$
+                            \begin{array}{lll}
+                            d(m,n) = m & \text{if} & n=0 \\
+                            d(m,n) = n & \text{if} & m=0 \\
+                            \end{array}
+                            $$
+                            <pre><code class="python">def levenshtein_recursive(s,t) :
+if len(s) == 0 : 
+return len(t)
+elif len(t) == 0 : 
+return len(s)
+else :
+#Cost of a substitution
+cost = 1 if s[len(s)-1] != t[len(t)-1] else 0
+#Case 1 : delete a letter from s
+c1 = 1 + levenshtein_recursive( s[0:len(s)-1], t)
+#Case 2 : delete a letter from t
+c2 = 1 + levenshtein_recursive( s, t[0:len(t)-1])
+#Case 3 : substitute a letter
+c3 = cost  + levenshtein_recursive( s[0:len(s)-1], t[0:len(t)-1])
+return min(c1, c2, c3) 
 </code></pre>
-            <h4>Implementation - Iteration + Memoize</h4>
-            <p>
-                To reduce the complexity of the recursive implementation, we can instead perform an iterative implementation using memoization. Basically, memoization consists in pre-computing and storing values that will be intensively used in order to reduced computational cost. Here the idea is to incrementally compute the distance between all $s$ and $t$ substrings.
-            </p>
-            <pre><code class="python">def levenshtein_iterative(s,t) :
-    #Build a matrix m such that m(i,j) is the edit distance between
-    #the i first letters of s and the j first letters of t
-    #Initial conditions are taken into account by considering the empty string
-    #Thus the size of the matrix is len(s)+1 x len(t)+1
-    m = [ [0 for i in range(len(s)+1) ] for j in range(len(t)+1) ]
-    for i in range(len(s)+1) :
-        m[0][i] = i
-    for j in range(len(t)+1) :
-        m[j][0] = j
+                            <h4>Implementation - Iteration + Memoize</h4>
+                            <p>
+                                To reduce the complexity of the recursive implementation, we can instead perform an iterative implementation using memoization. Basically, memoization consists in pre-computing and storing values that will be intensively used in order to reduced computational cost. Here the idea is to incrementally compute the distance between all $s$ and $t$ substrings.
+                            </p>
+                            <pre><code class="python">def levenshtein_iterative(s,t) :
+#Build a matrix m such that m(i,j) is the edit distance between
+#the i first letters of s and the j first letters of t
+#Initial conditions are taken into account by considering the empty string
+#Thus the size of the matrix is len(s)+1 x len(t)+1
+m = [ [0 for i in range(len(s)+1) ] for j in range(len(t)+1) ]
+for i in range(len(s)+1) :
+m[0][i] = i
+for j in range(len(t)+1) :
+m[j][0] = j
 
-    #Iteratively compute the edit distance
-    for i in range(1,len(s)+1) :
-        for j in range(1,len(t)+1) :
-            cost = 1 if s[i-1] !=  t[j-1] else 0
-            #Delete from s
-            c1 = 1 + m[j][i-1]
-            #Delete from t
-            c2 = 1 + m[j-1][i]
-            #Substitution
-            c3 = cost + m[j-1][i-1]
-            m[j][i] = min(c1,c2,c3)
-    return m[len(t)][len(s)]
-            </code></pre>
-
-            <h3>Exercice 2 : Continous optimization - Gradient descent</h3>
-            <blockquote>
-            $$
-                \begin{array}{l}
-                \displaystyle
-                F(w) = \sum_{i}\left(wx_{i}-y_{i}\right)^{2} \\
-                \displaystyle
-                F'(w) = \sum_{i}2*\left(wx_{i}-y_{i}\right)x_{i} \\
-                \end{array}
-            $$
-            The function $F$ measures the distance between a line of slope $w$ and a set of 2D points $(x_{i},y_{i})$. A gradient descent will follow the gradient to find the slope $w$ that minimizes $F(w)$ which means $F'(w)=0$. It can be implemented as an iteration process which update $w$ according to the gradient of $F$ until $F$ is minimized.
-            </blockquote>
-
-            <pre><code class="python">#Point set data
+#Iteratively compute the edit distance
+for i in range(1,len(s)+1) :
+for j in range(1,len(t)+1) :
+cost = 1 if s[i-1] !=  t[j-1] else 0
+#Delete from s
+c1 = 1 + m[j][i-1]
+#Delete from t
+c2 = 1 + m[j-1][i]
+#Substitution
+c3 = cost + m[j-1][i-1]
+m[j][i] = min(c1,c2,c3)
+return m[len(t)][len(s)]
+</code></pre>
+                            <h3>Exercice 2 : Continous optimization - Gradient descent</h3>
+                            <blockquote>
+                                $$
+                                \begin{array}{l}
+                                \displaystyle
+                                F(w) = \sum_{i}\left(wx_{i}-y_{i}\right)^{2} \\
+                                \displaystyle
+                                F'(w) = \sum_{i}2*\left(wx_{i}-y_{i}\right)x_{i} \\
+                                \end{array}
+                                $$
+                                The function $F$ measures the distance between a line of slope $w$ and a set of 2D points $(x_{i},y_{i})$. A gradient descent will follow the gradient to find the slope $w$ that minimizes $F(w)$ which means $F'(w)=0$. It can be implemented as an iteration process which update $w$ according to the gradient of $F$ until $F$ is minimized.
+                            </blockquote>
+                            <pre><code class="python">#Point set data
 xCoord = [0, 2, 4, 6, 8]
 yCoord = [0, 2, 4, 1, 4]
 
@@ -242,49 +238,46 @@ yCoord = [0, 2, 4, 1, 4]
 #It measure the distance between a line of slope w
 #and a (x,y) point set
 def costFunction(x, y, w) :
-    d = 0
-    for i in range( len(x) ) : 
-        d = d + pow(w*x[i]-y[i],2)
-    return d
+d = 0
+for i in range( len(x) ) : 
+d = d + pow(w*x[i]-y[i],2)
+return d
 
 #Derivative of the above cost function
 def deriv_costFunction(x, y, w) :
-    d = 0
-    for i in range( len(x) ) : 
-        d = d + (w*x[i]-y[i])*x[i]
-    return 2.0*d
+d = 0
+for i in range( len(x) ) : 
+d = d + (w*x[i]-y[i])*x[i]
+return 2.0*d
 
 #Optimization routine to find the best w that minimizes the cost function
 def gradientDescent() :
-    maxIterNb = 1e6
-    iterNb = 0
-    epsilon = 1e-3
-    stepSize = 1e-5
-    optimalSlope = 0
-    evaldF_next = deriv_costFunction(xCoord, yCoord, optimalSlope)
-    evaldF_curr = evaldF_next
-    while abs(evaldF_next)&gt;epsilon and iterNb&lt;maxIterNb :
-        evaldF_curr = evaldF_next
-        evaldF_next = deriv_costFunction(xCoord, yCoord, optimalSlope)
-        optimalSlope = optimalSlope - stepSize * evaldF_curr
-        iterNb = iterNb + 1
-    return optimalSlope
+maxIterNb = 1e6
+iterNb = 0
+epsilon = 1e-3
+stepSize = 1e-5
+optimalSlope = 0
+evaldF_next = deriv_costFunction(xCoord, yCoord, optimalSlope)
+evaldF_curr = evaldF_next
+while abs(evaldF_next)&gt;epsilon and iterNb&lt;maxIterNb :
+evaldF_curr = evaldF_next
+evaldF_next = deriv_costFunction(xCoord, yCoord, optimalSlope)
+optimalSlope = optimalSlope - stepSize * evaldF_curr
+iterNb = iterNb + 1
+return optimalSlope
 </code></pre>
-    </section>
-</article>
-    
-</main>
-
-<footer>
-    <hr>
-    <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a>
-    <a href="http://www.mathjax.org"><img title="Powered by MathJax" src="http://cdn.mathjax.org/mathjax/badge/badge.gif" alt="Powered by MathJax" /></a>
-    <address>by <a href="mailto:frajus@hotmail.fr">Frajus</a></address>
-</footer>
-
-    </div> <!--class=container-->
-</div> <!--class=row-->
-
-</body>
-
+                        </section>
+                    </article>
+                </main>
+            </div>
+            <div class="row">
+                <footer>
+                    <hr>
+                    <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a>
+                    <a href="http://www.mathjax.org"><img title="Powered by MathJax" src="http://cdn.mathjax.org/mathjax/badge/badge.gif" alt="Powered by MathJax" /></a>
+                    <address>by <a href="mailto:frajus@hotmail.fr">Frajus</a></address>
+                </footer>
+            </div>
+        </div>             
+    </body>
 </html>

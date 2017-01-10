@@ -1,6 +1,6 @@
 /*
 Commentaires CSS
- */
+*/
 
 *
 {
@@ -96,6 +96,7 @@ hr
 .website h3
 {
     text-align:left;
+    font-size: large;
 }
 
 .website h1
@@ -126,6 +127,21 @@ canvas
     border: 2px solid black;
     width: 640px;
     height: 480px;
+}
+
+.website p
+{
+    font-size: medium;
+}
+
+.website blockquote
+{
+    font-size: medium;
+}
+
+.website li
+{
+    font-size: medium
 }
 
 iframe
