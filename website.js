@@ -17,7 +17,7 @@ var website =
             header_string += '<li><a href="'+pathToMainWebDir+'/thesis.html#thesis-teaching">Teaching</a></li>';
             header_string += '</ul>';
             header_string += '</li>';
-            header_string += '<li><a href="'+pathToMainWebDir+'projects.html">Projects</a></li>';
+            header_string += '<li><a href="'+pathToMainWebDir+'/projects.html">Projects</a></li>';
             header_string += '</ul>';
             header_string += '</div>';
             header_string += '</nav>';
