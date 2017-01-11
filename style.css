@@ -26,6 +26,18 @@ a:visited
     color:blue;
 }
 
+.website img.teaserImage
+{
+    border: thick solid white;
+    border-radius: 5px;
+}
+
+.website img.teaserImage:hover
+{
+    border: thick solid LightGrey;
+    border-radius: 5px;
+}
+
 table
 {
     border-collapse : separate;
