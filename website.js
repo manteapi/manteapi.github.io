@@ -17,7 +17,13 @@ var website =
             header_string += '<li><a href="'+pathToMainWebDir+'/thesis.html#thesis-teaching">Teaching</a></li>';
             header_string += '</ul>';
             header_string += '</li>';
-            header_string += '<li><a href="'+pathToMainWebDir+'/projects.html">Projects</a></li>';
+            header_string += '<li class="dropdown">';
+            header_string += '<a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects<span class="caret"></span></a>';
+            header_string += '<ul class="dropdown-menu">';
+            header_string += '<li><a href="'+pathToMainWebDir+'/projects.html#projects-sphliquid">SPH Liquid</a></li>';
+            header_string += '<li><a href="'+pathToMainWebDir+'/projects.html#projects-raytracerSandbox">Raytracer Sandbox</a></li>';
+            header_string += '</ul>';
+            header_string += '</li>';
             header_string += '</ul>';
             header_string += '</div>';
             header_string += '</nav>';
