@@ -1,101 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <!-- Meta data -->
-        <!-- Encoding -->
-        <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
-        <!-- Viewport adptation to device -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Keywords for search engine -->
-        <meta name="keywords" content="simulation, sculpture, liquid, animations, space-time editing, research">
-        <!-- Description of the webpage -->
-        <meta name="description" content="Space-time sculpting of liquid animations">
-        <!-- Author -->
-        <meta name="author" content="Pierre-Luc Manteaux">
+---
+layout: default
+title: Space-time sculpting of liquid animations - Publications - Pierre-Luc Manteaux
+---
 
-        <!-- En-tête de la page -->
-        <title>Space-time sculpting of liquid animations - Publications - Pierre-Luc Manteaux</title>
-
-        <!-- <link rel="stylesheet" href="style.css"/> -->
-        <link rel="stylesheet" href="./../../style.css"> 
-
-        <!-- I love MathJax -->
-        <!-- <script type="text/javascript"
-src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>-->
-        <!-- But MathJax + PSTricks is better -->
-        <script type="text/x-mathjax-config">
-    // <![CDATA[
-        MathJax.Hub.Config({ 
-            TeX: {extensions: ["AMSmath.js", "AMSsymbols.js"]},     
-            extensions: ["tex2jax.js"],
-            jax: ["input/TeX", "output/HTML-CSS"],
-            showProcessingMessages : false,
-            messageStyle : "none" ,    
-            showMathMenu: false ,
-            tex2jax: {
-                processEnvironments: true,
-                inlineMath: [ ['$','$'] ],
-                displayMath: [ ['$$','$$'], ["\[","\]"] ],
-                preview : "none",
-                processEscapes: true
-            },
-            "HTML-CSS": { linebreaks: { automatic:true, width: "latex-container"} }
-        });
-        // ]]>
-        </script>
-        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-
-        <!--Highlight-->
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-
-        <!--Bootstrap & JQuery library-->
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-        <!--Html scripts-->
-        <script type="text/javascript" src="./../../website.js"></script>
-
-    </head>
-
-    <body class="website">
-        <div class="container">
-            <div class="row">
-                <script type="text/javascript">
-                    document.write(website.header('./../../'));
-                </script>
-                <main>
-                    <section class="col-md-12">
-                        <header>
-                            <h1>Space-time sculpting of liquid animations</h1>
-                            <h2><small>Pierre-Luc Manteaux<sup>*</sup>, Ulysse Vimont<sup>*</sup>, Chris Wojtan, Damien Rohmer, Marie-Paule Cani, <small><sup>*</sup>joint first authors</small></small></h2>
-                            <h2><small><a href="http://dl.acm.org/citation.cfm?id=2994261">Motion In Games 2016</a></small></h2>
-                            <hr>
-                        </header>
-                        <section>
-                            <img alt="Fluid sculpting" src = "fluidSculptingTeaser2.png" width="700"> <h2>Summary</h2>
-                            <p>
-                                We propose an interactive sculpting system for seamlessly editing pre-computed animations of liquid, without the need for any re-simulation. The input is a sequence of meshes without correspondences representing the liquid surface over time. Our method enables the efficient selection of consistent space-time parts of this animation, such as moving waves or droplets, which we call <em>space-time features</em>. Once selected, a feature can be copied, edited, or duplicated and then pasted back anywhere in space and time in the same or in another liquid animation sequence. Our method circumvents tedious user interactions by automatically computing the spatial and temporal ranges of the selected feature. We also provide space-time shape editing tools for non-uniform scaling, rotation, trajectory changes, and temporal editing to locally speed up or slow down motion. Using our tools, the user can edit and progressively refine any input simulation result, possibly using a library of pre-computed space-time features extracted from other animations. In contrast to the trial-and-error loop usually required to edit animation results through the tuning of indirect simulation parameters, our method gives the user full control over the edited space-time behaviors.
-                            </p>
-                            <h2>Downloads</h2>
-                            [<a href= "http://manteapi.github.io/publications/fluidSculpting_MIG_2016/fluidSculpting-mig2016.pdf">Paper (PDF)</a>] [<a href= "http://manteapi.github.io/publications/fluidSculpting_MIG_2016/video/fluidSculpting_mig2016.mp4">Movie (MP4, 20.8MB)</a>] [<a href="./STFS_MIG2016.bib">Bibtex</a>]
-                            <h2>Results</h2>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/4y3lXN-fE0g" allowfullscreen></iframe>
-                        </section>
-                    </section>
-                </main>
-            </div>
-            <div class="row">
-                <footer>
-                    <hr>
-                    <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a>
-                    <a href="http://www.mathjax.org"><img title="Powered by MathJax" src="http://cdn.mathjax.org/mathjax/badge/badge.gif" alt="Powered by MathJax" /></a>
-                    <address>by <a href="mailto:frajus@hotmail.fr">Frajus</a></address>
-                </footer>
-            </div>
-        </div>             
-    </body>
-</html>
+<div class="container">
+  <main>
+    <section class="col-md-12">
+      <header>
+        <h1>Space-time sculpting of liquid animations</h1>
+        <h2><small>Pierre-Luc Manteaux<sup>*</sup>, Ulysse Vimont<sup>*</sup>, Chris Wojtan, Damien Rohmer, Marie-Paule Cani, <small><sup>*</sup>joint first authors</small></small></h2>
+        <h2><small><a href="http://dl.acm.org/citation.cfm?id=2994261">Motion In Games 2016</a></small></h2>
+        <hr>
+      </header>
+      <section>
+        <img alt="Fluid sculpting" src = "fluidSculptingTeaser2.png" width="700"> <h2>Summary</h2>
+        <p>
+          We propose an interactive sculpting system for seamlessly editing pre-computed animations of liquid, without the need for any re-simulation. The input is a sequence of meshes without correspondences representing the liquid surface over time. Our method enables the efficient selection of consistent space-time parts of this animation, such as moving waves or droplets, which we call <em>space-time features</em>. Once selected, a feature can be copied, edited, or duplicated and then pasted back anywhere in space and time in the same or in another liquid animation sequence. Our method circumvents tedious user interactions by automatically computing the spatial and temporal ranges of the selected feature. We also provide space-time shape editing tools for non-uniform scaling, rotation, trajectory changes, and temporal editing to locally speed up or slow down motion. Using our tools, the user can edit and progressively refine any input simulation result, possibly using a library of pre-computed space-time features extracted from other animations. In contrast to the trial-and-error loop usually required to edit animation results through the tuning of indirect simulation parameters, our method gives the user full control over the edited space-time behaviors.
+        </p>
+        <h2>Downloads</h2>
+        [<a href= "http://manteapi.github.io/publications/fluidSculpting_MIG_2016/fluidSculpting-mig2016.pdf">Paper (PDF)</a>] [<a href= "http://manteapi.github.io/publications/fluidSculpting_MIG_2016/video/fluidSculpting_mig2016.mp4">Movie (MP4, 20.8MB)</a>] [<a href="./STFS_MIG2016.bib">Bibtex</a>]
+        <h2>Results</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/4y3lXN-fE0g" allowfullscreen></iframe>
+      </section>
+    </section>
+  </main>
+</div>
+</div>

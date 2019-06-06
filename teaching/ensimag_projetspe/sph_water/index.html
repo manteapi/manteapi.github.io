@@ -1,163 +1,92 @@
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <!-- Meta data -->
-        <!-- Encoding -->
-        <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
-        <!-- Viewport adptation to device -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Keywords for search engine -->
-        <meta name="keywords" content="simulation, liquide, SPH, ensimag">
-        <!-- Description of the webpage -->
-        <meta name="description" content="Projet spécialité - ENSIMAG 2013 - Simulation liquide SPH">
-        <!-- Author -->
-        <meta name="author" content="Pierre-Luc Manteaux">
+---
+layout: default
+title: Simulation liquide 2013 - Teaching - Pierre-Luc Manteaux
+---
 
-        <!-- En-tête de la page -->
-        <title>Simulation liquide 2013 - Teaching - Pierre-Luc Manteaux</title>
+<div class="container">
+  <div class="row">
+    <section class="col-md-12">
+      <header>
+        <h1>Simulation de liquide avec SPH - Ensimag 2<sup>ème</sup> année - 2013</h1>
+        <hr>
+      </header>
+    </section>
+    <main>
+      <section class="col-md-12">
+        <article>
+          <section class="col-md-12">
+            <h2>Membres du projet</h2>
+            <ul>
+              <li>Encadrants: Marie-Paule Cani, Pierre-Luc Manteaux</li>
+              <li>Étudiants: Anne-Hermine Allain, Jean-Philippe Bauchet, Loïc Ciccone, Héloïse Guillemaud</li>
+              <li>Durée: 3 semaines</li>
+            </ul>
+            <p><a href="https://ensiwiki.ensimag.fr/index.php/Projet_image_2013_:_Animation_temps-r%C3%A9el_de_liquides_(Cascade)">Lien vers la page ensiwiki</a></p>
+          </section>
 
-        <!-- <link rel="stylesheet" href="style.css"/> -->
-        <link rel="stylesheet" href="style.css"> 
-
-        <!-- I love MathJax -->
-        <!-- <script type="text/javascript"
-src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>-->
-        <!-- But MathJax + PSTricks is better -->
-        <script type="text/x-mathjax-config">
-// <![CDATA[
-    MathJax.Hub.Config({ 
-        TeX: {extensions: ["AMSmath.js", "AMSsymbols.js"]},     
-        extensions: ["tex2jax.js"],
-        jax: ["input/TeX", "output/HTML-CSS"],
-        showProcessingMessages : false,
-        messageStyle : "none" ,    
-        showMathMenu: false ,
-        tex2jax: {
-            processEnvironments: true,
-            inlineMath: [ ['$','$'] ],
-            displayMath: [ ['$$','$$'], ["\[","\]"] ],
-            preview : "none",
-            processEscapes: true
-        },
-        "HTML-CSS": { linebreaks: { automatic:true, width: "latex-container"} }
-    });
-    // ]]>
-        </script>
-        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-
-        <!--Highlight-->
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-
-        <!--Bootstrap & JQuery library-->
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-        <!--Html scripts-->
-        <script type="text/javascript" src="./../../../website.js"></script>
-    </head>
-
-    <body class="website">
-        <div class="container">
-            <div class="row">
-                <script type="text/javascript">
-                    document.write(website.header('./../../..'));
-                </script>
-                <section class="col-md-12">
-                    <header>
-                        <h1>Simulation de liquide avec SPH - Ensimag 2<sup>ème</sup> année - 2013</h1>
-                        <hr>
-                    </header>
-                </section>
-                <main>
-                    <section class="col-md-12">
-                        <article>
-                            <section class="col-md-12">
-                                <h2>Membres du projet</h2>
-                                <ul>
-                                    <li>Encadrants: Marie-Paule Cani, Pierre-Luc Manteaux</li>
-                                    <li>Étudiants: Anne-Hermine Allain, Jean-Philippe Bauchet, Loïc Ciccone, Héloïse Guillemaud</li>
-                                    <li>Durée: 3 semaines</li>
-                                </ul>
-                                <p><a href="https://ensiwiki.ensimag.fr/index.php/Projet_image_2013_:_Animation_temps-r%C3%A9el_de_liquides_(Cascade)">Lien vers la page ensiwiki</a></p>
-                            </section>
-
-                            <section class="col-md-12">
-                                <h2>Objectifs</h2>
-                                <p>
-                                    Nos objectifs pour ce projet couvraient trois aspects : modélisation physique, rendu graphique, et optimisations.
-                                </p>
-                                <p>
-                                    Assimilant le fluide à un système de particules, dotées de caractéristiques propres telles que masse volumique ou densité, il nous fallait en premier lieu implémenter un modèle physique décrivant le fluide et ses caractéristiques globales, mais aussi les forces extérieures auxquelles sont soumises les particules qui le composent, pour en déduire les équations du mouvement qui leurs sont associées. Nous disposions pour cela de deux modèles : 
-                                </p>
-                                <ul>
-                                    <li>
-                                        Le premier, "Smoothed Particle Hydrodynamics" (SPH), consiste à considérer les particules comme une discrétisation du champ de pression et de masse volumique dans le fluide. À partir de ces points, il est possible de définir toutes les grandeurs physiques du système à n'importe quel endroit par interpolation. On peut ainsi en déduire les expressions des forces de pression, de viscosité, de tension de surface auxquelles est soumise une particule donnée, par somme des contributions des autres particules, celle-ci étant d'autant plus importante que l'autre particule est proche de la particule considérée, et nulle si elle est trop éloignée. Les équations du mouvement s'obtiennent alors par intégration par rapport au temps, selon la deuxième loi de Newton. 
-                                    </li>
-                                    <li>
-                                        Le second, "Adaptively Restrained Particle Simulation" (ARPS), utilise des principes relatifs à la mécanique hamiltonienne et reformule les équations décrivant le mouvement des particules dans le fluide. La différence majeure par rapport au SPH est que les particules possèdent des états (elles peuvent être actives ou inactives). Si le moment d'une particule devient trop faible, elle peut être mise en sommeil et ne plus intervenir dans le calcul des autres équations du mouvement, améliorant ainsi la vitesse d'exécution du programme. 
-                                    </li>
-                                </ul>
-                                <p>Un autre aspect du projet concernait le rendu graphique de la simulation. En effet, notre fluide peut être représenté de différentes manières : </p>
-                                <ul>
-                                    <li>
-                                        Une première méthode basique consiste à dessiner des billes centrées en chacune des particules du système ; 
-                                    </li>
-                                    <li>
-                                        On peut aussi utiliser le concept de surfaces implicites, vu en cours de graphique 3D. On dispose d'une fonction d'évaluation à support fini et centré en l'origine, considérant la distance d'un point de l'espace par rapport à une particule, et d'une isovaleur. Il faut alors représenter la surface séparant les points de l'espace où cette fonction d'évaluation est inférieure à l'isovaleur, de ceux où elle est supérieure : c'est la définition d'une surface implicite, que permettent de représenter certains algorithmes comme l'algorithme des "Marching Cubes". Ici, il serait question de donner un aspect plus réaliste à notre fluide, en dessinant des gouttes d'eau, le film à la surface du fluide, et les rides qui le parcourent ; 
-                                    </li>
-                                    <li>
-                                        D'autres techniques peuvent être utilisées comme le point splatting : une image ou une texture est projetée sur les objets de telle sorte que la forme de l'image varie doucement de son centre vers ses bords. 
-                                    </li>
-                                </ul>
-                                <p>
-                                    Enfin, un sujet de ce type mobilisant un certain nombre de ressources de l'ordinateur, et dans l'approche temps-réel qui est voulue ici, nous avons également cherché à optimiser le plus possible notre programme. Ce travail d'optimisation se décline en les quelques points suivants : 
-                                </p>
-                                <ul>
-                                    <li>
-                                        Utilisation d'une table de hachage pour la recherche des plus proches voisins, afin d'éviter des parcours superflus de la liste des particules qui conduiraient à l'ajout de termes nuls dans l'expression des forces ; 
-                                    </li>
-                                    <li>
-                                        Choix des algorithmes, des structures de données et des structures de classe les plus performantes ; 
-                                    </li>
-                                    <li>
-                                        Implémentation de l'ARPS
-                                    </li>
-                                </ul>
-                            </section>
-                            <section class="col-md-12">
-                                <h2>Résultats</h2>
-                                <img alt="screenshot" style="width:400px;height:400px" src="data/ExempleSPH.png"/>
-                                <ul>
-                                    <li>
-                                        <a href="http://www.youtube.com/watch?v=HoSGzL7cwec"> ARPS </a>
-                                    </li>
-                                    <li>
-                                        <a href="http://youtu.be/L9NyE6xFhyM"> Boundary conditions </a>
-                                    </li>
-                                    <li>
-                                        <a href="http://www.youtube.com/watch?v=zCXnyllmU0Y"> Surfacing </a>
-                                    </li>
-                                    <li>
-                                        <a href="http://www.youtube.com/watch?v=oXTyxOiCzj0"> Metaballs </a>
-                                    </li>
-                                </ul>
-                            </section>
-                        </article>
-                    </section>
-                </main>
-            </div>
-            <div class="row">
-                <footer>
-                    <hr>
-                    <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a>
-                    <a href="http://www.mathjax.org"><img title="Powered by MathJax" src="http://cdn.mathjax.org/mathjax/badge/badge.gif" alt="Powered by MathJax" /></a>
-                    <address>by <a href="mailto:frajus@hotmail.fr">Frajus</a></address>
-                </footer>
-            </div>
-        </div>             
-    </body>
-</html>
+          <section class="col-md-12">
+            <h2>Objectifs</h2>
+            <p>
+              Nos objectifs pour ce projet couvraient trois aspects : modélisation physique, rendu graphique, et optimisations.
+            </p>
+            <p>
+              Assimilant le fluide à un système de particules, dotées de caractéristiques propres telles que masse volumique ou densité, il nous fallait en premier lieu implémenter un modèle physique décrivant le fluide et ses caractéristiques globales, mais aussi les forces extérieures auxquelles sont soumises les particules qui le composent, pour en déduire les équations du mouvement qui leurs sont associées. Nous disposions pour cela de deux modèles :
+            </p>
+            <ul>
+              <li>
+                Le premier, "Smoothed Particle Hydrodynamics" (SPH), consiste à considérer les particules comme une discrétisation du champ de pression et de masse volumique dans le fluide. À partir de ces points, il est possible de définir toutes les grandeurs physiques du système à n'importe quel endroit par interpolation. On peut ainsi en déduire les expressions des forces de pression, de viscosité, de tension de surface auxquelles est soumise une particule donnée, par somme des contributions des autres particules, celle-ci étant d'autant plus importante que l'autre particule est proche de la particule considérée, et nulle si elle est trop éloignée. Les équations du mouvement s'obtiennent alors par intégration par rapport au temps, selon la deuxième loi de Newton.
+              </li>
+              <li>
+                Le second, "Adaptively Restrained Particle Simulation" (ARPS), utilise des principes relatifs à la mécanique hamiltonienne et reformule les équations décrivant le mouvement des particules dans le fluide. La différence majeure par rapport au SPH est que les particules possèdent des états (elles peuvent être actives ou inactives). Si le moment d'une particule devient trop faible, elle peut être mise en sommeil et ne plus intervenir dans le calcul des autres équations du mouvement, améliorant ainsi la vitesse d'exécution du programme.
+              </li>
+            </ul>
+            <p>Un autre aspect du projet concernait le rendu graphique de la simulation. En effet, notre fluide peut être représenté de différentes manières : </p>
+            <ul>
+              <li>
+                Une première méthode basique consiste à dessiner des billes centrées en chacune des particules du système ;
+              </li>
+              <li>
+                On peut aussi utiliser le concept de surfaces implicites, vu en cours de graphique 3D. On dispose d'une fonction d'évaluation à support fini et centré en l'origine, considérant la distance d'un point de l'espace par rapport à une particule, et d'une isovaleur. Il faut alors représenter la surface séparant les points de l'espace où cette fonction d'évaluation est inférieure à l'isovaleur, de ceux où elle est supérieure : c'est la définition d'une surface implicite, que permettent de représenter certains algorithmes comme l'algorithme des "Marching Cubes". Ici, il serait question de donner un aspect plus réaliste à notre fluide, en dessinant des gouttes d'eau, le film à la surface du fluide, et les rides qui le parcourent ;
+              </li>
+              <li>
+                D'autres techniques peuvent être utilisées comme le point splatting : une image ou une texture est projetée sur les objets de telle sorte que la forme de l'image varie doucement de son centre vers ses bords.
+              </li>
+            </ul>
+            <p>
+              Enfin, un sujet de ce type mobilisant un certain nombre de ressources de l'ordinateur, et dans l'approche temps-réel qui est voulue ici, nous avons également cherché à optimiser le plus possible notre programme. Ce travail d'optimisation se décline en les quelques points suivants :
+            </p>
+            <ul>
+              <li>
+                Utilisation d'une table de hachage pour la recherche des plus proches voisins, afin d'éviter des parcours superflus de la liste des particules qui conduiraient à l'ajout de termes nuls dans l'expression des forces ;
+              </li>
+              <li>
+                Choix des algorithmes, des structures de données et des structures de classe les plus performantes ;
+              </li>
+              <li>
+                Implémentation de l'ARPS
+              </li>
+            </ul>
+          </section>
+          <section class="col-md-12">
+            <h2>Résultats</h2>
+            <img alt="screenshot" style="width:400px;height:400px" src="data/ExempleSPH.png"/>
+            <ul>
+              <li>
+                <a href="http://www.youtube.com/watch?v=HoSGzL7cwec"> ARPS </a>
+              </li>
+              <li>
+                <a href="http://youtu.be/L9NyE6xFhyM"> Boundary conditions </a>
+              </li>
+              <li>
+                <a href="http://www.youtube.com/watch?v=zCXnyllmU0Y"> Surfacing </a>
+              </li>
+              <li>
+                <a href="http://www.youtube.com/watch?v=oXTyxOiCzj0"> Metaballs </a>
+              </li>
+            </ul>
+          </section>
+        </article>
+      </section>
+    </main>
+  </div>
+</div>

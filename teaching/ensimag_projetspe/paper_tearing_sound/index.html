@@ -1,126 +1,54 @@
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <!-- Meta data -->
-        <!-- Encoding -->
-        <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
-        <!-- Viewport adptation to device -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Keywords for search engine -->
-        <meta name="keywords" content="simulation, papier, déchirure, génération son, ensimag">
-        <!-- Description of the webpage -->
-        <meta name="description" content="Projet spécialité - ENSIMAG 2015 - Déchirure Papier avec Son">
-        <!-- Author -->
-        <meta name="author" content="Pierre-Luc Manteaux">
+---
+layout: default
+title: Animation papier 2015 - Teaching - Pierre-Luc Manteaux
+---
 
-        <!-- En-tête de la page -->
-        <title>Animation papier 2015 - Teaching - Pierre-Luc Manteaux</title>
+<div class="container">
+  <div class="row">
+    <section class="col-md-12">
+      <header>
+        <h1>Animation sonorisée de papier qui se déchire - Ensimag 2<sup>ème</sup> année - 2015</h1>
+        <hr>
+      </header>
+    </section>
 
-        <!-- <link rel="stylesheet" href="style.css"/> -->
-        <link rel="stylesheet" href="style.css"> 
+    <main>
+      <section class="col-md-12">
+        <article>
+          <section class="col-md-12">
+            <h2>Membres du projet</h2>
+            <ul>
+              <li>Encadrants: Marie-Paule Cani, Pierre-Luc Manteaux</li>
+              <li>Étudiants: Thibault Blanc-Beyne, Thibault Lejemble, Nicolas Durin, Amélie Fondevilla</li>
+              <li>Durée: 3 semaines</li>
+            </ul>
+            <p><a href="https://ensiwiki.ensimag.fr/index.php/Projet_image_2015_:_Animation_sonorisee_de_papier_qui_se_dechire">Lien vers la page ensiwiki</a></p>
+          </section>
 
-        <!-- I love MathJax -->
-        <!-- <script type="text/javascript"
-src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>-->
-        <!-- But MathJax + PSTricks is better -->
-        <script type="text/x-mathjax-config">
-// <![CDATA[
-    MathJax.Hub.Config({ 
-        TeX: {extensions: ["AMSmath.js", "AMSsymbols.js"]},     
-        extensions: ["tex2jax.js"],
-        jax: ["input/TeX", "output/HTML-CSS"],
-        showProcessingMessages : false,
-        messageStyle : "none" ,    
-        showMathMenu: false ,
-        tex2jax: {
-            processEnvironments: true,
-            inlineMath: [ ['$','$'] ],
-            displayMath: [ ['$$','$$'], ["\[","\]"] ],
-            preview : "none",
-            processEscapes: true
-        },
-        "HTML-CSS": { linebreaks: { automatic:true, width: "latex-container"} }
-    });
-    // ]]>
-        </script>
-        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+          <section class="col-md-12">
+            <h2>Objectifs</h2>
+            <p>
+              La modélisation de phénomènes physiques est une problématique courante en informatique graphique. Malheureusement, la modélisation du papier, matière complexe et non-extensible n’est que très peu développée. Des travaux de recherche sont en cours pour la modélisation de papier qui se froissent, ou que l’on découpe. Mais à ce jour, aucun modèle de papier qui se déchire n’existe. En effet un modèle basé sur un système masse-ressort (modèle physique couramment utilisé) manquerait de réalisme dans ce contexte. Non seulement un tel modèle permettrait au papier de s’étirer, mais il provoquerait de plus des déchirements non voulus du papier : par exemple, si on essaie de tirer des deux côtés du papier.
+            </p>
+            <p>
+              Notre but principal est donc de créer le premier modèle de papier qui se déchire. Nous devons aussi garantir un modèle temps-réel, donc avec des temps de calculs limités pour permettre un rendu visuel fluide. Enfin, le dernier enjeu sera d’intégrer le son au modèle : il devra être réaliste, et s’adapter aux différents types de déchirure. Etant donnée la complexité de la réalité physique du phénomène de déchirement, nous avons décider de limiter notre étude à une configuration simple de déchirure.
 
-        <!--Highlight-->
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
+              On traite du cas suivant : une feuille posée sur un plan 2D, que l’on va déchirer par le haut, à l’aide de l’action de deux mains. Chaque main va agir sur la déchirure à l’aide de deux doigts : l’index et le pouce. Il est entendu que bien que la feuille soit initialement dans un plan, le modèle passe en 3 dimensions dès le début du mouvement qui va engendrer la déchirure.
+            </p>
+          </section>
 
-        <!--Bootstrap & JQuery library-->
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+          <section class="col-md-12">
+            <h2>Résultats</h2>
 
-        <!--Html scripts-->
-        <script type="text/javascript" src="./../../../website.js"></script>
-    </head>
-
-    <body class="website">
-        <div class="container">
-            <div class="row">
-                <script type="text/javascript">
-                    document.write(website.header('./../../..'));
-                </script>
-
-                <section class="col-md-12">
-                    <header>
-                        <h1>Animation sonorisée de papier qui se déchire - Ensimag 2<sup>ème</sup> année - 2015</h1>
-                        <hr>
-                    </header>
-                </section>
-
-                <main>
-                    <section class="col-md-12">
-                        <article>
-                            <section class="col-md-12">
-                                <h2>Membres du projet</h2>
-                                <ul>
-                                    <li>Encadrants: Marie-Paule Cani, Pierre-Luc Manteaux</li>
-                                    <li>Étudiants: Thibault Blanc-Beyne, Thibault Lejemble, Nicolas Durin, Amélie Fondevilla</li>
-                                    <li>Durée: 3 semaines</li>
-                                </ul>
-                                <p><a href="https://ensiwiki.ensimag.fr/index.php/Projet_image_2015_:_Animation_sonorisee_de_papier_qui_se_dechire">Lien vers la page ensiwiki</a></p>
-                            </section>
-
-                            <section class="col-md-12">
-                                <h2>Objectifs</h2>
-                                <p>
-                                    La modélisation de phénomènes physiques est une problématique courante en informatique graphique. Malheureusement, la modélisation du papier, matière complexe et non-extensible n’est que très peu développée. Des travaux de recherche sont en cours pour la modélisation de papier qui se froissent, ou que l’on découpe. Mais à ce jour, aucun modèle de papier qui se déchire n’existe. En effet un modèle basé sur un système masse-ressort (modèle physique couramment utilisé) manquerait de réalisme dans ce contexte. Non seulement un tel modèle permettrait au papier de s’étirer, mais il provoquerait de plus des déchirements non voulus du papier : par exemple, si on essaie de tirer des deux côtés du papier. 
-                                </p>
-                                <p>
-                                    Notre but principal est donc de créer le premier modèle de papier qui se déchire. Nous devons aussi garantir un modèle temps-réel, donc avec des temps de calculs limités pour permettre un rendu visuel fluide. Enfin, le dernier enjeu sera d’intégrer le son au modèle : il devra être réaliste, et s’adapter aux différents types de déchirure. Etant donnée la complexité de la réalité physique du phénomène de déchirement, nous avons décider de limiter notre étude à une configuration simple de déchirure.
-
-                                    On traite du cas suivant : une feuille posée sur un plan 2D, que l’on va déchirer par le haut, à l’aide de l’action de deux mains. Chaque main va agir sur la déchirure à l’aide de deux doigts : l’index et le pouce. Il est entendu que bien que la feuille soit initialement dans un plan, le modèle passe en 3 dimensions dès le début du mouvement qui va engendrer la déchirure.
-                                </p>
-                            </section>
-
-                            <section class="col-md-12">
-                                <h2>Résultats</h2>
-
-                                <table>
-                                    <tr><td><img alt="screenshot" style="width:400px;height:400px" src="data/Resultats.png"/></td></tr>
-                                    <tr><td><img alt="screenshot" style="width:400px;height:400px" src="data/Resultat_Detail.png"/></td></tr>
-                                    <tr><td><img alt="screenshot" style="width:400px;height:400px" src="data/Cone52.jpg"/></td></tr>
-                                    <tr><td><img alt="screenshot" style="width:400px;height:400px" src="data/ResultatTriangulation.bmp"/></td></tr>
-                                </table>
-                            </section>
-                        </article>
-                    </section>
-                </main>
-            </div>
-            <div class="row">
-                <footer>
-                    <hr>
-                    <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a>
-                    <a href="http://www.mathjax.org"><img title="Powered by MathJax" src="http://cdn.mathjax.org/mathjax/badge/badge.gif" alt="Powered by MathJax" /></a>
-                    <address>by <a href="mailto:frajus@hotmail.fr">Frajus</a></address>
-                </footer>
-            </div>
-        </div>             
-    </body>
-</html>
+            <table>
+              <tr><td><img alt="screenshot" style="width:400px;height:400px" src="data/Resultats.png"/></td></tr>
+              <tr><td><img alt="screenshot" style="width:400px;height:400px" src="data/Resultat_Detail.png"/></td></tr>
+              <tr><td><img alt="screenshot" style="width:400px;height:400px" src="data/Cone52.jpg"/></td></tr>
+              <tr><td><img alt="screenshot" style="width:400px;height:400px" src="data/ResultatTriangulation.bmp"/></td></tr>
+            </table>
+          </section>
+        </article>
+      </section>
+    </main>
+  </div>
+</div>

@@ -1,119 +1,48 @@
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <!-- Meta data -->
-        <!-- Encoding -->
-        <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8">
-        <!-- Viewport adptation to device -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Keywords for search engine -->
-        <meta name="keywords" content="simulation, plaquettes sanguines, ensimag">
-        <!-- Description of the webpage -->
-        <meta name="description" content="Projet spécialité - ENSIMAG 2016 - Simulation de plaquettes sanguines">
-        <!-- Author -->
-        <meta name="author" content="Pierre-Luc Manteaux">
+---
+layout: default
+title: Modélisation et animation des changements de forme d'une plaquette sanguine
+---
 
-        <!-- En-tête de la page -->
-        <title>Ecosystème 2016 - Teaching - Pierre-Luc Manteaux</title>
+<div class="container">
+  <div class="row">
+    <section class="col-md-12">
+      <header>
+        <h1>Modélisation et animation des changements de forme d'une plaquette sanguine - Ensimag 2<sup>ème</sup> année - 2016</h1>
+        <hr>
+      </header>
+    </section>
+    <main>
+      <section class="col-md-12">
+        <article>
+          <section class="col-md-12">
+            <h2>Membres du projet</h2>
+            <ul>
+              <li>Encadrants: Marie-Paule Cani, Pierre-Luc Manteaux, Karin Sadoul</li>
+              <li>Étudiants: Abdellatif Trimech, Rafik Siala, Yassir Jedra</li>
+              <li>Durée: 3 semaines</li>
+            </ul>
+            <p><a href="https://ensiwiki.ensimag.fr/index.php/Projet_image_2016_:_Mod%C3%A9lisation_et_animation_des_changements_de_forme_d'une_plaquette_sanguine">Lien vers la page ensiwiki</a></p>
+          </section>
 
-        <!-- <link rel="stylesheet" href="style.css"/> -->
-        <link rel="stylesheet" href="style.css"> 
+          <section class="col-md-12">
+            <h2>Objectifs</h2>
+            <p>
+              Les plaquettes sanguines sont des cellules sans noyau qu’on trouve dans le sang. Elles interviennent principalement dans la coagulation sanguine et ce, en subissant des transformations de forme. Une étude récente effectuée par Mme. Sadoul Karin et son équipe, propose une nouvelle explication pour ces transformations.
+            </p>
+            <p>
+              L’objectif de ce projet est de modéliser ces transformations de forme en se basant sur cette nouvelle étude, et de produire des animations simulant le phénomène. Les simulations réalisées devraient pouvoir confirmer les hypothèses qu’ont les chercheurs et servir d’appui pour expliquer leur étude. Un objectif secondaire serait de réaliser une interface graphique pour les simulations.
+            </p>
+          </section>
 
-        <!-- I love MathJax -->
-        <!-- <script type="text/javascript"
-src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>-->
-        <!-- But MathJax + PSTricks is better -->
-        <script type="text/x-mathjax-config">
-// <![CDATA[
-    MathJax.Hub.Config({ 
-        TeX: {extensions: ["AMSmath.js", "AMSsymbols.js"]},     
-        extensions: ["tex2jax.js"],
-        jax: ["input/TeX", "output/HTML-CSS"],
-        showProcessingMessages : false,
-        messageStyle : "none" ,    
-        showMathMenu: false ,
-        tex2jax: {
-            processEnvironments: true,
-            inlineMath: [ ['$','$'] ],
-            displayMath: [ ['$$','$$'], ["\[","\]"] ],
-            preview : "none",
-            processEscapes: true
-        },
-        "HTML-CSS": { linebreaks: { automatic:true, width: "latex-container"} }
-    });
-    // ]]>
-        </script>
-        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-
-        <!--Highlight-->
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-
-        <!--Bootstrap & JQuery library-->
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-        <!--Html scripts-->
-        <script type="text/javascript" src="./../../../website.js"></script>
-    </head>
-
-    <body class="website">
-        <div class="container">
-            <div class="row">
-                <script type="text/javascript">
-                    document.write(website.header('./../../..'));
-                </script>
-                <section class="col-md-12">
-                    <header>
-                        <h1>Modélisation et animation des changements de forme d'une plaquette sanguine - Ensimag 2<sup>ème</sup> année - 2016</h1>
-                        <hr>
-                    </header>
-                </section>
-                <main>
-                    <section class="col-md-12">
-                        <article>
-                            <section class="col-md-12">
-                                <h2>Membres du projet</h2>
-                                <ul>
-                                    <li>Encadrants: Marie-Paule Cani, Pierre-Luc Manteaux, Karin Sadoul</li>
-                                    <li>Étudiants: Abdellatif Trimech, Rafik Siala, Yassir Jedra</li>
-                                    <li>Durée: 3 semaines</li>
-                                </ul>
-                                <p><a href="https://ensiwiki.ensimag.fr/index.php/Projet_image_2016_:_Mod%C3%A9lisation_et_animation_des_changements_de_forme_d'une_plaquette_sanguine">Lien vers la page ensiwiki</a></p>
-                            </section>
-
-                            <section class="col-md-12">
-                                <h2>Objectifs</h2>
-                                <p>
-                                    Les plaquettes sanguines sont des cellules sans noyau qu’on trouve dans le sang. Elles interviennent principalement dans la coagulation sanguine et ce, en subissant des transformations de forme. Une étude récente effectuée par Mme. Sadoul Karin et son équipe, propose une nouvelle explication pour ces transformations.
-                                </p>
-                                <p>
-                                    L’objectif de ce projet est de modéliser ces transformations de forme en se basant sur cette nouvelle étude, et de produire des animations simulant le phénomène. Les simulations réalisées devraient pouvoir confirmer les hypothèses qu’ont les chercheurs et servir d’appui pour expliquer leur étude. Un objectif secondaire serait de réaliser une interface graphique pour les simulations. 
-                                </p>
-                            </section>
-
-                            <section class="col-md-12">
-                                <h2>Résultats</h2>
-                                <table>
-                                    <tr><td><img alt="Elongation" style="width:600px;height:250px" src="data/Elongation.png"/></td></tr>
-                                    <tr><td><img alt="Fusion" style="width:600px;height:250px" src="data/Fusion.png"/></td></tr>
-                                </table>
-                            </section>
-                        </article>
-                    </section>
-                </main>
-            </div>
-            <div class="row">
-                <footer>
-                    <hr>
-                    <a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a>
-                    <a href="http://www.mathjax.org"><img title="Powered by MathJax" src="http://cdn.mathjax.org/mathjax/badge/badge.gif" alt="Powered by MathJax" /></a>
-                    <address>by <a href="mailto:frajus@hotmail.fr">Frajus</a></address>
-                </footer>
-            </div>
-        </div>             
-    </body>
-</html>
+          <section class="col-md-12">
+            <h2>Résultats</h2>
+            <table>
+              <tr><td><img alt="Elongation" style="width:600px;height:250px" src="data/Elongation.png"/></td></tr>
+              <tr><td><img alt="Fusion" style="width:600px;height:250px" src="data/Fusion.png"/></td></tr>
+            </table>
+          </section>
+        </article>
+      </section>
+    </main>
+  </div>
+</div>
