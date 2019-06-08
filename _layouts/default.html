@@ -15,6 +15,7 @@
 
     <!-- <link rel="stylesheet" href="style.css"/> -->
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
 
     <!-- I love MathJax -->
     <!-- <script type="text/javascript"
@@ -56,10 +57,16 @@
     <!--Html scripts-->
     <script type="text/javascript" src="/assets/js/website.js"></script>
 
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+
+
     <title>{{ page.title }}</title>
   </head>
 
-  <body>
+  <body onload="mdc-js.setup()">
     {% include navigation.html %}
 
     {{ content }}
