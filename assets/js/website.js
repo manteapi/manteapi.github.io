@@ -1,12 +1,10 @@
-//Object website
 var website =
-{
-};
-
-var mdc-js =
 {
   setup : function()
   {
-    mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));
+    const buttons = document.querySelectorAll('.mdc-button');
+    for (const button of buttons) {
+      mdc.ripple.MDCRipple.attachTo(button);
+    }
   }
 };

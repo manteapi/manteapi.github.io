@@ -17,33 +17,6 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
 
-    <!-- I love MathJax -->
-    <!-- <script type="text/javascript"
-      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>-->
-    <!-- But MathJax + PSTricks is better -->
-    <script type="text/x-mathjax-config">
-      // <![CDATA[
-      MathJax.Hub.Config({
-        TeX: {extensions: ["AMSmath.js", "AMSsymbols.js"]},
-        extensions: ["tex2jax.js"],
-        jax: ["input/TeX", "output/HTML-CSS"],
-        showProcessingMessages : false,
-        messageStyle : "none" ,
-        showMathMenu: false ,
-        tex2jax: {
-            processEnvironments: true,
-            inlineMath: [ ['$','$'] ],
-            displayMath: [ ['$$','$$'], ["\[","\]"] ],
-            preview : "none",
-            processEscapes: true
-        },
-        "HTML-CSS": { linebreaks: { automatic:true, width: "latex-container"} }
-    });
-    // ]]>
-    </script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-
     <!--Highlight-->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
@@ -66,7 +39,7 @@
     <title>{{ page.title }}</title>
   </head>
 
-  <body onload="mdc-js.setup()">
+  <body onload="website.setup()">
     {% include navigation.html %}
 
     {{ content }}
