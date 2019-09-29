@@ -7,43 +7,43 @@
     <!-- Viewport adaptation to device -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Keywords for search engine -->
-    <meta name="keywords" content="liquid simulation, sph, iisph, code, computer graphics, physics-based animation">
+    <meta name="keywords" content="liquid simulation, sph, code, computer graphics, physics-based animation">
     <!-- Description of the webpage -->
     <meta name="description" content="A list of shared projects">
     <!-- Author -->
     <meta name="author" content="Pierre-Luc Manteaux">
 
-    <!-- <link rel="stylesheet" href="style.css"/> -->
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-
-    <!--Highlight-->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
-    <!--Bootstrap & JQuery library-->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-    <!--Html scripts-->
-    <script type="text/javascript" src="/assets/js/website.js"></script>
-
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
+    <link href="https://cdn.materialdesignicons.com/4.4.95/css/materialdesignicons.min.css" rel="stylesheet" />    
 
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/bundle.css">
+    <script src="/assets/bundle.js" async></script>
+
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="/assets/js/website.js"></script>
 
     <title>{{ page.title }}</title>
   </head>
 
   <body onload="website.setup()">
-    {% include navigation.html %}
 
-    {{ content }}
+    {% include header.html %}
+
+    <div class="website--fixed-adjust">
+      <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+          <div class="mdc-layout-grid__cell--span-12">
+            {{ content }}
+          </div>
+        </div>
+      </div>
+    </div>
 
     {% include footer.html %}
+
   </body>
 </html>

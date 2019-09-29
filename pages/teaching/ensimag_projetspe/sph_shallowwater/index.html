@@ -1,0 +1,10 @@
+---
+layout: teaching-project
+title: Simulation de Shallow Water avec SPH
+advisors: Marie-Paule Cani, Pierre-Luc Manteaux
+students: Vincent Boumard, Élie Cattan, Jean-Philippe Classen, Olivier Perret
+duration: 3 weeks
+objective: "La simulation réaliste de liquides et en temps réel est intéressante pour plusieurs domaines, des jeux vidéo à la médecine. Notre objectif dans ce projet est d'obtenir une simulation de liquides répondant à des perturbations venant d'éléments extérieurs (pente du terrain, mouvement provoquant des vagues, ...). Pour cela, l'idée est d'utiliser une discrétisation du fluide en particules qui s'animent les unes par rapport aux autres. Contrairement à des animations très réalistes qui utilisent des millions de particules et des temps de calcul énormes, nous travaillons sous la contrainte de temps réel. Cela limite non seulement le nombre de particule que nous pouvons animer mais nous oblige aussi à utiliser des optimisations. Le but de ce projet est de modéliser de l'eau dans le cadre d'une scène représentant un océan, dans un système temps réel. On utilise pour cela les équations de <b>Shallow Water</b> au sein d'un système de particules de type <b>SPH</b> (<b>S</b>moothed <b>P</b>articles <b>H</b>ydrodynamics). La nuance ici est que contrairement aux SPH classiques en 3 dimensions, nous ne considérons que de la surface; ainsi, tous les calculs sont effectués en 2 dimensions, alors que la hauteur de l'eau est calculée indépendamment. Au delà de cette simulation 2.5D (plus performante qu'une simulation 3D), le second objectif est d'intégrer les optimisations données par l' <b>ARPS</b> (<b>A</b>daptively <b>R</b>estrained <b>P</b>article <b>S</b>imulations) au projet, afin d'améliorer les temps de calcul et ainsi augmenter le nombre de particules de la simulation."
+video: 'https://www.youtube.com/embed/Lm8p7AgK1c4'
+image: 'data/Shallowwatersurface.png'
+---

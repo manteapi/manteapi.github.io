@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<main>
+
+<header>
+  <h1>{{ page.title }}</h1>
+  <h5>{{ page.contributors }}</h5>
+  <h5>{{ page.conference }} {{ page.downloads }}</h5>
+
+  <ul class="mdc-image-list">
+    <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" alt="Teaser" src = {{ page.teaser }}>
+    </li>
+  </ul>
+
+</header>
+
+<section>
+  <h2>Summary</h2>
+  <p>{{ page.summary}}</p>
+
+  {% if page.video %}
+  <h2>Results</h2>
+  <div class="responsive-iframe-container">
+    <iframe class="responsive-iframe" src="{{ page.video }}" allowfullscreen></iframe>
+  </div>
+  {% endif %}
+
+</section>
+
+</main>
