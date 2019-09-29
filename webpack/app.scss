@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+$mdc-typography-font-family: unquote('Roboto');
+@import "@material/typography/mdc-typography";
+
+@import "@material/button/mdc-button";
+@import "@material/tab-bar/mdc-tab-bar";
+@import "@material/tab-scroller/mdc-tab-scroller";
+@import "@material/tab-indicator/mdc-tab-indicator";
+@import "@material/tab/mdc-tab";
+
+@import "@material/list/mdc-list";
+@import "@material/drawer/mdc-drawer";
+@import "@material/image-list/mdc-image-list";
+
+@import "@material/data-table/mdc-data-table";
+
+* {
+  --mdc-theme-primary: #0277bd;
+  @extend .mdc-typography;
+}
+
+body {
+
+  margin: 0px;
+
+}
+
+h1 {
+  @extend .mdc-typography--headline1;
+}
+
+h2
+{
+  @extend .mdc-typography--headline2;
+}
+
+h3
+{
+  @extend .mdc-typography--headline3;
+}
+
+h4
+{
+  @extend .mdc-typography--headline4;
+}
+
+h5
+{
+  @extend .mdc-typography--headline5;
+}
+
+h6
+{
+  @extend .mdc-typography--headline6;
+}
+
+th
+{
+  @extend .mdc-typography--headline5;
+}
+
+p, li, td
+{
+  @extend .mdc-typography--body1;
+}
+
+.home-thumbnail-grid {
+
+  max-width: 800px;
+
+  .mdc-image-list__supporting {
+    justify-content: center;
+  }
+
+  .mdc-image-list__item {
+    padding: 20px;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+.mdc-top-app-bar__small-screen {
+  display: none;
+}
+.mdc-top-app-bar__large-screen {
+  display: inline;
+}
+}
+
+@media only screen and (max-width: 768px) {
+.mdc-top-app-bar__small-screen {
+  display: inline;
+}
+.mdc-top-app-bar__large-screen {
+  display: none;
+}
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
