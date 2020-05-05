@@ -31,3 +31,8 @@ Clean
 -----
 
 <pre><code>npm run clean:project</code></pre>
+
+Image dithering
+---------------
+
+<pre><code>convert input.png -colorspace gray -ordered-dither -o8x8 -normalize output.png</code></pre>
