@@ -36,3 +36,12 @@ Image dithering
 ---------------
 
 <pre><code>convert input.png -colorspace gray -ordered-dither -o8x8 -normalize output.png</code></pre>
+
+Utility
+-------
+
+# Convert images in folders from jpg to png
+
+<pre><code>
+for f in $(find . -type f -name *.jpg); do convert $f ${f%.*}".png"; done
+</code></pre>
