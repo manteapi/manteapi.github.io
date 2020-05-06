@@ -35,13 +35,26 @@ Clean
 Image dithering
 ---------------
 
-<pre><code>convert input.png -colorspace gray -ordered-dither -o8x8 -normalize output.png</code></pre>
+<pre><code>convert input.png -colorspace gray -ordered-dither o8x8 -normalize output.png</code></pre>
 
-Utility
--------
-
-# Convert images in folders from jpg to png
+Image conversion
+----------------
 
 <pre><code>
-for f in $(find . -type f -name *.jpg); do convert $f ${f%.*}".png"; done
+for f in $(find . -type f -name *.jpg -not -path "./_site/*" -not -path "./node_modules/*"); do convert $f ${f%.*}".png"; done
+</code></pre>
+
+Image dithering
+---------------
+
+<pre><code>
+for f in $(find . -type f -name *.png -not -path "./_site/*" -not -path "./node_modules/*"); do convert $f -colorspace gray -ordered-dither o8x8 -normalize $f; done
+</code></pre>
+
+
+Image resizing
+--------------
+
+<pre><code>
+for f in $(find . -type f -name *.png -not -path "./_site/*" -not -path "./node_modules/*"); do convert $f -resize 512x512\> $f; done
 </code></pre>
