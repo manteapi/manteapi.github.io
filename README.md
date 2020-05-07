@@ -51,6 +51,9 @@ Image dithering
 for f in $(find . -type f -name *.png -not -path "./_site/*" -not -path "./node_modules/*"); do convert $f -colorspace gray -ordered-dither o8x8 -normalize $f; done
 </code></pre>
 
+<pre><code>
+for f in $(find . -type f -name *.png -not -path "./_site/*" -not -path "./node_modules/*"); do convert $f -ordered-dither h8x8a -normalize $f; done
+</code></pre>
 
 Image resizing
 --------------
