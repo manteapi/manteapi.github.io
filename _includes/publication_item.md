@@ -1,0 +1,2 @@
+
+| [![Teaser]( {{ include.teaser-url }} "{{ include.title }}"){: style="width: 250px;"}]( {{ include.project-url }} ) | [{{ include.title }}]({{ include.project-url }}) <br> {{ include.authors }} <br> {{ include.conference }} <br> [PDF]({{ include.paper-url }}) {% if include.video-url %} [Movie]({{ include.video-url }}) {% endif %} [Bibtex]({{ include.bibtex-url }}) [Project Page]({{ include.project-url }})|

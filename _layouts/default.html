@@ -13,34 +13,20 @@
     <!-- Author -->
     <meta name="author" content="Pierre-Luc Manteaux">
 
-    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-
     <link href="https://cdn.materialdesignicons.com/4.4.95/css/materialdesignicons.min.css" rel="stylesheet" />    
-
     <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="stylesheet" href="/assets/bundle.css">
-    <script src="/assets/bundle.js" async></script>
 
-    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="/assets/js/website.js"></script>
 
     <title>{{ page.title }}</title>
   </head>
 
-  <body onload="website.setup()">
+  <body>
 
     {% include header.html %}
 
     <div class="website--fixed-adjust">
-      <div class="mdc-layout-grid">
-        <div class="mdc-layout-grid__inner">
-          <div class="mdc-layout-grid__cell--span-12">
-            {{ content }}
-          </div>
-        </div>
-      </div>
+        {{ content }}
     </div>
 
     {% include footer.html %}

@@ -1,6 +1,0 @@
-var website = {
-
-  setup: function() {
-  }
-
-};

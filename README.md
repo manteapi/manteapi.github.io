@@ -17,20 +17,10 @@ Objectives
     1. Html/CSS learning
     2. Html/CSS testing
 
-Clean + Build + Start development server
-----------------------------------------
+Build and start development server
+----------------------------------
 
-<pre><code>npm start</code></pre>
-
-Build
------
-
-<pre><code>npm run build</code></pre>
-
-Clean
------
-
-<pre><code>npm run clean:project</code></pre>
+<pre><code>bundle exec jekyll serve</code></pre>
 
 Image dithering
 ---------------
