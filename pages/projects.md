@@ -5,7 +5,7 @@ title: Projects
 
 # Liquid simulation using IISPH
 
-![Dam Break Simulation](/assets/img/hokusai/simpleBreakingDam.png "Dam break simulation")
+![Dam Break Simulation](/assets/img/hokusai/simpleBreakingDam.png "Dam break simulation"){: .responsive-image}
 
 ## Summary 
 
@@ -50,7 +50,7 @@ This project features :
 
 ## Results
 
-![Simple spheres raytracing](/assets/img/raytracer-sandbox/simplesspheres.png "Simple spheres raytracing")
+![Simple spheres raytracing](/assets/img/raytracer-sandbox/simplesspheres.png "Simple spheres raytracing"){: .responsive-image}
         
 ## References
 
