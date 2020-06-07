@@ -22,61 +22,61 @@ Therefore, the method is simpler to integrate into an existing simulator and the
 
     {%
       include publication_item.md
-      teaser-url="/assets/img/fluidsculpting/fluidSculptingTeaser.png"
-      project-url="./publications/fluidSculpting_MIG_2016/index.html"
+      teaser_url="/assets/img/fluidsculpting/fluidSculptingTeaser.png"
+      project_url="./publications/fluidSculpting_MIG_2016/index.html"
       title="Space-time sculpting of liquid animation"
       authors='Pierre-Luc Manteaux<sup>*</sup>, Ulysse Vimont<sup>*</sup>, Chris Wojtan, Damien Rohmer, Marie-Paule Cani, <sup>*</sup>joint first authors'
       conference="Motion In Games 2016"
-      paper-url="https://manteapi.github.io/publications/fluidSculpting_MIG_2016/fluidSculpting-mig2016.pdf"
-      video-url="https://manteapi.github.io/publications/fluidSculpting_MIG_2016/video/fluidSculpting_mig2016.mp4"
-      bibtex-url="./publications/fluidSculpting_MIG_2016/STFS_MIG2016.bib"
+      paper_url="https://manteapi.github.io/publications/fluidSculpting_MIG_2016/fluidSculpting-mig2016.pdf"
+      video_url="https://manteapi.github.io/publications/fluidSculpting_MIG_2016/video/fluidSculpting_mig2016.mp4"
+      bibtex_url="./publications/fluidSculpting_MIG_2016/STFS_MIG2016.bib"
     %}
 
     {%
       include publication_item.md
-      teaser-url="/assets/img/star/STAR_Teaser.png"
-      project-url="./publications/starAdaptivity_CGF_2016/index.html"
+      teaser_url="/assets/img/star/STAR_Teaser.png"
+      project_url="./publications/starAdaptivity_CGF_2016/index.html"
       title="Adaptive Physically-Based Models in Computer Graphics"
       authors='Pierre-Luc Manteaux, Chris Wojtan, Rahul Narain, Stephane Redon, François Faure, Marie-Paule Cani'
       conference="Computer Graphics Forum 2016"
-      paper-url="https://manteapi.github.io/publications/starAdaptivity_CGF_2016/starAdaptivity-cgf.pdf"
-      bibtex-url="./publications/starAdaptivity_CGF_2016/APMCG_CGF2016.bib"
+      paper_url="https://manteapi.github.io/publications/starAdaptivity_CGF_2016/starAdaptivity-cgf.pdf"
+      bibtex_url="./publications/starAdaptivity_CGF_2016/APMCG_CGF2016.bib"
     %}
 
     {%
       include publication_item.md
-      teaser-url="/assets/img/cutting/Manteaux_MIG2015_IDCTS.png"
-      project-url="./publications/cutting_MIG2015/index.html"
+      teaser_url="/assets/img/cutting/Manteaux_MIG2015_IDCTS.png"
+      project_url="./publications/cutting_MIG2015/index.html"
       title="Interactive Detailed Cutting of Thin Sheets"
       authors="Pierre-Luc Manteaux, Wei-Lun Sun, François Faure, Marie-Paule Cani, James F. O'Brien"
       conference="Motion In Games 2015"
-      paper-url="https://hal.inria.fr/hal-01206780/document"
-      video-url="https://hal.inria.fr/hal-01206780/file/Manteaux_MIG2015_IDCTS.mp4"
-      bibtex-url="./publications/cutting_MIG2015/IDCTS_MIG2015.bib"
+      paper_url="https://hal.inria.fr/hal-01206780/document"
+      video_url="https://hal.inria.fr/hal-01206780/file/Manteaux_MIG2015_IDCTS.mp4"
+      bibtex_url="./publications/cutting_MIG2015/IDCTS_MIG2015.bib"
     %}
 
     {%
       include publication_item.md
-      teaser-url="/assets/img/tearing/Lejemble_2015_Thumbnail.png"
-      project-url="./publications/tearing_MIG2015/index.html"
+      teaser_url="/assets/img/tearing/Lejemble_2015_Thumbnail.png"
+      project_url="./publications/tearing_MIG2015/index.html"
       title="Interactive procedural simulation of paper tearing with sound"
       authors='Thibault Lejemble, Amélie Fondevilla, Nicolas Durin, Thibault Blanc-Beyne, Camille Schreck, Pierre-Luc Manteaux, Paul G. Kry, Marie-Paule Cani'
       conference="Motion In Games 2015"
-      paper-url="https://hal.inria.fr/hal-01206764/document"
-      video-url="https://hal.inria.fr/hal-01206764/file/Lejemble_MIG2015_IPSPTS.mp4"
-      bibtex-url="./publications/tearing_MIG2015/IPSPT_MIG2015.bib"
+      paper_url="https://hal.inria.fr/hal-01206764/document"
+      video_url="https://hal.inria.fr/hal-01206764/file/Lejemble_MIG2015_IPSPTS.mp4"
+      bibtex_url="./publications/tearing_MIG2015/IPSPT_MIG2015.bib"
     %}
 
     {%
       include publication_item.md
-      teaser-url="/assets/img/arps/arpsTeaserThumbnail.png"
-      project-url="./publications/arps_VRIPHYS2013/index.html"
+      teaser_url="/assets/img/arps/arpsTeaserThumbnail.png"
+      project_url="./publications/arps_VRIPHYS2013/index.html"
       title="Exploring the Use of Adaptively Restrained Particles for Graphics Simulations"
       authors='Pierre-Luc Manteaux, François Faure, Stéphane Redon, Marie-Paule Cani'
       conference="VRIPHYS 2013"
-      paper-url="https://hal.inria.fr/docs/00/91/46/53/PDF/arps-vriphys2013.pdf"
-      video-url="https://hal.inria.fr/docs/00/91/46/53/VIDEO/VideoPaper1004.flv"
-      bibtex-url="./publications/arps_VRIPHYS2013/EARPS_VRIPHYS2013.bib"
+      paper_url="https://hal.inria.fr/docs/00/91/46/53/PDF/arps-vriphys2013.pdf"
+      video_url="https://hal.inria.fr/docs/00/91/46/53/VIDEO/VideoPaper1004.flv"
+      bibtex_url="./publications/arps_VRIPHYS2013/EARPS_VRIPHYS2013.bib"
     %}
 
 
