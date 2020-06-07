@@ -3,7 +3,7 @@ layout: default
 title: Projects
 ---
 
-# Liquid simulation using IISPH
+# Liquid simulation using IISPH <a class="mdi mdi-github-box" href="https://github.com/manteapi/hokusai"></a>
 
 ![Dam Break Simulation](/assets/img/hokusai/simpleBreakingDam.png "Dam break simulation"){: .responsive-image}
 
@@ -15,10 +15,6 @@ A simple C++ implementation of the implicit incompressible sph model (IISPH) pro
 - **Surface tension** has been implemented using the model proposed by [Akinci et al.](#Akinci2013)
 - Neighbor search uses Z-sorting to improve cache efficiency.
 - Blender was used for offline rendering.
-
-## Downloads
-
-[Github](https://github.com/manteapi/hokusai)
 
 ## Results
 
@@ -32,7 +28,7 @@ A simple C++ implementation of the implicit incompressible sph model (IISPH) pro
 - <a id="Akinci2012"></a> Nadir Akinci, Markus Ihmsen, Gizem Akinci, Barbara Solenthaler, Matthias Teschner. <cite>Versatile Rigid-Fluid Coupling for Incompressible SPH</cite>. ACM Transactions on Graphics (Proc. SIGGRAPH 2012), vol. 31, no. 4, pp. 62:1-62:8, July 2012.
 - <a id="Akinci2013"></a> Nadir Akinci, Gizem Akinci, and Matthias Teschner. <cite>Versatile surface tension and adhesion for SPH fluids</cite>. ACM Trans. Graph., 32(6):182:1–182:8, 2013.
         
-# Raytracer sandbox
+# Raytracer sandbox <a class="mdi mdi-github-box" href="https://github.com/manteapi/raytracer-sandbox"></a>
 
 ## Summary
 
@@ -43,10 +39,6 @@ This project features :
 - Rendering of spheres, plane and triangle meshes.
 - Reflection, refraction and diffusive illumination models.
 - Hard shadows
-
-## Downloads
-
-[Github](https://github.com/manteapi/raytracer-sandbox)
 
 ## Results
 

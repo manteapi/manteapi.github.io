@@ -7,16 +7,15 @@
 <div class="row">
 <div class="col-12">
 <a href="{{ include.project_url }}">{{ include.title }}</a>
+<a class="mdi mdi-file-pdf-box" href="{{ include.paper_url }}"></a>
+{% if include.video_url %} 
+<a class="mdi mdi-movie" href="{{ include.video_url }}"></a>
+{% endif %} 
+<a class="mdi mdi-book-open" href="{{ include.bibtex_url }}"></a>
+<a class="mdi mdi-web" href="{{ include.project_url }}"></a>
 <br>
 {{ include.authors }}
 <br>
 {{ include.conference }}
-<br>
-<a href="{{ include.paper_url }}">PDF</a>
-{% if include.video_url %} 
-<a href="{{ include.video_url }}">Movie</a>
-{% endif %} 
-<a href="{{ include.bibtex_url }}">Bibtex</a>
-<a href="{{ include.project_url }}">Project Page</a>
 </div>
 </div>

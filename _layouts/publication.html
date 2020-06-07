@@ -5,16 +5,16 @@ layout: default
 <main>
 
 <header>
-  <h1>{{ page.title }}</h1>
-  <h5>{{ page.contributors }}</h5>
-  <h5>
-      {{ page.conference }} 
-      <a href="{{ page.pdf_url }}">[PDF]</a>
+  <h1>
+      {{ page.title }}
+      <a class="mdi mdi-file-pdf-box" href="{{ page.pdf_url }}"></a>
       {% if page.video_url %}
-        <a href="{{ page.video_url }}">[Movie]</a>
+        <a class="mdi mdi-movie" href="{{ page.video_url }}"></a>
       {% endif %}
-      <a href="{{ page.bibtex_url }}">[Bibtex]</a>
-  </h5>
+      <a class="mdi mdi-book-open" href="{{ page.bibtex_url }}"></a>
+  </h1>
+  <h5>{{ page.contributors }}</h5>
+  <h5>{{ page.conference }}</h5>
 
   <img class="responsive-image" alt="Teaser" src = {{ page.teaser_url }} />
 
