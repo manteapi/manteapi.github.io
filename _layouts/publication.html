@@ -7,9 +7,16 @@ layout: default
 <header>
   <h1>{{ page.title }}</h1>
   <h5>{{ page.contributors }}</h5>
-  <h5>{{ page.conference }} {{ page.downloads }}</h5>
+  <h5>
+      {{ page.conference }} 
+      <a href="{{ page.pdf_url }}">[PDF]</a>
+      {% if page.video_url %}
+        <a href="{{ page.video_url }}">[Movie]</a>
+      {% endif %}
+      <a href="{{ page.bibtex_url }}">[Bibtex]</a>
+  </h5>
 
-  <img class="responsive-image" alt="Teaser" src = {{ page.teaser }}>
+  <img class="responsive-image" alt="Teaser" src = {{ page.teaser_url }}>
 
 </header>
 
@@ -17,10 +24,10 @@ layout: default
   <h2>Summary</h2>
   <p>{{ page.summary}}</p>
 
-  {% if page.video %}
+  {% if page.youtube_url %}
   <h2>Results</h2>
   <div class="responsive-iframe-container">
-    <iframe class="responsive-iframe" src="{{ page.video }}" allowfullscreen></iframe>
+    <iframe class="responsive-iframe" src="{{ page.youtube_url }}" allowfullscreen></iframe>
   </div>
   {% endif %}
 
