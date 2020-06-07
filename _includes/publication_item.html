@@ -1,0 +1,22 @@
+
+<div class="row">
+<div class="col-12">
+<a href="{{ include.project_url }}"><img alt="{{ include.title }}" src="{{ include.teaser_url }}" style="width: 250px;" /></a>
+</div>
+</div>
+<div class="row">
+<div class="col-12">
+<a href="{{ include.project_url }}">{{ include.title }}</a>
+<br>
+{{ include.authors }}
+<br>
+{{ include.conference }}
+<br>
+<a href="{{ include.paper_url }}">PDF</a>
+{% if include.video_url %} 
+<a href="{{ include.video_url }}">Movie</a>
+{% endif %} 
+<a href="{{ include.bibtex_url }}">Bibtex</a>
+<a href="{{ include.project_url }}">Project Page</a>
+</div>
+</div>

@@ -6,7 +6,7 @@ year: 2014
 division: Master 1 Informatique
 ---
 
-| ![](data/infinite1.png){: style="width: 200px;"} | ![](data/raccord_4.png){: style="width: 200px;"} |
+| ![](data/raccord_4.png){: style="width: 200px;"} |
 
 - [TP1 : Courbes de Bézier - Algorithme de De Casteljau](data/TP1_Beziers_De_Casteljau.zip)
 - [TP2 : Courbes de Bézier - Raccord C<sup>1</sup> et C<sup>2</sup>](data/TP2_Raccord_Bezier.zip)

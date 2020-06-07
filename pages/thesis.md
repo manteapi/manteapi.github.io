@@ -21,7 +21,7 @@ Therefore, the method is simpler to integrate into an existing simulator and the
 ## Publications
 
     {%
-      include publication_item.md
+      include publication_item.html
       teaser_url="/assets/img/fluidsculpting/fluidSculptingTeaser.png"
       project_url="./publications/fluidSculpting_MIG_2016/index.html"
       title="Space-time sculpting of liquid animation"
@@ -33,7 +33,7 @@ Therefore, the method is simpler to integrate into an existing simulator and the
     %}
 
     {%
-      include publication_item.md
+      include publication_item.html
       teaser_url="/assets/img/star/STAR_Teaser.png"
       project_url="./publications/starAdaptivity_CGF_2016/index.html"
       title="Adaptive Physically-Based Models in Computer Graphics"
@@ -44,7 +44,7 @@ Therefore, the method is simpler to integrate into an existing simulator and the
     %}
 
     {%
-      include publication_item.md
+      include publication_item.html
       teaser_url="/assets/img/cutting/Manteaux_MIG2015_IDCTS.png"
       project_url="./publications/cutting_MIG2015/index.html"
       title="Interactive Detailed Cutting of Thin Sheets"
@@ -56,7 +56,7 @@ Therefore, the method is simpler to integrate into an existing simulator and the
     %}
 
     {%
-      include publication_item.md
+      include publication_item.html
       teaser_url="/assets/img/tearing/Lejemble_2015_Thumbnail.png"
       project_url="./publications/tearing_MIG2015/index.html"
       title="Interactive procedural simulation of paper tearing with sound"
@@ -68,7 +68,7 @@ Therefore, the method is simpler to integrate into an existing simulator and the
     %}
 
     {%
-      include publication_item.md
+      include publication_item.html
       teaser_url="/assets/img/arps/arpsTeaserThumbnail.png"
       project_url="./publications/arps_VRIPHYS2013/index.html"
       title="Exploring the Use of Adaptively Restrained Particles for Graphics Simulations"
@@ -84,6 +84,10 @@ Therefore, the method is simpler to integrate into an existing simulator and the
 
 ### Main courses
 
+{::options parse_block_html="true" /}
+
+<div style="overflow-x:auto;">
+
 | Title | Institute | Hours | Type | Level | Students | Year |
 | ----- | --------- | ----- | ---- | ----- | -------- | ---- |
 | [3D Computer Graphics](https://chamilo2.grenet.fr/inp/courses/ENSIMAG4MMG3D/document/instructions/index.html) | Ensimag | 18 | TP | Bac+4 | 30 | 2016 |
@@ -91,6 +95,8 @@ Therefore, the method is simpler to integrate into an existing simulator and the
 | [Synthèse d'Image](./teaching/polytech_syntheseimage/index.html) | Polytech Grenoble | 12 | TP | Bac+4 | 30 | 2014 |
 | [Visualisation Scientifique](./teaching/imag_visu/index.html) | UJF, UFR IMAG | 9 | TP | Bac+5 | 30 | 2014 |
 | [Géométrie Numérique](./teaching/imag_geonum/index.html) | UJF, UFR IMAG | 16.5 | TP | Bac+4 | 30 | 2014 |
+
+</div>
 
 ### Personal contributions
         
@@ -100,6 +106,8 @@ In 2015, I proposed to completely update the practicals for the course of 3D Gra
 
 I participated to the management of students during the project time of at Ensimag. These projects allowed me to be involved in advanced scientific problems on different topics. The list of the project I was involved in is just below. Also, from 2013 to 2016 I was invited to be part of the jury of these projects.
 
+<div style="overflow-x:auto;">
+
 | Title | Institute | Hours | Level | Students | Year |
 | ----- | --------- | ----- | ----- | -------- | ---- |
 | [Génération d'un écosystème](teaching/ensimag_projetspe/ecosystem/index.html) | Ensimag | 10 | Bac+4 | 4 | 2016 |
@@ -108,3 +116,7 @@ I participated to the management of students during the project time of at Ensim
 | [Animation sonorisé de la déchirure du papier](teaching/ensimag_projetspe/paper_tearing_sound/index.html) | Ensimag | 10 | Bac+4 | 4 | 2015 |
 | [Simulation d'un fluide à l'aide de particules SPH](teaching/ensimag_projetspe/sph_water/index.html) | Ensimag | 10 | Bac+4 | 4 | 2013 |
 | [Simulation des équations de Shallow-Water avec SPH](teaching/ensimag_projetspe/sph_shallowwater/index.html) | Ensimag | 10 | Bac+4 | 4 | 2013 |
+
+</div>
+
+{::options parse_block_html="false" /}

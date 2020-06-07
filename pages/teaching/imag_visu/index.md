@@ -6,7 +6,7 @@ year: 2014
 division: Master 2 GICAO
 ---
 
-| ![](data/output1.png){: style="width: 200px;"} | ![](data/output.png){: style="width: 200px;"} | ![](data/output2.png){: style="width: 200px;"} |
+| ![](data/output1.png){: style="width: 200px;"} | ![](data/output.png){: style="width: 200px;"} |
 
 - [TP1 : Ondelette de Haar](data/TP1_Subdivision_Ondelette_Haar.zip)
 - [TP2 : Subdivision de Chaikin](data/TP2_Subdivision_Chaikin.zip)
