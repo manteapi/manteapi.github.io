@@ -3,9 +3,9 @@ layout: default
 title: Thesis
 ---
 
-# Simulation and control of physical phenomena
+## Simulation and control of physical phenomena
 
-## Research
+### Research
 
 My research lies in the area of computer graphics, more specifically in physically based simulation of deformable models and fluids. 
 I am particularly interested in adaptive models to allow the expression of complex effects and drastically reduce computational cost.
@@ -16,9 +16,9 @@ This growing complexity introduces new challenges in order to offer control on t
 In this thesis, we propose three techniques to tackle these challenges. First, we introduce a new adaptive model which allows the reduction of the computational cost in Lagrangian simulations of particles. In contrast with re-sampling strategies, the number of degrees of freedom remains constant throughout the simulation.
 Therefore, the method is simpler to integrate into an existing simulator and the memory consumption remains constant, which can be an advantage in an interactive context. Then, we propose an algorithm which allows the detailed cutting of thin deformable objects. Our method relies on a dynamic update of the shape functions associated to the degrees of freedom, which therefore allows the use of a very low number of degrees of freedom while performing detailed topological changes. Finally, we focus on the control of animations of liquid and take inspiration from interactive methods of shape editing in the field of 3D modeling. We introduce a system where the user directly edits the result of the simulation: a sequence of meshes representing the surface of the liquid. We propose selection and editing spatio-temporal tools inspired from static shape sculpting software.
 
-### <a class="mdi mdi-github-box" href="https://github.com/manteapi/phd-thesis"></a> <a class="mdi mdi-file-pdf-box" href="https://manteapi.github.io/publications/thesis/thesis.pdf">Thesis</a>, <a class="mdi mdi-file-pdf-box" href="https://manteapi.github.io/publications/thesis/presentation.pdf">Slides</a> 
+##### <a class="mdi mdi-github-box" href="https://github.com/manteapi/phd-thesis"></a> <a class="mdi mdi-file-pdf-box" href="https://manteapi.github.io/publications/thesis/thesis.pdf">Thesis</a>, <a class="mdi mdi-file-pdf-box" href="https://manteapi.github.io/publications/thesis/presentation.pdf">Slides</a> 
 
-## Publications
+### Publications
 
     {%
       include publication_item.html
@@ -80,9 +80,9 @@ Therefore, the method is simpler to integrate into an existing simulator and the
     %}
 
 
-## Teaching
+### Teaching
 
-### Main courses
+#### Main courses
 
 {::options parse_block_html="true" /}
 
@@ -98,11 +98,11 @@ Therefore, the method is simpler to integrate into an existing simulator and the
 
 </div>
 
-### Personal contributions
+#### Personal contributions
         
 In 2015, I proposed to completely update the practicals for the course of 3D Graphics at Ensimag. With the help of Thomas Delame, I built a small game engine targeted for beginners in OpenGL 4 and allowing to getting familiar with modern GPU technologies. Aside from the engine, I wrote seven tutorials to introduce essential concepts of Computer Graphics: rendering, modeling and animation. A final project was proposed at the end of the course, students had to produce a kart racing game. They actually produced nice results.
 
-### Specific courses
+#### Specific courses
 
 I participated to the management of students during the project time of at Ensimag. These projects allowed me to be involved in advanced scientific problems on different topics. The list of the project I was involved in is just below. Also, from 2013 to 2016 I was invited to be part of the jury of these projects.
 

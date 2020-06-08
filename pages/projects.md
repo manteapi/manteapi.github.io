@@ -3,7 +3,7 @@ layout: default
 title: Projects
 ---
 
-# Liquid simulation using IISPH <a class="mdi mdi-github-box" href="https://github.com/manteapi/hokusai"></a>
+## Liquid simulation using IISPH <a class="mdi mdi-github-box" href="https://github.com/manteapi/hokusai"></a>
 
 ![Dam Break Simulation](/assets/img/hokusai/simpleBreakingDam.png "Dam break simulation"){: .responsive-image}
 
@@ -16,21 +16,21 @@ A simple C++ implementation of the implicit incompressible sph model (IISPH) pro
 - Neighbor search uses Z-sorting to improve cache efficiency.
 - Blender was used for offline rendering.
 
-## Results
+### Results
 
 <div class="responsive-iframe-container">
 <iframe class="responsive-iframe" src="https://www.youtube.com/embed/v5bxcxcEiU4" allowfullscreen></iframe>
 </div>
 
-## References
+### References
 
 - <a id="ihmsen2014"></a> Markus Ihmsen, Jens Cornelis, Barbara Solenthaler, Christopher Horvath, and Matthias Teschner. <cite>Implicit Incompressible SPH</cite>. In: IEEE Transactions on Visualization and Computer Graphics 20.3 (2014), pp. 426–435.
 - <a id="Akinci2012"></a> Nadir Akinci, Markus Ihmsen, Gizem Akinci, Barbara Solenthaler, Matthias Teschner. <cite>Versatile Rigid-Fluid Coupling for Incompressible SPH</cite>. ACM Transactions on Graphics (Proc. SIGGRAPH 2012), vol. 31, no. 4, pp. 62:1-62:8, July 2012.
 - <a id="Akinci2013"></a> Nadir Akinci, Gizem Akinci, and Matthias Teschner. <cite>Versatile surface tension and adhesion for SPH fluids</cite>. ACM Trans. Graph., 32(6):182:1–182:8, 2013.
         
-# Raytracer sandbox <a class="mdi mdi-github-box" href="https://github.com/manteapi/raytracer-sandbox"></a>
+## Raytracer sandbox <a class="mdi mdi-github-box" href="https://github.com/manteapi/raytracer-sandbox"></a>
 
-## Summary
+### Summary
 
 A c++ raytracer based on the work of [Turner Whitted](#Whitted) and [ScratchAPixel](https://www.scratchapixel.com/) tutorials.
 This work is a sandbox for learning and exploring new techniques related to raytracing used for rendering images.
@@ -40,10 +40,10 @@ This project features :
 - Reflection, refraction and diffusive illumination models.
 - Hard shadows
 
-## Results
+### Results
 
 ![Simple spheres raytracing](/assets/img/raytracer-sandbox/simplesspheres.png "Simple spheres raytracing"){: .responsive-image}
         
-## References
+### References
 
 - <a id="Whitted"></a> Turner Whitted. 1980. An improved illumination model for shaded display. Commun. ACM 23, 6 (June 1980), 343-349.

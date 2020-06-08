@@ -5,10 +5,10 @@ layout: default
 <article>
 
 <header>
-  <h1>{{ page.title }}</h1>
+  <h2>{{ page.title }}</h2>
 </header>
 
-<h2>Participants</h2>
+<h3>Participants</h3>
 
 <ul>
   <li>Advisors: {{ page.advisors }}</li>
@@ -16,13 +16,13 @@ layout: default
   <li>Duration: {{ page.duration }}</li>
 </ul>
 
-<h2>Objectives</h2>
+<h3>Objectives</h3>
 
 <p>{{ page.objective }}</p>
 
 {% if page.video or page.image %}
 
-  <h2>Results</h2>
+<h3>Results</h3>
 
   {% if page.video%}
   <div class="responsive-iframe-container">
