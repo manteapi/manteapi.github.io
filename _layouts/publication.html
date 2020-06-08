@@ -2,9 +2,8 @@
 layout: default
 ---
 
-<main>
+<article>
 
-<header>
   <h1>
       {{ page.title }}
       <a class="mdi mdi-file-pdf-box" href="{{ page.pdf_url }}"></a>
@@ -18,9 +17,6 @@ layout: default
 
   <img class="responsive-image" alt="Teaser" src = {{ page.teaser_url }} />
 
-</header>
-
-<section>
   <h2>Summary</h2>
   <p>{{ page.summary}}</p>
 
@@ -31,6 +27,4 @@ layout: default
   </div>
   {% endif %}
 
-</section>
-
-</main>
+</article>
