@@ -47,6 +47,15 @@
  h3 {
      @extend %typography-headline-3;
  }
+ h4 {
+     @extend %typography-headline-4;
+ }
+ h5 {
+     @extend %typography-headline-5;
+ }
+ h6 {
+     @extend %typography-headline-6;
+ }
 
 body {
     margin: 0px;
