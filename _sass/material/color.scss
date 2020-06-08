@@ -1,8 +1,5 @@
----
----
-@import 'material/color';
-$primary: #0277bd;
-$primary-variant: #02BD77;
+$primary: #6200EE;
+$primary-variant: #3700B3;
 $secondary: #03DAC6;
 $secondary-variant: #018786;
 $background: #FFFFFF;
@@ -12,8 +9,4 @@ $on-primary: #FFFFFF;
 $on-secondary: #FFFFFF;
 $on-background: #000000;
 $on-surface: #000000;
-@import 'material/elevation';
-@import 'material/typography';
-@import "grid";
-@import "top-bar";
-@import "main";
+$on-error: #FFFFFF;
