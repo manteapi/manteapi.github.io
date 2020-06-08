@@ -41,6 +41,12 @@
  h1 {
      @extend %typography-headline-1;
  }
+ h2 {
+     @extend %typography-headline-2;
+ }
+ h3 {
+     @extend %typography-headline-3;
+ }
 
 body {
     margin: 0px;

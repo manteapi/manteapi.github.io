@@ -4,24 +4,24 @@ layout: default
 
 <article>
 
-  <h1>
+  <h2>
       {{ page.title }}
       <a class="mdi mdi-file-pdf-box" href="{{ page.pdf_url }}"></a>
       {% if page.video_url %}
         <a class="mdi mdi-movie" href="{{ page.video_url }}"></a>
       {% endif %}
       <a class="mdi mdi-book-open" href="{{ page.bibtex_url }}"></a>
-  </h1>
+  </h2>
   <h5>{{ page.contributors }}</h5>
   <h5>{{ page.conference }}</h5>
 
   <img class="responsive-image" alt="Teaser" src = {{ page.teaser_url }} />
 
-  <h2>Summary</h2>
+  <h3>Summary</h3>
   <p>{{ page.summary}}</p>
 
   {% if page.youtube_url %}
-  <h2>Results</h2>
+  <h3>Results</h3>
   <div class="responsive-iframe-container">
     <iframe class="responsive-iframe" src="{{ page.youtube_url }}" allowfullscreen></iframe>
   </div>
