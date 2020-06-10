@@ -16,7 +16,7 @@ This growing complexity introduces new challenges in order to offer control on t
 In this thesis, we propose three techniques to tackle these challenges. First, we introduce a new adaptive model which allows the reduction of the computational cost in Lagrangian simulations of particles. In contrast with re-sampling strategies, the number of degrees of freedom remains constant throughout the simulation.
 Therefore, the method is simpler to integrate into an existing simulator and the memory consumption remains constant, which can be an advantage in an interactive context. Then, we propose an algorithm which allows the detailed cutting of thin deformable objects. Our method relies on a dynamic update of the shape functions associated to the degrees of freedom, which therefore allows the use of a very low number of degrees of freedom while performing detailed topological changes. Finally, we focus on the control of animations of liquid and take inspiration from interactive methods of shape editing in the field of 3D modeling. We introduce a system where the user directly edits the result of the simulation: a sequence of meshes representing the surface of the liquid. We propose selection and editing spatio-temporal tools inspired from static shape sculpting software.
 
-##### <a class="mdi mdi-github-box" href="https://github.com/manteapi/phd-thesis"></a> <a class="mdi mdi-file-pdf-box" href="https://manteapi.github.io/publications/thesis/thesis.pdf">Thesis</a>, <a class="mdi mdi-file-pdf-box" href="https://manteapi.github.io/publications/thesis/presentation.pdf">Slides</a> 
+##### <a class="mdi mdi-github-box" href="https://github.com/manteapi/phd-thesis"></a> <a class="mdi mdi-file-pdf-box" href="./publications/thesis/thesis.pdf">Thesis</a>, <a class="mdi mdi-file-pdf-box" href="./publications/thesis/presentation.pdf">Slides</a> 
 
 ### Publications
 
@@ -27,8 +27,8 @@ Therefore, the method is simpler to integrate into an existing simulator and the
       title="Space-time sculpting of liquid animation"
       authors='Pierre-Luc Manteaux<sup>*</sup>, Ulysse Vimont<sup>*</sup>, Chris Wojtan, Damien Rohmer, Marie-Paule Cani, <sup>*</sup>joint first authors'
       conference="Motion In Games 2016"
-      paper_url="https://manteapi.github.io/publications/fluidSculpting_MIG_2016/fluidSculpting-mig2016.pdf"
-      video_url="https://manteapi.github.io/publications/fluidSculpting_MIG_2016/video/fluidSculpting_mig2016.mp4"
+      paper_url="./publications/fluidSculpting_MIG_2016/fluidSculpting-mig2016.pdf"
+      video_url="./publications/fluidSculpting_MIG_2016/video/fluidSculpting_mig2016.mp4"
       bibtex_url="./publications/fluidSculpting_MIG_2016/STFS_MIG2016.bib"
     %}
 
@@ -39,7 +39,7 @@ Therefore, the method is simpler to integrate into an existing simulator and the
       title="Adaptive Physically-Based Models in Computer Graphics"
       authors='Pierre-Luc Manteaux, Chris Wojtan, Rahul Narain, Stephane Redon, François Faure, Marie-Paule Cani'
       conference="Computer Graphics Forum 2016"
-      paper_url="https://manteapi.github.io/publications/starAdaptivity_CGF_2016/starAdaptivity-cgf.pdf"
+      paper_url="./publications/starAdaptivity_CGF_2016/starAdaptivity-cgf.pdf"
       bibtex_url="./publications/starAdaptivity_CGF_2016/APMCG_CGF2016.bib"
     %}
 
