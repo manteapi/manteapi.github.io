@@ -1,66 +1,96 @@
- /* Extra small devices (phones, 600px and down) */
- @media only screen and (max-width: 600px) {
+html[data-theme='dark']
+{
+    --primary: #0277bd;
+    --primary-variant: #02BD77;
+    --secondary: #03DAC6;
+    --secondary-variant: #018786;
+    --background: #000000;
+    --surface: #000000;
+    --error: #B00020;
+    --on-primary: #FFFFFF;
+    --on-secondary: #FFFFFF;
+    --on-background: #FFFFFF;
+    --on-surface: #FFFFFF;
+}
+
+html[data-theme='light']
+{
+    --primary: #0277bd;
+    --primary-variant: #02BD77;
+    --secondary: #03DAC6;
+    --secondary-variant: #018786;
+    --background: #FFFFFF;
+    --surface: #FFFFFF;
+    --error: #B00020;
+    --on-primary: #FFFFFF;
+    --on-secondary: #FFFFFF;
+    --on-background: #000000;
+    --on-surface: #000000;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
     section {
         margin: auto;
         width: 90%;
     }
- }
+}
 
- /* Small devices (portrait tablets and large phones, 600px and up) */
- @media only screen and (min-width: 600px) {
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
     section {
         margin: auto;
         width: 90%;
     }
- }
+}
 
- /* Medium devices (landscape tablets, 768px and up) */
- @media only screen and (min-width: 768px) {
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
     section {
         margin: auto;
         width: 90%;
     }
- }
+}
 
- /* Large devices (laptops/desktops, 992px and up) */
- @media only screen and (min-width: 992px) {
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
     section {
         margin: auto;
         width: 80%;
     }
- }
+}
 
- /* Extra large devices (large laptops and desktops, 1200px and up) */
- @media only screen and (min-width: 1200px) {
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
     section {
         margin: auto;
         width: 70%;
     }
- } 
+} 
 
- h1 {
-     @extend %typography-headline-1;
- }
- h2 {
-     @extend %typography-headline-2;
- }
- h3 {
-     @extend %typography-headline-3;
- }
- h4 {
-     @extend %typography-headline-4;
- }
- h5 {
-     @extend %typography-headline-5;
- }
- h6 {
-     @extend %typography-headline-6;
- }
+h1 {
+    @extend %typography-headline-1;
+}
+h2 {
+    @extend %typography-headline-2;
+}
+h3 {
+    @extend %typography-headline-3;
+}
+h4 {
+    @extend %typography-headline-4;
+}
+h5 {
+    @extend %typography-headline-5;
+}
+h6 {
+    @extend %typography-headline-6;
+}
 
 body {
     margin: 0px;
-    background-color: $background;
-    color: $on-background;
+    background-color: var(--background);
+    color: var(--on-background);
 }
 
 .website--fixed-adjust
